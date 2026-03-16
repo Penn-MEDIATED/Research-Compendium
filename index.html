@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research Compendium — Penn MEDIATED</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Merriweather+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #011F5B;
+      --navy-mid: #082d75;
+      --gold: #cfb53b;
+      --gold-bright: #F2A900;
+      --link: #01419a;
+      --text: #1a1a2e;
+      --text-light: #555;
+      --border: #dde3ee;
+      --bg-page: #ffffff;
+      --bg-card: #ffffff;
+      --bg-subtle: #f4f5f8;
+    }
+
+    body {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.75;
+      background: var(--bg-page);
+      color: var(--text);
+    }
+
+    /* ── NAV ── */
+    .site-header {
+      background: var(--navy);
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      position: relative;
+      z-index: 200;
+    }
+
+    .site-logo {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      text-decoration: none;
+    }
+    .logo-img {
+      height: 56px;
+      width: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
+    .logo-img-fallback {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-shield {
+      width: 52px;
+      height: 52px;
+      flex-shrink: 0;
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .logo-penn {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.02em;
+    }
+    .logo-sub {
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 9.5px;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.3;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .site-nav a {
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      padding: 8px 10px;
+      letter-spacing: 0.01em;
+      transition: color .15s;
+    }
+    .site-nav a:hover { color: white; }
+    .site-nav a.active { color: var(--gold-bright); font-weight: 600; }
+
+    /* ── HERO GRADIENT ── */
+    .hero-gradient {
+      background: linear-gradient(to bottom, var(--navy) 0%, #06287a 30%, #8fa8d4 65%, #dce6f5 85%, white 100%);
+      height: 80px;
+    }
+
+    /* ── PAGE TITLE BAND ── */
+    .page-title-band {
+      background: white;
+      padding: 8px 56px 28px;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-title-band h1 {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+    .page-desc-primary {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--text);
+      max-width: 840px;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .page-desc-secondary {
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 13.5px;
+      color: var(--text-light);
+      max-width: 840px;
+      line-height: 1.75;
+    }
+
+    /* ── STICKY CONTROLS ── */
+    .controls-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: white;
+      border-bottom: 2px solid var(--border);
+      box-shadow: 0 2px 10px rgba(1,31,91,.08);
+    }
+
+    .controls-top {
+      padding: 11px 56px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #eef0f5;
+    }
+
+    .controls-top input {
+      border: 1px solid #c8cfe0;
+      border-radius: 5px;
+      padding: 7px 12px;
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 13px;
+      width: 260px;
+      outline: none;
+      color: var(--text);
+    }
+    .controls-top input:focus { border-color: var(--navy); }
+    .ctrl-label {
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 12px;
+      color: #777;
+    }
+    select {
+      border: 1px solid #c8cfe0;
+      border-radius: 5px;
+      padding: 7px 11px;
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 13px;
+      color: var(--text);
+      background: white;
+      outline: none;
+      cursor: pointer;
+    }
+    .ctrl-divider { width:1px; height:20px; background:#ddd; flex-shrink:0; }
+
+    .year-btn {
+      border: 1px solid #c8cfe0;
+      border-radius: 5px;
+      padding: 5px 11px;
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 12px;
+      cursor: pointer;
+      background: white;
+      color: #555;
+      transition: all .15s;
+    }
+    .year-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+    .entry-count {
+      margin-left: auto;
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 12px;
+      color: #999;
+      white-space: nowrap;
+    }
+    .expand-all-btn {
+      border: none;
+      background: none;
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 12px;
+      color: var(--link);
+      cursor: pointer;
+      padding: 4px 0;
+      white-space: nowrap;
+    }
+    .expand-all-btn:hover { text-decoration: underline; }
+
+    /* Theme filter row */
+    .theme-row {
+      padding: 9px 56px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+    .theme-row-label {
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: #999;
+      margin-right: 2px;
+      white-space: nowrap;
+    }
+    .theme-pill {
+      border: 1.5px solid var(--tc);
+      border-radius: 20px;
+      padding: 4px 13px;
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      background: white;
+      color: var(--tc);
+      transition: all .15s;
+      white-space: nowrap;
+    }
+    .theme-pill:hover { background: var(--tb); }
+    .theme-pill.active { background: var(--tb); font-weight: 700; }
+    .pill-count { opacity: .6; font-size: 11px; }
+    .clear-filters {
+      border: none;
+      background: none;
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 12px;
+      color: #c00;
+      cursor: pointer;
+      padding: 4px 6px;
+      display: none;
+    }
+    .clear-filters:hover { text-decoration: underline; }
+
+    /* Active chips */
+    .active-chips {
+      padding: 0 56px 9px;
+      display: none;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #e8edf7;
+      border: 1px solid #c5d0e8;
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 11px;
+      color: #2a3a6b;
+    }
+    .chip button {
+      border: none; background: none; cursor: pointer; color: #666;
+      font-size: 14px; line-height: 1; padding: 0; margin-left: 1px;
+    }
+    .chip button:hover { color: #c00; }
+
+    /* ── TABLE HEADER ── */
+    .table-header {
+      display: grid;
+      grid-template-columns: 280px 170px 95px 1fr;
+      background: #e8eef6;
+      padding: 9px 56px;
+      border-bottom: 2px solid #b8cde0;
+    }
+    .table-header span {
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: var(--navy);
+    }
+
+    /* ── ENTRIES ── */
+    .entries {
+      padding: 20px 56px 72px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: var(--bg-subtle);
+    }
+
+    .entry {
+      background: var(--bg-card);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: box-shadow .2s;
+    }
+    .entry:hover { box-shadow: 0 2px 16px rgba(1,31,91,.1); }
+    .entry:target { box-shadow: 0 0 0 2.5px var(--gold-bright); }
+
+    .entry-top {
+      display: grid;
+      grid-template-columns: 280px 170px 95px 1fr;
+      padding: 18px 22px;
+      cursor: pointer;
+      align-items: start;
+    }
+    .entry-top:hover { background: #fafbfe; }
+
+    /* Title column */
+    .entry-title-col { padding-right: 14px; }
+    .entry-title-text {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      margin-bottom: 8px;
+    }
+    .entry-title-text a {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--link);
+      text-decoration: none;
+      line-height: 1.55;
+    }
+    .entry-title-text a:hover { text-decoration: underline; color: var(--navy); }
+
+    .entry-badges { display: flex; flex-wrap: wrap; gap: 4px; }
+    .theme-badge {
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 10px;
+      white-space: nowrap;
+      letter-spacing: .02em;
+    }
+    .new-badge {
+      flex-shrink: 0;
+      margin-top: 2px;
+      background: var(--gold-bright);
+      color: #5a3b00;
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      padding: 3px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .entry-faculty {
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 13px;
+      color: #2a2a3e;
+      padding-top: 2px;
+      padding-right: 10px;
+      line-height: 1.5;
+    }
+    .entry-date {
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 13px;
+      color: #888;
+      padding-top: 2px;
+    }
+
+    /* Takeaway column */
+    .entry-takeaway { padding-top: 1px; }
+    .takeaway-label {
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #b07d00;
+      margin-bottom: 5px;
+    }
+    .takeaway-text {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .expand-hint {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 12px;
+      color: var(--link);
+    }
+    .chevron { transition: transform .25s; flex-shrink: 0; }
+    .entry.open .chevron { transform: rotate(180deg); }
+
+    /* Expanded panel */
+    .entry-detail {
+      display: none;
+      border-top: 1px solid #eaeef5;
+      padding: 0 22px 22px;
+    }
+    .entry.open .entry-detail { display: block; }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      padding-top: 16px;
+    }
+    .detail-block {
+      background: var(--bg-subtle);
+      border-radius: 7px;
+      padding: 15px 18px;
+    }
+    .detail-block.full-width { grid-column: 1 / -1; }
+    .detail-block h4 {
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 9px;
+    }
+    .detail-block.summary h4 { color: var(--navy); }
+    .detail-block.takeaway-full { border-left: 3px solid var(--gold-bright); }
+    .detail-block.takeaway-full h4 { color: #b07d00; }
+    .detail-block.importance { border-left: 3px solid #2d7a4e; }
+    .detail-block.importance h4 { color: #2d7a4e; }
+
+    .detail-text {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 13.5px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: #333;
+    }
+    .detail-sub {
+      margin-top: 9px;
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    .entry-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-top: 16px;
+    }
+    .read-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      letter-spacing: .02em;
+      transition: background .15s;
+    }
+    .read-btn:hover { background: #062d85; }
+    .link-btn {
+      border: none;
+      background: none;
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 12px;
+      color: var(--link);
+      cursor: pointer;
+      padding: 0;
+    }
+    .link-btn:hover { text-decoration: underline; }
+
+    .no-results {
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 14px;
+      color: #999;
+      padding: 52px 0;
+      text-align: center;
+      display: none;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER / NAV -->
+<header class="site-header">
+  <a href="#" class="site-logo">
+    <!-- Real Penn MEDIATED logo — place penn-logo.png in same folder as this HTML -->
+    <img class="logo-img" src="penn-logo.png" alt="Penn Media, Technology and Democracy"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+    <div class="logo-img-fallback" style="display:none">
+      <svg class="logo-shield" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+        <rect width="52" height="52" rx="3" fill="#011F5B"/>
+        <path d="M8 6 h36 v28 c0 10 -18 16 -18 16 s-18-6-18-16 z" fill="#990000" stroke="white" stroke-width="1"/>
+        <rect x="16" y="14" width="20" height="2.5" rx="1" fill="white" opacity=".9"/>
+        <rect x="16" y="20" width="20" height="2.5" rx="1" fill="white" opacity=".9"/>
+        <rect x="16" y="26" width="14" height="2.5" rx="1" fill="white" opacity=".9"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-penn">Penn</span>
+        <span class="logo-sub">Media, Technology<br>and Democracy</span>
+      </div>
+    </div>
+  </a>
+  <nav class="site-nav">
+    <a href="#">Home</a>
+    <a href="#" class="active">Research ›</a>
+    <a href="#">Events</a>
+    <a href="#">Data</a>
+    <a href="#">Grants</a>
+    <a href="#">Our Team ›</a>
+    <a href="#">About The Center</a>
+  </nav>
+</header>
+
+<!-- GRADIENT FADE -->
+<div class="hero-gradient"></div>
+
+<!-- PAGE TITLE -->
+<div class="page-title-band">
+  <h1>Research Compendium</h1>
+  <p class="page-desc-primary">This research compendium <em>(still in development!)</em> curates and translates University of Pennsylvania research on the quantitative study of the information ecosystem and its impact on democracy. It brings together empirical work examining issues such as information integrity, media ecosystems, political speech, and democratic resilience, with the aim of making rigorous academic research more accessible and actionable.</p>
+  <p class="page-desc-secondary">The compendium features research from seven schools and centers at Penn—the Annenberg School for Communication, the Annenberg Public Policy Center, the Wharton School, SAS Political Science, SEAS Computer and Information Science, the School of Social Policy and Practice, and the Carey Law School—and is designed to serve journalists, media leaders, civil society organizations, and policymakers seeking evidence-based insights into the functioning and governance of digital information systems.</p>
+</div>
+
+<!-- STICKY CONTROLS -->
+<div class="controls-wrap">
+  <div class="controls-top">
+    <input type="text" placeholder="🔍  Search by title, author, or keyword…" id="searchInput" oninput="applyFilters()"/>
+    <div class="ctrl-divider"></div>
+    <span class="ctrl-label">Author</span>
+    <select id="authorSelect" onchange="applyFilters()">
+      <option value="">All</option>
+      <option value="Chris Callison-Burch and Dan Roth">Chris Callison-Burch and Dan Roth</option>
+<option value="Danaé Metaxa">Danaé Metaxa</option>
+<option value="Daniel J. Hopkins">Daniel J. Hopkins</option>
+<option value="Dean Knox">Dean Knox</option>
+<option value="Deen Freelon">Deen Freelon</option>
+<option value="Desmond Patton">Desmond Patton</option>
+<option value="Diana C. Mutz">Diana C. Mutz</option>
+<option value="Dolores Albarracín">Dolores Albarracín</option>
+<option value="Duncan Watts">Duncan Watts</option>
+<option value="Emily B. Falk">Emily B. Falk</option>
+<option value="Erik Santoro">Erik Santoro</option>
+<option value="Kathleen Hall Jamieson">Kathleen Hall Jamieson</option>
+<option value="Lyle Ungar">Lyle Ungar</option>
+<option value="Matt Levendusky">Matt Levendusky</option>
+<option value="Pinar Yildirim">Pinar Yildirim</option>
+<option value="Sandra González-Bailón">Sandra González-Bailón</option>
+<option value="Shiri Melumad">Shiri Melumad</option>
+<option value="Yphtach Lelkes">Yphtach Lelkes</option>
+    </select>
+    <div class="ctrl-divider"></div>
+    <button class="year-btn" data-year="2026" onclick="toggleYear(this)">2026</button>
+<button class="year-btn" data-year="2025" onclick="toggleYear(this)">2025</button>
+<button class="year-btn" data-year="2024" onclick="toggleYear(this)">2024</button>
+    <div class="ctrl-divider"></div>
+    <span class="ctrl-label">Sort</span>
+    <select id="sortSelect" onchange="sortEntries()">
+      <option value="newest">Newest first</option>
+      <option value="oldest">Oldest first</option>
+      <option value="faculty">Author A–Z</option>
+    </select>
+    <span class="entry-count" id="entryCount">23 entries</span>
+    <button class="expand-all-btn" id="expandAllBtn" onclick="toggleExpandAll()">Expand all</button>
+  </div>
+  <div class="theme-row">
+    <span class="theme-row-label">Theme</span>
+    <button class="theme-pill" data-theme="AI & LLMs" style="--tc:#4f46e5;--tb:#ede9fe" onclick="toggleTheme(this)">AI & LLMs <span class="pill-count">8</span></button>
+<button class="theme-pill" data-theme="Misinformation & Belief Change" style="--tc:#b91c1c;--tb:#fee2e2" onclick="toggleTheme(this)">Misinformation & Belief Change <span class="pill-count">4</span></button>
+<button class="theme-pill" data-theme="Political Polarization" style="--tc:#0369a1;--tb:#e0f2fe" onclick="toggleTheme(this)">Political Polarization <span class="pill-count">6</span></button>
+<button class="theme-pill" data-theme="Social Media & Platforms" style="--tc:#0f766e;--tb:#ccfbf1" onclick="toggleTheme(this)">Social Media & Platforms <span class="pill-count">5</span></button>
+<button class="theme-pill" data-theme="Persuasion & Communication" style="--tc:#b45309;--tb:#fef3c7" onclick="toggleTheme(this)">Persuasion & Communication <span class="pill-count">6</span></button>
+<button class="theme-pill" data-theme="Research Methods" style="--tc:#6b21a8;--tb:#f3e8ff" onclick="toggleTheme(this)">Research Methods <span class="pill-count">4</span></button>
+
+    <button class="clear-filters" id="clearBtn" onclick="clearFilters()">✕ Clear all filters</button>
+  </div>
+  <div class="active-chips" id="activeChips"></div>
+</div>
+
+<!-- TABLE HEADER -->
+<div class="table-header">
+  <span>Title</span>
+  <span>Penn Faculty Lead</span>
+  <span>Date</span>
+  <span>Key Takeaway</span>
+</div>
+
+<!-- ENTRIES -->
+<div class="entries" id="entriesList">
+
+  <div class="entry" id="a-large-scale-evaluation-of-commonsense-knowledge-in-humans" data-faculty="duncan watts" data-year="2026" data-themes="AI & LLMs">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://arxiv.org/pdf/2505.10309" target="_blank" rel="noopener" onclick="event.stopPropagation()">A large-scale evaluation of commonsense knowledge in humans and large language models</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span></div>
+      </div>
+      <div class="entry-faculty">Duncan Watts</div>
+      <div class="entry-date">1/21/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Common sense in humans is subjective and traditional benchmarks aimed at evaluating common sense in LLMs mainly focus on measuring accuracy relative to some decided ground truth.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">Aligning LLMs to mirror how humans think and process information is quite challenging. LLM developers tend to evaluate this “common sense” knowledge using answers that human annotators have marked as true. However, this assumes that common sense in humans is homogenous. However, what is common sense to one person, may not apply to the larger population. In this paper, the researchers propose a way to evaluate common sense knowledge in LLMs without assuming some “ground truth” that may only reflect the views of the model developer. They do so in two ways. 
+1. First, the researchers treat each LLM like an individual survey respondent, asking it to give yes or no answers to thousands of statements. They measure first whether the model's responses align with the human majority, and second whether it can accurately predict what most people would say. On these metrics, more than two-thirds of models scored below the median human, and the best-performing model only exceeded the commonsense aptitude of 64% of human participants. Surprisingly, smaller open-weight models, such as Mistral-7B, outperformed larger frontier models, such asGPT-4.
+2. The researchers also tested whether LLMs could simulate how a large group of humans thinks about common sense. The underlying idea is that the more frequently a statement is endorsed by humans in an LLM's training data, the more likely the model is to accept it, meaning LLMs may effectively represent “the average human contributor of that data.” To test this, they repeatedly prompted  each LLM to get a range of responses (which the authors call a “silicon sample”) and compared their responses to those of real human participants. They found that humans tend to agree more on factual, literal statements than on figures of speech, and most LLMs also reflected this pattern. However, most LLMs tended to rate statements as either commonsensical or not, with little middle ground. The authors attribute this to extensive fine-tuning, which pushes models toward confident, decisive answers and away from the more uncertain responses that better reflect how humans actually think.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">Common sense in humans is subjective and traditional benchmarks aimed at evaluating common sense in LLMs mainly focus on measuring accuracy relative to some decided ground truth.</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">Assuming a single “ground truth” and evaluating LLMs based on it might be a more straightforward way to evaluate progress in AI alignment. However, this “one truth myth” has misguided AI research and creates an “illusion of success” when LLMs pass these tests that don't account for the subjectivity in how humans process cultural information. These LLMs have been deployed in many contexts that are subjective, like toxicity detection and image classification. This can have unintended consequences and this paper makes an important contribution in showing how model developers can employ “human judgments as a normative standard for human-like AI benchmarking.”</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://arxiv.org/pdf/2505.10309" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#a-large-scale-evaluation-of-commonsense-knowledge-in-humans');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="how-well-do-large-language-models-understand-african-america" data-faculty="desmond patton" data-year="2026" data-themes="AI & LLMs">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://www.annualreviews.org/content/journals/10.1146/annurev-linguistics-041824-050629" target="_blank" rel="noopener" onclick="event.stopPropagation()">How Well Do Large Language Models Understand African American Language? Causes and Implications</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span></div>
+      </div>
+      <div class="entry-faculty">Desmond Patton</div>
+      <div class="entry-date">1/4/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">This review paper shows that LLMs by virtue of how they are trained and deployed, “are in part beholden to what language—and importantly, whose language—is being modeled in ways that have effects on the real speaker communities who use the technology.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This review paper discusses empirical research examining how LLMs interpret African-American Language (AAL) and whether they “distort the communicative intent” of its speakers. First, the authors synthesize research explaining reasons for why LLMs are worse at interpreting AAL compared to White Mainstream English (WME) and its downstream impact on African-American users. The authors identify three sources of bias that may explain the disparity in LLM performance on AAL vs WME. They are:
+1. Data: Research demonstrates that AAL is severely underrepresented in LLM training data. Studies of the widely-used C4 corpus found AAL constituted only 0.07% compared to 97.8% WME. Even with documents representing AAL, research found that it frequently “reinforced stereotypes, and/or represented appropriated speech.” Research attributes this imbalance to automated quality filters that disproportionately remove AAL texts, filtering out 42% of AAL documents versus only 6.2% of WME documents. LLMs also perform poorly on AAL because pretraining data includes what is easily available on the web which for AAL, is often performative online contexts like Twitter and hip hop lyrics rather than naturalistic speech.
+2. Annotations: How content is labeled is shaped by the characteristics of the annotator. This is relevant for AAL because when data has been annotated without consideration of the annotators’ race, “the resulting labeled data may not reflect the views of African Americans.” For instance, research found that conservatives who also tend to “hold racist beliefs” are more likely to label AAL posts as offensive, clearly showing that the political views of the annotators can act as a source of bias against AAL. 
+3. Model: The authors note that data quality alone doesn't explain bias—the models themselves also introduce problems. Better training data can't fully solve the issue because language constantly changes, and biased models can worsen existing biases when retrained. Research shows models have more trouble understanding AAL texts compared to WME texts and rate AAL documents as having lower quality.
+The inability for LLMs to accurately interpret AAL has significant impacts: AAL speakers have to work harder to be understood by LLMs which can make some Black users “feel that their culture and language are not valued.”</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">This review paper shows that LLMs by virtue of how they are trained and deployed, “are in part beholden to what language—and importantly, whose language—is being modeled in ways that have effects on the real speaker communities who use the technology.</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">This paper shows that  LLMs are trained and deployed in ways that don't account for the linguistic traditions of African Americans. LLMs should aim to be better at interpreting AAL, especially when LLMs are used in essential sectors like healthcare or financial services. Conversely, the authors raise concerns about LLMs that understand AAL engaging in cultural appropriation:“LLMs capable of generating AAL risk enabling malicious users to impersonate Black people online and potentially further perpetuate stereotypes of AAL.”</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-linguistics-041824-050629" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#how-well-do-large-language-models-understand-african-america');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="computational-social-science-past-present-and-future" data-faculty="duncan watts" data-year="2025" data-themes="Research Methods">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://www.elgaronline.com/edcollchap/book/9781802207309/chapter2.xml" target="_blank" rel="noopener" onclick="event.stopPropagation()">Computational Social Science: Past, Present, and Future</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Research Methods</span></div>
+      </div>
+      <div class="entry-faculty">Duncan Watts</div>
+      <div class="entry-date">12/11/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Computational social science is a "a collection of compelling and consequential problems, grounded in the rise of socio-technical systems: systems of devices, platforms, algorithms, and data that are equally social and computational, and that cannot be understood or managed through either lens in isolation of the other."</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This introductory chapter lays out Duncan Watts and David Lazer's "subjective appraisal of the field of computational social science (CSS)." They first trace the field's history beginning in the late 90s and its growth in popularity during the Web 2.0 revolution which allowed researchers access to unprecedented amounts of online data because of the growing reliance on digital tools. In 2007, Duncan Watts shared that if handled well, data about online communications could "revolutionize our understanding of collective human behavior." Incidentally, 2007 was also the year where people began interpreting CSS as a field that could "produce an understanding of the global network on which many global problems exist: SARS and infectious disease, global warming, strife due to cultural collisions, and the livability of our cities.” 
+What is the current state of CSS? Watts and Lazer argue that computational social science (CSS) has produced a substantial number of empirical insights that would have been difficult or impossible in the pre-digital era. Examples include large-scale validation of network science theories using online social networks, measuring “structural virality” across billions of social media cascades and predicting poverty levels from mobile phone metadata. But has the field's impact extended beyond the realm of scientific publishing? The authors conclude that potential exists but the evidence thus far is "inconclusive."
+Looking to the future, the authors identify 5 key challenges that would shape the field in the next decade. First, the field's overreliance on industry data creates a power imbalance wherein platforms get to decide which data to share with researchers and what data remains "locked up." Second, CSS researchers will continue grappling with "the difference between what is measured and what would ideally be measured." Third, CSS should pursue solution-oriented research intended to tackle real-world problems. Finally, embracing open science and developing ethical frameworks for digital data will be essential to ensure research is reliable, transparent, and socially responsible.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">Computational social science is a "a collection of compelling and consequential problems, grounded in the rise of socio-technical systems: systems of devices, platforms, algorithms, and data that are equally social and computational, and that cannot be understood or managed through either lens in isolation of the other."</div>
+        </div>
+        
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.elgaronline.com/edcollchap/book/9781802207309/chapter2.xml" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#computational-social-science-past-present-and-future');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="the-post-api-age-of-social-media-data-access-past-present-an" data-faculty="deen freelon" data-year="2025" data-themes="Social Media & Platforms,Research Methods">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://journals.sagepub.com/doi/full/10.1177/00027162251372557" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Post-API Age of Social Media Data Access: Past, Present, and Future</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Research Methods</span></div>
+      </div>
+      <div class="entry-faculty">Deen Freelon</div>
+      <div class="entry-date">12/15/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">The last 20 years has witnessed a trend toward reduced researcher access for social media data, which is also "permanently contingent on factors over which researchers have little or no control."</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This research article provides a historical overview of social media data access and how it has evolved in the last twenty years, beginning in the early 2000s. The authors identify four key periods starting in 2006: a "laissez-faire" era (2006–2011) when platforms offered relatively open, free access but was not extensively used by researchers; an "authentication period" (2011–2018) when platforms began tightening restrictions and requiring credentials which happened to coincide with social scientists realizing the value of this data for studying online communications; a "limited options period" (2018–2020) triggered by Meta shutting down academic API access following the Cambridge Analytica scandal; and an "academic cooperation period" (2020–2023) wherein social media platforms "implemented academic-only data sources in response to public scrutiny about their role in society."
+Based on this historical assessment, the paper evaluates the “data access options” currently provided by the six major technology companies. Here’s what they found:<div class="detail-sub"><strong>1. Laissez-Faire API:</strong> The oldest and most open data access regime, offering free, on-demand access with no application or institutional affiliation required. Currently, YouTube and Reddit operate under this model.</div><div class="detail-sub"><strong>2. Academic API:</strong> Emerged after a decade of the laissez-faire approach, these APIs impose more control on who can access platform data through lengthy and manually reviewed applications. Currently, TikTok and Reddit's enhanced tier fall in this category, requiring lengthy applications and academic affiliation.</div><div class="detail-sub"><strong>3. Walled Garden:</strong> Free and restricted to academics, but limits what data can be exported. Facebook and Instagram only allow data to be downloaded above certain visibility thresholds, with lower-visibility content confined to Meta's online "clean room."</div><div class="detail-sub"><strong>4. Pay-to-play API:</strong> Access to data requires payment. X/Twitter is currently the only platform in this category, having eliminated its free academic API after Elon Musk acquired the company.
+The authors close with recommendations urging platforms to make data more freely downloadable, outsource access decisions to independent academic bodies, and revisit data management rules that were written with commercial developers in mind and which may compromise research rigor in some cases.</div></div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">The last 20 years has witnessed a trend toward reduced researcher access for social media data, which is also "permanently contingent on factors over which researchers have little or no control."</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">Data access is and will continue to be shaped by policy shifts by companies, public scandals and legislation. Thus, researchers cannot only rely on platform data for their research. As the authors note, the ability for researchers to “analyze future platform data,” will depend as much on innovation from the research community as on the “whims of the platforms’ corporate owners.”</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://journals.sagepub.com/doi/full/10.1177/00027162251372557" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#the-post-api-age-of-social-media-data-access-past-present-an');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="a-megastudy-of-behavioral-interventions-to-increase-voter-re" data-faculty="emily b. falk" data-year="2025" data-themes="Political Polarization,Persuasion & Communication">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://sciety.org/articles/activity/10.31234/osf.io/p6b2e_v2" target="_blank" rel="noopener" onclick="event.stopPropagation()">A Megastudy Of Behavioral Interventions To Increase Voter Registration Ahead Of The 2024 U.S. Presidential Election</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Communication</span></div>
+      </div>
+      <div class="entry-faculty">Emily B. Falk</div>
+      <div class="entry-date">12/03/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">This megastudy points to the “intention-behavior gap” for voter registration and shows that when prior motivation is low, “interventions that successfully boost intentions may be insufficient to prompt action.”</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This paper tests the efficacy of ten “expert-crowdsourced, theoretically-based psychological interventions” in bolstering electoral participation with a sample of eligible unregistered US voters ahead of the 2024 presidential election. These interventions drew on established behavioral science principles—such as correcting misperceptions about registration difficulty; emphasizing the moral basis for civic participation; and using escalating commitment techniques that combine multiple forms of social pressure, such as telling people that voting records are public. The authors measure the impact of these interventions across different stages of electoral participation, from stated voting intentions to clicking on voter registration websites to actual registration and turnout. The control condition in this case was an intervention unrelated to voting. Here are some key findings:
+1. Eight out of ten interventions significantly increased intentions to vote and the “Escalating Commitments" intervention had the strongest effect, boosting voting intentions by eight percentage points.
+2. Five interventions led to increased click rates for voter registration websites compared to the control. Intuitively, interventions were less effective on participants who reported low political interest and voting intention prior to the study, showing that how people feel about voting from the outset is a stubborn determinant of electoral participation.
+3. Despite having positive effects on increasing voting intentions and in some cases, click rates, none of the interventions “had a significant impact on voter registration.” The same applies for voter turnout, in that, no interventions significantly improved actual turnout compared to the control condition.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">This megastudy points to the “intention-behavior gap” for voter registration and shows that when prior motivation is low, “interventions that successfully boost intentions may be insufficient to prompt action.”</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">A large proportion of America’s eligible electorate is unregistered. In fact in the last two presidential elections, “nearly a quarter of eligible Americans were unregistered and therefore did not participate.” Most prior research has looked at how to improve voter turnout among registered voters rather than examining what makes people register to vote. This paper addresses this research gap and shows that in order to encourage voter turnout and participation, interventions must “pair efforts to increase motivation with efforts to simplify registration and voting processes, such that motivation can be more easily translated into action.”</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://sciety.org/articles/activity/10.31234/osf.io/p6b2e_v2" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#a-megastudy-of-behavioral-interventions-to-increase-voter-re');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="rethinking-news-framing-with-large-language-models" data-faculty="duncan watts" data-year="2025" data-themes="AI & LLMs,Misinformation & Belief Change">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://www.nature.com/articles/s41598-025-29519-9" target="_blank" rel="noopener" onclick="event.stopPropagation()">Rethinking news framing with large language models</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation & Belief Change</span></div>
+      </div>
+      <div class="entry-faculty">Duncan Watts</div>
+      <div class="entry-date">11/28/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">This study shows that the “selective presentation of truthful information” can influence both the feelings and opinions regarding important news events. Moreover, by using an LLM to create a set of articles that are factually accurate but differ in tone(i.e., based on what content is included and what is left out) this paper highlights the “ease with which bias can be introduced to otherwise typical news coverage as well as its impact on readers.” Thus, grasping the role of misinformation in society must go beyond addressing falsehoods by also addressing “biased, yet factually accurate, reporting practices prevalent in mainstream media.”</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This paper employs LLMs to generate “synthetic news articles” in order to study the effects of biased news coverage across a range of events  pertaining to politics, the economy and culture more broadly. The LLM-generated news articles incorporate changes in “selection and tone of the content while holding factual accuracy and other features constant.” In other words, the generated news articles mimic the ways in which different media outlets may employ a positive, neutral, or negative tone; and selectively present certain facts when reporting the news. The authors conducted a randomized experiment to evaluate the impact of the “alternative framings” of the news articles on how participants evaluated its tone and informativeness along with how it made them feel about the subject of the news article. Here are some key findings:
+1. Both positively and negatively framed news articles “significantly influence” how participants feel about the subject of the article. However, news stories with a negative framing had a substantially larger impact on how respondents felt about the subject. Specifically, the negative framing led to an “average treatment effect of – 18.5 percentage points." This indicates that negatively biased news coverage has a greater impact on how participants feel about the subject of the story.
+2. The authors also examined whether these biased news articles shaped deeply held opinions about the content presented and found that articles with negative framing significantly shifted opinion while there was “no significant effect in the positive direction.” This result indicates that biased news articles not only “alter feelings toward the subject”, but can “also influence how people perceive the facts associated with these events.”
+3. The negative framing in news articles presented to participants had a “substantially larger effect” among those who self-reported as less informed. This indicates that people who don't consider themselves well versed about the news cycle are more susceptible to selective reporting and tonal shifts in news coverage.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">This study shows that the “selective presentation of truthful information” can influence both the feelings and opinions regarding important news events. Moreover, by using an LLM to create a set of articles that are factually accurate but differ in tone(i.e., based on what content is included and what is left out) this paper highlights the “ease with which bias can be introduced to otherwise typical news coverage as well as its impact on readers.” Thus, grasping the role of misinformation in society must go beyond addressing falsehoods by also addressing “biased, yet factually accurate, reporting practices prevalent in mainstream media.”</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">Traditional research about the impact of media bias on public opinion has faced two important limitations. First, researchers have tended to manually draft news articles, making it difficult to change one factor (e.g., tone or content) while keeping everything else (e.g., writing style and factual accuracy) the same. Second, prior work has focused on single issues such as immigration, gun control, or civil protests, limiting the ability to determine whether findings apply more broadly. This study addresses both limitations by using LLMs, which can “discern subtle variations in tone, emphasis, and narrative structure” in news articles, allowing for more generalizable findings about how media framing affects public opinion. The study also speaks to the growing role of automated journalism in news production. Decisions about which data are included and how models are prompted "can have significant downstream effects on how events are framed."</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.nature.com/articles/s41598-025-29519-9" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#rethinking-news-framing-with-large-language-models');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="using-a-mental-model-approach-to-undercut-the-effects-of-exp" data-faculty="kathleen hall jamieson" data-year="2025" data-themes="Misinformation & Belief Change,Persuasion & Communication">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://www.pnas.org/doi/10.1073/pnas.2517067122" target="_blank" rel="noopener" onclick="event.stopPropagation()">Using a mental model approach to undercut the effects of exposure to mRNA vaccination misconceptions: Two randomized trials</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation & Belief Change</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Communication</span></div>
+      </div>
+      <div class="entry-faculty">Kathleen Hall Jamieson</div>
+      <div class="entry-date">11/24/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">This paper showed that presenting conceptual scientific knowledge that counters vaccine misinformation without directly refuting false claims can be more effective than merely correcting false claims.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This research paper tested whether teaching people how mRNA vaccines and cellular DNA protection actually work could reduce susceptibility to vaccine misinformation. Rather than directly correcting false claims (as in traditional fact-checking), the researchers conducted two studies that employed a "mental model approach", providing detailed explanations about how vaccines work. Two preregistered experiments tested this approach with U.S. adults. The first study graphically displayed how mRNA vaccines work (the vaccine model) and how human cells protect themselves from foreign DNA (the cell protection model), along with additional material on vaccine safety. The second study used an animated video to explain the cell protection model, either by itself or combined with the first study’s materials. Both experiments intentionally avoided directly refuting false claims about the vaccines. 
+The researchers also examined if exposure to misinformation would increase misconceptions, specifically using Florida Surgeon General Joseph Ladapo's false claim that DNA fragments in mRNA vaccines could integrate into recipients' DNA. They further tested whether the proposed “mental model approach” could protect against this false claim. Here are some key findings:
+1. Participants exposed to Ladapo’s false claims regarding DNA integration reduced accurate responses from subjects in both studies, showing that vaccine misinformation from seemingly authoritative sources can have a negative impact. Similarly, subjects who did not see this content and were only exposed to either mental models led to more accurate responses compared to the control group.
+2. Participants exposed to the mental models along with Ladapo's problematic claims showed more accurate responses than those who only saw Ladapo's claims, regardless of presentation order.
+3. Preemptive positioning may be slightly more effective than correction with authors finding that presenting the mental models before exposure to misconceptions was somewhat more protective than presenting the models as a rebuttal, that is, after exposure to vaccine misinformation.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">This paper showed that presenting conceptual scientific knowledge that counters vaccine misinformation without directly refuting false claims can be more effective than merely correcting false claims.</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">This study addresses some of the issues with traditional fact-checking regarding vaccine misinformation by introducing a “mental model approach” that shows how vaccines actually work, thereby contradicting false claims without directly responding to them. As the authors note, this approach has practical applications, as it can be “introduced in a live debate or in educational, clinical, or public health settings long before misconception exposure.”</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.pnas.org/doi/10.1073/pnas.2517067122" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#using-a-mental-model-approach-to-undercut-the-effects-of-exp');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="brain-activity-explains-message-effectiveness-a-mega-analysi" data-faculty="emily b. falk" data-year="2025" data-themes="Persuasion & Communication">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://pubmed.ncbi.nlm.nih.gov/41200100/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Brain activity explains message effectiveness: A mega-analysis of 16 neuroimaging studies</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Communication</span></div>
+      </div>
+      <div class="entry-faculty">Emily B. Falk</div>
+      <div class="entry-date">11/4/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">This study shows that neural indicators of reward, language and emotions processing are associated with the persuasiveness of messages both for individuals and at scale.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This paper uses a large-scale mega-analysis of 16 fMRI studies to examine the neural mechanisms underlying why some messages are more persuasive than others across domains such as health, marketing, and political communication. By pooling raw neuroimaging data across 16 separate studies, the authors test whether the neural coorelates for persuasive messaging applies at the individual level and among large groups "of message receivers who did not undergo neuroimaging." Here are some key findings:
+1. Messages that elicit greater activation in brain systems associated with reward and social cognition are more likely to be effective. Moreover, message effectiveness at scale was corelated with greater activation in the VTA, a part of the dopaminergic reward system, related to "anticipation and receipt of personal rewards" and social conformity. 
+2. Mentalizing, which refers to the process by which "people understand themselves and the minds of others," was associated with strong effects in the "dorsomedial prefrontal cortex, and cerebellar regions."
+3. Supplimentary analyses found that brain regions associated with language processing and emotions had a positive effect on message effectiveness.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">This study shows that neural indicators of reward, language and emotions processing are associated with the persuasiveness of messages both for individuals and at scale.</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">Persuasive messaging shapes outcomes in public health, advertising and political communications, yet research on what makes messages effective is often siloed by domain or method. This paper contributes approach of pooling available data from 16 different neuroimaging studies shows how "certain basic mechanisms may be active across different messaging contexts and may inspire novel strategies targeting these mechanisms."</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/41200100/" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#brain-activity-explains-message-effectiveness-a-mega-analysi');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="identity-related-speech-suppression-in-generative-ai-content" data-faculty="danaé metaxa" data-year="2025" data-themes="AI & LLMs">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://dl.acm.org/doi/10.1145/3757887.3763010" target="_blank" rel="noopener" onclick="event.stopPropagation()">Identity-related Speech Suppression in Generative AI Content Moderation</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span></div>
+      </div>
+      <div class="entry-faculty">Danaé Metaxa</div>
+      <div class="entry-date">11/4/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">This paper provides a methodological framework to test automated moderation systems for incorrect speech suppression and in doing so, shows that there will be a tradeoff between “filtering out undesired content and ensuring that other speech is allowed.”</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This paper examines how automated content-moderation systems may incorrectly suppress identity-related speech. Using both traditional short-form user-generated text and “longer generative-AI-focused data” introduced in the paper, the researchers created a benchmark to measure speech suppression for nine identity groups. Here’s what they found:
+1.  Identity-related speech is more frequently suppressed than other forms of speech across both traditional and automated moderation services. 
+2. Identity-related speech has a higher likelihood of being suppressed for both marginalized and non-marginalized groups, except for those identified as “straight” and/or “Christian.”
+3. The reasons for speech suppression by the content moderation systems tested in this paper differ based on the stereotypes and text associations for specific identity groups. Eg: non-Christian content had a higher likelihood of being incorrectly flagged as hateful.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">This paper provides a methodological framework to test automated moderation systems for incorrect speech suppression and in doing so, shows that there will be a tradeoff between “filtering out undesired content and ensuring that other speech is allowed.”</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">Gen AI is being rapidly integrated into platform moderation. Companies like Meta and Tiktok have laid off trust and safety workers and contracted moderators in favor of automated systems, potentially to cut costs and improve efficiency while also reducing the reliance on human moderators that experience severe psychological distress for being exposed to streams of problematic content. Given these incentives, it is crucial to understand the gaps and potential pitfalls of relying on LLM based content moderation. While a lot of AI safety research has looked into how to prevent these systems from producing “undesired outcomes”, less attention has been paid to “making sure appropriate text can be generated.” This paper addresses this research gap by providing “the first comprehensive bias audit of generative AI speech suppression across five automated content moderation APIs” and shows how identity-based stereotypes may permeate LLMs and inadvertently suppress permissible speech.</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://dl.acm.org/doi/10.1145/3757887.3763010" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#identity-related-speech-suppression-in-generative-ai-content');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="experimental-evidence-of-the-effects-of-large-language-model" data-faculty="shiri melumad" data-year="2025" data-themes="AI & LLMs">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://academic.oup.com/pnasnexus/article/4/10/pgaf316/8303888" target="_blank" rel="noopener" onclick="event.stopPropagation()">Experimental evidence of the effects of large language models versus web search on depth of learning</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span></div>
+      </div>
+      <div class="entry-faculty">Shiri Melumad</div>
+      <div class="entry-date">10/28/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">LLMs reduce the effort it takes to find information about a topic but often at the expense of developing a deeper understanding of the topic. This in turn, makes LLM-assisted analyses less informative.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">In this research paper, the authors examined “how one’s ability to learn about a topic” is impacted by the use of LLMs versus traditional web search and found that while LLMs may make accessing information easier, it may come at the cost of reducing the “depth of knowledge users may develop.” In a series of experiments, the researchers had participants use different search methods (ChatGPT vs. Google, LLM summaries vs. linked articles, or Google's standard results vs. AI Overviews) to learn about a topic and draft advice based on what they learned. Independent evaluators, blind to the search method used, rated the participant-generated advice to assess downstream consequences of using LLMs vs traditional search. Here are some key findings:
+1. Those who used ChatGPT spent less time on the task and reported that “they learnt fewer new things about the subject.” Participants learning via ChatGPT also put less effort in creating advice and thus felt less “personal ownership” on what they created.
+2. Even when the same information was presented as an LLM summary rather than a series of web links, participants reported putting less effort in learning and developed only a “shallow understanding of the topic.”
+3. Evaluators found advice based on learning from Google's AI Overviews (vs. web links) to be less helpful and less informative. They also believed less effort had been put into writing the advice, found it less trustworthy, and were less willing to adopt it themselves or recommend it to others.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">LLMs reduce the effort it takes to find information about a topic but often at the expense of developing a deeper understanding of the topic. This in turn, makes LLM-assisted analyses less informative.</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">The rise of ChatGPT and Google’s AI Overviews reflects how LLMs are reshaping how we search for information. According to a recent <a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/" target="_blank" rel="noopener">Pew research report</a>, users are less likely to click through webpages when presented with Google’s AI summary. While a lot of attention has gone into examining the accuracy of these summaries and its potential for spreading falsehoods, this paper examines its adverse effects on learning. If LLM-mediated search is the future, this paper argues that it may make learning a more “passive” activity.</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://academic.oup.com/pnasnexus/article/4/10/pgaf316/8303888" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#experimental-evidence-of-the-effects-of-large-language-model');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="persuasion-and-dissuasion-in-political-campaigns-communicati" data-faculty="pinar yildirim" data-year="2025" data-themes="Political Polarization,Persuasion & Communication">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://link.springer.com/article/10.1007/s11129-025-09300-y" target="_blank" rel="noopener" onclick="event.stopPropagation()">Persuasion and dissuasion in political campaigns: Communication and media coverage in senate races</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Communication</span></div>
+      </div>
+      <div class="entry-faculty">Pinar Yildirim</div>
+      <div class="entry-date">10/22/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">The effects of campaign speeches on electoral performance are constrained by what media organizations choose to amplify and this research finds that the media prefers polarizing content.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">Politicians tend to switch between partisan and centrist rhetoric based on perceived electoral gains. Which type of rhetoric yields votes also depends on what media platforms choose to amplify. In this paper, the researchers set out to examine (1) how candidates’ incentives to target audiences to win votes and (2) how the media’s incentives to cover political campaigns “interact to shape campaign speech and campaign performance.” This is empirically challenging because the electorate is not homogenous, meaning that the same campaign remark can persuade some but dissuade others. Thus, most previous research has looked at “net effects”, limiting the understanding of “the underlying trade-offs that candidates face.” 
+To address this, the authors developed a method to separately measure persuasion and dissuasion effects. They used text analysis to classify more than 200,000 newspaper stories from U.S. Senate races (1980-2012) as either partisan voter-oriented or swing voter-oriented, linking those to high-frequency polling data. Here's what they found:
+1. Candidates prefer for partisan rhetoric to “fly under the radar” whereas the media prefers more polarizing content. Conversely, candidates would like rhetoric aimed at swing voters (centrist appeals) to be covered by the media but the media tends to ignore it.
+2. Democrat appeals to their voter base are “four times more effective” at mobilizing voter turnout compared to Republican appeals. However, this increase in partisan rhetoric by Democrats triggers “twice the level of backlash” from swing voters. On average, 56% remarks by Democrat candidates and 45% remarks by Republican candidates aim to mobilize partisans.
+3. Media coverage for both parties is balanced. Because media outlets prefer partisan content but Democrats produce less of it (due to swing-voter penalties), both parties receive similar overall coverage rates.
+4. In states where Democrats make up a smaller share of the electorate, swing voters reward Democratic centrist appeals more strongly. Competitiveness also matters: as polling gaps narrow, Republican speech targeting swing-voters becomes more effective.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">The effects of campaign speeches on electoral performance are constrained by what media organizations choose to amplify and this research finds that the media prefers polarizing content.</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">Algorithms curate content based on engagement and not newsworthiness. The authors contend that by allowing candidates to microtarget campaign passages via social media, these platforms may lower the swing-voter backlash that once disciplined Democratic rhetoric. At the same time, if social media-driven polarization is shrinking the pool of persuadable swing voters, future campaigns may become even more partisan and weaken the “moderating role of the press.”</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://link.springer.com/article/10.1007/s11129-025-09300-y" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#persuasion-and-dissuasion-in-political-campaigns-communicati');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="culturally-aware-conversations-a-framework-amp-benchmark-for" data-faculty="lyle ungar" data-year="2025" data-themes="AI & LLMs,Research Methods">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://arxiv.org/pdf/2510.11563" target="_blank" rel="noopener" onclick="event.stopPropagation()">Culturally-Aware Conversations: A Framework &amp; Benchmark for LLMs</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Research Methods</span></div>
+      </div>
+      <div class="entry-faculty">Lyle Ungar</div>
+      <div class="entry-date">10/13/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">LLMs developed in the West struggle to adapt to cultural nuances in specific conversational settings. The framework proposed in this paper can help guide future “AI systems that better
+understand, respect, and adapt to diversity in communication.”</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">AI chatbots are used by people from diverse cultural backgrounds but are they “culturally aware?” In this paper, the authors introduce the “first framework and benchmark designed to evaluate LLMs in realistic, multicultural conversational settings.” To do so, the authors, in consultation with cultural experts, designed six conversational situations where the LLM’s ideal response should be culturally sensitive. For example, when discussing personal accomplishments, some cultures may view celebration as confidence while others may view it as arrogance. The authors used an OpenAI model to generate a dataset of 48 conversations, each with five possible responses that vary stylistically while conveying the same underlying message. They recruited 24 annotators from eight countries to determine which responses are most culturally appropriate in each conversational situation. 
+After evaluating five models from OpenAI, Google and Anthropic based on this framework, the researchers found that all models perform best in the Western cultural context. Across the board, the highest accuracy scores were for America and the Netherlands. This is worrying because LLMs have become quite popular in non-Western contexts and this research suggests that LLMs are “less likely to align with local users’ communication practices.”</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">LLMs developed in the West struggle to adapt to cultural nuances in specific conversational settings. The framework proposed in this paper can help guide future “AI systems that better
+understand, respect, and adapt to diversity in communication.”</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">Most cultural benchmarks for LLMs are “factual”, lacking focus on conversational style. This paper provides a way to assess LLMs in “realistic, multicultural conversational settings.”</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://arxiv.org/pdf/2510.11563" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#culturally-aware-conversations-a-framework-amp-benchmark-for');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="learning-human-perceived-fakeness-in-ai-generated-videos-via" data-faculty="chris callison-burch and dan roth" data-year="2025" data-themes="AI & LLMs,Misinformation & Belief Change">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://arxiv.org/abs/2509.22646" target="_blank" rel="noopener" onclick="event.stopPropagation()">Learning Human-Perceived Fakeness in AI-Generated Videos Via Multimodal LLMs</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation & Belief Change</span></div>
+      </div>
+      <div class="entry-faculty">Chris Callison-Burch and Dan Roth</div>
+      <div class="entry-date">10/01/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Existing AI models are reasonably able to classify videos as either real or fake. That being said, most models have a bias towards real videos, meaning they have higher accuracy in correctly identifying real videos compared to fake ones.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">The rise and growing sophistication of AI-generated videos has made identifying what is real, rather than AI generated, more challenging. The authors argue that despite advances in these video generation models, the question of whether humans can identify and provide reasons for why a video is machine generated has been largely overlooked. To address this, the researchers introduce DEEPTRACEREWARD, a benchmark built on a dataset of 4,300 expert annotations across 3,300 AI-generated videos from seven state-of-the-art video generators. Each annotation identifies the portion of the video containing the sign, or trace, that the video was fake, the time it occurs, and a natural-language explanation of what gave it away. Based on these annotations, the researchers identify 9 categories through which humans identified a video as AI-generated. Reasons for why annotators identified videos as fake included object and background distortions, sudden blurring, and objects unnaturally disappearing mid-scene.
+The researchers then evaluated 13 existing AI models on their ability to identify these human-perceived deepfake traces, asking: do current AI models possess human-level visual intelligence to identify deepfake traces, and if not, can they be taught to do so using DEEPTRACEREWARD?  Here are some key results:
+1. While frontier models such as GPT-5 and Gemini 2.5 Pro achieved over 70% accuracy when classifying videos as fake or real, their performance on identifying exactly where and why a video is fake was below 36%.
+2. The researchers also  fine-tuned an existing AI model (LLaMa 3) on their benchmark, which achieved an overall score of 70.2%, outperforming GPT-5 by nearly 35 percentage points. Across all models, a consistent pattern emerged: binary classification was easiest, followed by natural language explanation. Identifying the location and time of the deepfake trace was much harder. spatial localization, with temporal localization being hardest.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">Existing AI models are reasonably able to classify videos as either real or fake. That being said, most models have a bias towards real videos, meaning they have higher accuracy in correctly identifying real videos compared to fake ones.</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">This paper shows that existing methods to evaluate AI-generated videos ignore the “crucial role of human perception” in determining authenticity. The researchers help address this research gap by introducing DEEPTRACEREWARD, the first large-scale benchmark with expert human annotations explaining how and why a video is machine generated, with the goal of helping future AI video generation models better reflect how humans see and judge authenticity.</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://arxiv.org/abs/2509.22646" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#learning-human-perceived-fakeness-in-ai-generated-videos-via');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="why-depolarization-is-hard-evaluating-attempts-to-decrease-p" data-faculty="yphtach lelkes" data-year="2025" data-themes="Political Polarization">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://www.pnas.org/doi/10.1073/pnas.2508827122" target="_blank" rel="noopener" onclick="event.stopPropagation()">Why Depolarization is Hard: Evaluating attempts to decrease partisan animosity in America</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span></div>
+      </div>
+      <div class="entry-faculty">Yphtach Lelkes</div>
+      <div class="entry-date">9/23/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Online interventions aimed at “depolarization” by themselves are not a “scalable solution for reducing societal conflict” and efforts must be made to study “elite behaviors and structural incentives that fuel partisan conflict.”</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This paper introduces two new experiments and provides a meta analysis that looks into the efficacy of online interventions designed to reduce “partisan animosity.” Here’s what they found:
+1. Depolarization is difficult to implement and scale. In their meta-analysis, the researchers find that these interventions have small effects, “a 5-point shift on a 101-point scale,” and become weaker with time. 
+2. Efficacy of depolarization does not improve with repeated exposure, indicating that solutions to online polarization require going beyond user-level interventions.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">Online interventions aimed at “depolarization” by themselves are not a “scalable solution for reducing societal conflict” and efforts must be made to study “elite behaviors and structural incentives that fuel partisan conflict.”</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">Partisan divides on both traditional and online media platforms are often framed as a consequence of “echo chambers” wherein people are less likely to view/engage with disagreeable content. The tendency for homogeneity in social discourse has led some to tout depolarization interventions as an effective solution to reduce partisan divides. But does exposure to contrary views bring people closer together? This is an empirical question with important policy implications. 
+This paper challenges this assumption, providing empirical evidence suggesting that the gains of depolarization may be overstated and suggests shifting focus toward understanding the societal level incentives that encourage online partisanship.</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.pnas.org/doi/10.1073/pnas.2508827122" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#why-depolarization-is-hard-evaluating-attempts-to-decrease-p');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="changing-beliefs-or-changing-behavior-understanding-the-beli" data-faculty="dolores albarracín" data-year="2025" data-themes="Misinformation & Belief Change,Persuasion & Communication">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://myscp.onlinelibrary.wiley.com/doi/abs/10.1002/jcpy.70014" target="_blank" rel="noopener" onclick="event.stopPropagation()">Changing beliefs or changing behavior? Understanding the belief-to-behavior process and intervening to curb the impact of misinformation</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation & Belief Change</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Communication</span></div>
+      </div>
+      <div class="entry-faculty">Dolores Albarracín</div>
+      <div class="entry-date">9/10/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">To effectively combat misinformation, interventions must go beyond describing what is true or false. If the goal is to change behavior in this regard, it is critical to recognize "when, how, and why a belief matters for behavior, and when behavior must be addressed in a direct way."</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><a href="https://www.tandfonline.com/doi/full/10.1080/1047840X.2025.2482343">Prior research</a> has shown that the relationship between beliefs and behavior is often weak, variable, and highly context-dependent. This paper examines this "belief-to-behavior inference model" and challenges the assumption that "misinformation must be corrected to change behavior." The authors look at both individual and societal level interventions to examine if and to what extent belief change can prompt behavior change, especially when it comes to combating misinformation. Here are a few important findings from their review:
+1. Beliefs are more likely to drive behavior change when specific goals are activated and "inferential paths are short." Based on the author's proposed framework, interventions that combat misinformation like prebunking will be better at changing behaviors by focusing on outcome beliefs or include "direct calls to action."
+2. The authors also provide promising alternatives to prebunking and fact-checking for combating misinformation with behavior change in mind. For instance, they find that self affirmations reduce defensiveness, especially when misinformation targets a social identity and "bypassing" which highlights alternative viewpoints without directly confronting misinformation to be effective. The important thing to keep in mind is that interventions must "shift the locus of change from belief accuracy
+to behavior change."
+3. Legal and administrative sanctions with the goal of increasing trust in institutions have "negligible effects" on behavior change while broader societal interventions like providing support networks, and upholding social norms are important.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">To effectively combat misinformation, interventions must go beyond describing what is true or false. If the goal is to change behavior in this regard, it is critical to recognize "when, how, and why a belief matters for behavior, and when behavior must be addressed in a direct way."</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">Combating misinformation is a priority for journalists, platforms and policymakers. Strategies like fact-checking is often framed as a solution to the problem. But as this paper shows, if the goal is to target behavior change, merely educating people about what is true or false may not be enough. Through this paper, the authors show that interventions are more likely to shape behavior if "beliefs are behaviorally engaged, inferentially accessible, and contextually relevant". Overall this paper provides the groundwork to ensure that future interventions to combat misinformation are "better calibrated to the realities of human.</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://myscp.onlinelibrary.wiley.com/doi/abs/10.1002/jcpy.70014" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#changing-beliefs-or-changing-behavior-understanding-the-beli');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="the-persistence-of-cross-cutting-discussion-in-a-politicized" data-faculty="diana c. mutz" data-year="2025" data-themes="Political Polarization">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://www.pnas.org/doi/10.1073/pnas.2516942122" target="_blank" rel="noopener" onclick="event.stopPropagation()">The persistence of cross-cutting discussion in a politicized public sphere</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span></div>
+      </div>
+      <div class="entry-faculty">Diana C. Mutz</div>
+      <div class="entry-date">8/26/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">There has been a significant increase in political discussions in the United States, largely due to “increases in like-minded political discussion partners.” However, conversations across the political aisle (cross-cutting conversations) are "no less common than they were 25 years ago," and the paper concludes that elites rather than the mass public may be greater contributors to widespread political intolerance.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">In this research paper, Diana Mutz uses "two identical pre-election surveys" from 1996 and 2020 respectively to examine changes in the political discussion networks of Americans in the 25 years between both surveys and its implications for political participation and partisan tolerance. Here are some key findings:
+1. When comparing results from both pre-election surveys (1996 and 2020), the study finds that political discussants, which refers to the number of people someone talks to about politics, increased by 22% among all respondents. However, to account for changes in survey best practices and ensure uniformity, the paper also compared the 1996 results with a subset of "respondents randomly assigned to take the survey by telephone in 2020, as was originally done in 1996" and found an even larger increase in political discussants (33%) compared to 1996.
+2. Despite the increase in political conversations among Americans, the study found no significant increase in political discussions with those that have opposing views. When looking at the composition of Americans' political discussion networks, the study finds that the number of "like-minded discussants" increased the most and "oppositional discussants were largely unchanged." This indicates that on average, political networks of Americans have only grown more homogenous over time. 
+3. In 1996, women had greater cross cutting conversations, which refers to conversations with people who hold different political views, but in 2020, "this relationship had completely reversed, with women now reporting systematically less cross-cutting discussion than men." 
+4. The study finds a 9% decrease in political tolerance from 1996 to 2020. Political participation however increased given the greater homogeneity in political discussion networks with the study suggesting that the number of "like-minded discussants" in one's political networks is a salient predictor for political participation, or put more simply, that people are more likely to engage in political action when they feel validated in their views.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">There has been a significant increase in political discussions in the United States, largely due to “increases in like-minded political discussion partners.” However, conversations across the political aisle (cross-cutting conversations) are "no less common than they were 25 years ago," and the paper concludes that elites rather than the mass public may be greater contributors to widespread political intolerance.</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">A lot of interventions in recent years aimed at curbing polarization have focused on increasing cross-cutting political discussions with the assumption that "more cross-cutting contact in the mass public could stem the tide of rising polarization and violations of democratic norms." However, this paper shows that Americans dislike engaging in such discussions and even so, the prevalence of such "cross cutting discussions" has remained largely unchanged. Thus, solutions for curbing political polarization that are based on incentivizing communication with "out-partisans" may not be highly effective.</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.pnas.org/doi/10.1073/pnas.2516942122" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#the-persistence-of-cross-cutting-discussion-in-a-politicized');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="talking-point-based-ideological-discourse-analysis-in-news-e" data-faculty="daniel j. hopkins" data-year="2025" data-themes="AI & LLMs,Research Methods">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://aclanthology.org/2025.findings-acl.32.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Talking Point based Ideological Discourse Analysis in News Events</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Research Methods</span></div>
+      </div>
+      <div class="entry-faculty">Daniel J. Hopkins</div>
+      <div class="entry-date">7/27/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">This paper shows that LLMs can be a powerful tool to analyze news discourse at scale, and may lead to a better understanding of ideological competition in the information ecosystem. The proposed framework addresses limitations regarding the ability for LLMs to "integrate contextual information required for understanding abstract ideological views."</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This paper introduces and evaluates an LLM-based framework for analyzing the ideological discourse pertaining to news events. The authors do so by representing news articles based on their talking points, capturing how the media frames the particular topic of discussion. The framework then uses an LLM to extract "prominent talking points (PTPs)" from news events. Each PTP is "infused with ideological information," which reveal left-leaning vs right-leaning viewpoints, referred to as partisan perspectives. The researchers develop and release a  dataset including 6,141 news articles sourced from 126 outlets covering 24 events related to 4 politically contested topics. For each event, the framework generates a PTP and the aggregate partisan perspectives. The researchers evaluated the framework's ability to generate these perspectives via both automated tasks and human validation.
+The paper then seeks to assess whether the LLM-based framework can predict the partisan leaning (left or right) of news articles related to the event, but not part of the initial dataset. For each new article, the framework identified the three most similar left- and right-leaning partisan perspectives and asked an LLM to determine which group the article aligned with most closely. The paper compares this method with simply prompting an LLM to provide ideological labels. Here are some key findings:
+1. The author’s classification approach outperformed directly prompting an LLM, suggesting the framework effectively captures ideological signals across many articles about the same event.
+2. When the researchers used the partisan perspectives as training data to fine-tune a model, the fine-tuned model outperformed the base model on ideology classification which indicates that the framework's generated partisan perspectives "encodes ideology-specific nuances."
+3. The researchers also conducted a human evaluation to measure the "quality of generated partisan perspectives" and found that these viewpoints can be incorrect, especially when the LLM produces inaccurate summaries of news articles.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">This paper shows that LLMs can be a powerful tool to analyze news discourse at scale, and may lead to a better understanding of ideological competition in the information ecosystem. The proposed framework addresses limitations regarding the ability for LLMs to "integrate contextual information required for understanding abstract ideological views."</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">Through this paper, the authors provide an LLM-based framework to analyze ideological discourse about news events. Moreover, by analyzing "highly contested repeating themes," the paper offers fresh insights regarding areas of consensus and polarization. The authors have also released the dataset and model from this paper to the broader community to facilitate further research.</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://aclanthology.org/2025.findings-acl.32.pdf" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#talking-point-based-ideological-discourse-analysis-in-news-e');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="unraveling-a-cancel-culture-dynamic-when-why-and-which-ameri" data-faculty="matt levendusky" data-year="2025" data-themes="Political Polarization">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://www.journals.uchicago.edu/doi/full/10.1086/733004" target="_blank" rel="noopener" onclick="event.stopPropagation()">Unraveling a “Cancel Culture” Dynamic: When, Why, and Which Americans Sanction Offensive Speech</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span></div>
+      </div>
+      <div class="entry-faculty">Matt Levendusky</div>
+      <div class="entry-date">3/10/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Whether “cancel culture” is perceived as harmful or beneficial depends on how citizens prioritize competing values. That is, a commitment to “unfettered speech” versus the goal of protecting “marginalized groups in the public sphere.”</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This paper empirically examines how often Americans actually sanction (or “cancel”) others for offensive speech, why they do so, and how accurately they perceive others' canceling behavior.
+The researchers administered a nationally representative survey (N=1,752), asking if respondents engaged in specific “cancelling behaviors” and the extent to which they perceived others to do so. Subsequently, respondents participated in an experiment, reading four hypothetical scenarios wherein speakers made potentially offensive statements. Each scenario randomly varied the speaker's partisanship or race, their role, and what they said. Respondents rated their likelihood of engaging in different canceling behaviors for each scenario. Here are some key findings:
+1. The paper finds that Americans tend to inflate by at least a factor of two “how often their fellow citizens cancel others.” In particular, the research found that respondents were “10 times more likely” to witness someone else engage in doxing than to have done it themselves, showing that people’s perception about the prevalence of cancelling behavior is far greater than the number of people who do it. 
+2. Contrary to popular belief and media coverage regarding cancel culture, this research suggests that Americans tend to cancel offensive speech that counters their "ideological leanings, regardless of who says them.” As the authors note, “generally, citizens do not care who makes offensive statements.”
+3. Democrats and Republicans are “similarly likely to engage in cancelling behavior” due to “ideologically disagreeable ideas.” But why does this finding contradict reports suggesting Democrats cancel more often than Republicans? The authors contend that the “supply of offensive statements” during data collection likely had a “right leaning bias.”</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">Whether “cancel culture” is perceived as harmful or beneficial depends on how citizens prioritize competing values. That is, a commitment to “unfettered speech” versus the goal of protecting “marginalized groups in the public sphere.”</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">This research paper is “among the first to empirically investigate the prevalence and motives of canceling among the American public.” Moreover, the paper’s findings regarding the politicized misperceptions about who cancels whom and why “could exacerbate partisan animus and
+discourage cross-party dialogue.”</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.journals.uchicago.edu/doi/full/10.1086/733004" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#unraveling-a-cancel-culture-dynamic-when-why-and-which-ameri');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="more-platforms-less-attention-to-news-a-multi-platform-analy" data-faculty="sandra gonzález-bailón" data-year="2025" data-themes="Social Media & Platforms">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://journals.sagepub.com/doi/full/10.1177/14614448251341496" target="_blank" rel="noopener" onclick="event.stopPropagation()">More platforms, less attention to news? A multi-platform analysis of news exposure across TV, web, and YouTube in the United States</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span></div>
+      </div>
+      <div class="entry-faculty">Sandra González-Bailón</div>
+      <div class="entry-date">5/29/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">This study shows that in a world where most people tend to avoid news, a "committed minority" of news consumers have a disproportionate influence on how news is disseminated.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This paper explores how news consumption is shaped by a "multi-platform media environment" and whether exposure to multiple media platforms "alleviates or exacerbates observed inequalities in attention to news." To do so, the researchers tracked and analyzed news exposure across TV, the web and YouTube for 55000 unique panelists across 39 months. Results from this study provide insights into the fraction of news consumers specific to each platform and their demographic profiles. Further analyses looks at whether multi-platform news exposure affects time spent engaging with news sources. Here are some key findings:
+1. TV has the largest reach when it comes to news exposure, with 80% of panelists reporting seeing at least one news channel. Less than half of the panelists reported accessing news via the web while only 5% of overall visits to YouTube were to access news sources. 
+2. When looking at time spent accessing news, the study finds that the "the skewness of the distribution becomes more prominent as we move from TV to the web and to YouTube." This trend indicates the possibility of "news fatigue" on TV and web searchers while YouTube news consumption is on the rise despite being a very small component of overall YouTube traffic.
+3. Young people are comparatively less interested in news consumption and multi-platform news consumers tend to be older and more educated. 
+4. Lastly, exposure to more media platforms only increases news consumption for the "the unrepresentative minority of news consumers, who generate most engagement with online news."</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">This study shows that in a world where most people tend to avoid news, a "committed minority" of news consumers have a disproportionate influence on how news is disseminated.</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">Based on their findings, the researchers importantly conclude that "online media is amplifying the already high levels of interest of cross-platform consumers, setting them farther apart from the average citizen." Moreover, with results showing that TV is still the most common avenue to access news, this research makes the case for why the amount of scholarly interest on online news exposure is disproportionate to the relative impact these sources have compared to TV."</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://journals.sagepub.com/doi/full/10.1177/14614448251341496" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#more-platforms-less-attention-to-news-a-multi-platform-analy');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="listen-for-a-change-a-longitudinal-field-experiment-on-liste" data-faculty="erik santoro" data-year="2025" data-themes="Persuasion & Communication">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://www.pnas.org/doi/10.1073/pnas.2421982122" target="_blank" rel="noopener" onclick="event.stopPropagation()">Listen for a change? A longitudinal field experiment on listening’s potential to enhance persuasion</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Communication</span></div>
+      </div>
+      <div class="entry-faculty">Erik Santoro</div>
+      <div class="entry-date">2/20/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">When it comes to conversations about policy-level disagreements, “listening may not reliably enhance persuasion efforts.” Thus, from a practical standpoint, “adding listening to persuasive appeals may not be worth the added costs if persuasion is the goal.”</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This paper empirically investigates whether actively listening to someone's views on a topic before trying to convince them about an alternative viewpoint is effective. Or put simply, does listening enhance persuasion? To address this question, the researchers conducted a field experiment with 1,485 participants who had 10-minute video conversations with trained canvassers about unauthorized immigration policy. Participants were randomly assigned to four conditions: 1) canvassers listened to participants' views; 2) canvassers listened then shared a persuasive narrative; 3) canvassers shared a persuasive narrative without listening; or 4) a placebo where canvassers did neither. The main outcome of interest was whether participants reported a “reduction in exclusionary attitudes”, that is, lower “prejudice toward undocumented immigrants and support of anti-undocumented immigrant policies.”Here are some key findings:
+1. Persuasive narratives changed attitudes substantially, whether or not canvassers listened first. Participants who heard a persuasive narrative showed reductions in anti-immigrant prejudice and opposition to pro-immigrant policies, with effects persisting five weeks later. Thus, while a persuasive appeal “effectively changed prejudice and policy attitudes,” “adding listening to the persuasive appeal did not change attitudes any further.”
+2. Contrary to popular belief, this research found little evidence to support the claim that listening alone can change political attitudes, with the study only finding “marginal differences” between the “listening only condition” and the placebo. 
+3. Participants who were listened to before being persuaded reported feeling less defensive and had more favorable views of the canvasser, but this did not significantly change their attitudes. This shows that people tend to change their attitudes in response to persuasive appeals even from those they dislike.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">When it comes to conversations about policy-level disagreements, “listening may not reliably enhance persuasion efforts.” Thus, from a practical standpoint, “adding listening to persuasive appeals may not be worth the added costs if persuasion is the goal.”</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">Politicians and advocates alike have touted the role of listening as a means to facilitate common ground and bridge political divides. The idea being that when people feel heard, they are more likely to be receptive to opposing viewpoints. This research paper tests this claim empirically and finds that the role of listening in enhancing persuasion may be overstated. Thus, these findings can help guide future interventions designed to bridge divides.</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.pnas.org/doi/10.1073/pnas.2421982122" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#listen-for-a-change-a-longitudinal-field-experiment-on-liste');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="short-term-exposure-to-filter-bubble-recommendation-systems" data-faculty="dean knox" data-year="2025" data-themes="Social Media & Platforms">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2318127122" target="_blank" rel="noopener" onclick="event.stopPropagation()">Short-term exposure to filter-bubble recommendation systems has limited polarization effects: Naturalistic experiments on YouTube</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span></div>
+      </div>
+      <div class="entry-faculty">Dean Knox</div>
+      <div class="entry-date">2/18/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">While recommendation algorithms can shape what users choose to engage with, this paper finds no evidence that these algorithms radicalize users by pushing extreme content to them in the short-term.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">Academic research and media coverage alike have argued that recommendation algorithms used by companies like YouTube are optimized to drive engagement and have thus driven political polarization by creating “filter bubbles” and “rabbit holes.” Rabbit holes differ from filter bubbles in that recommendations become extreme over time. In this paper, the researchers address this question by creating an interface that mimics how YouTube presents videos and recommendations to users. They simulate filter bubbles and rabbit holes by presenting participants with ideology balanced and more partisan content. The goal here is to see whether the recommendations “alter users’ media consumption decisions and, indirectly, their political attitudes.” Here are some key findings:
+1. The study finds that while changes to recommendation algorithms shapes “user demand” by changing the types of videos consumed and time spent on the platform, it did not have substantial effects in changing political attitudes in the short-term. For example, when the algorithm recommended more videos matching the ideology of what users had just watched (rather than showing balanced recommendations from both sides), the share of liberal videos chosen increased by 6 percentage points among liberals and decreased by 12 percentage points among conservatives, yet these changes in viewing behavior did not translate into meaningful shifts in political attitudes.
+2. On the question of whether recommendation algorithms put users in rabbit holes where they see more extreme content over time, the authors found no significant effects. As the authors note, “any algorithmic effect for rabbit holes that exists is likely far smaller than simply watching conservative or liberal video sequences.”</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">While recommendation algorithms can shape what users choose to engage with, this paper finds no evidence that these algorithms radicalize users by pushing extreme content to them in the short-term.</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">This paper provided participants with choices about media consumption, based on actual YouTube recommendations through “9000-person randomized controlled trials” which according to the authors, “represents the most credible test of the phenomenon to date.” Given its empirical rigor, this paper challenges notions about the potential of platforms like Youtube to radicalize users. If, as this paper suggests, these effects are overstated, it can have significant implications for how policymakers and civil society view algorithmic curation as a driver of polarization.</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.pnas.org/doi/abs/10.1073/pnas.2318127122" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#short-term-exposure-to-filter-bubble-recommendation-systems');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="sanctioning-political-speech-on-social-media-is-driven-by-pa" data-faculty="yphtach lelkes" data-year="2024" data-themes="Political Polarization,Social Media & Platforms">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://academic.oup.com/pnasnexus/article/3/12/pgae534/7906876" target="_blank" rel="noopener" onclick="event.stopPropagation()">Sanctioning political speech on social media is driven by partisan norms and identity signaling</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span></div>
+      </div>
+      <div class="entry-faculty">Yphtach Lelkes</div>
+      <div class="entry-date">11/22/2024</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">This paper shows that sanctioning offensive speech on social media has a performative element: it allows users to signal their party allegiance and loyalty.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">Social media platforms are rife with online firestorms, wherein groups of users shame people for offending political sentiments. In this paper, the authors empirically examine why certain individuals partake in this sanctioning behavior. While shaming people with opposing political beliefs is not novel, social media enables people to get approval from fellow partisans for such behavior (via likes, comments and reshares). Despite these incentives, past research shows that relatively few people engage in such behavior. Through three experiments, the researchers tested whether sanctioning political speech online signals partisan identity, how group approval shapes willingness to sanction, and whether people are more likely to engage in this behavior if they are not the first to do so. Here’s what they found:
+1. Tweets that signal partisan identity without explicitly stating party affiliation affects attitudes “nearly as strongly as” explicitly partisan tweets. For example, a Democrat reading a tweet critical of transgender people is almost as likely to assume the author is a Republican as if they had read a tweet actively campaigning for a Republican candidate. While it's expected that tweets explicitly stating party affiliation signal partisanship, it is worth noting that implicit messaging is just as impactful. 
+2. Participants believe that publicly criticizing political opponents online is something their fellow partisans both approve of and expect them to do.
+3. People are reluctant to be the first to sanction someone online, but will readily pile on once others have acted. Respondents shown an offensive tweet accompanied by existing critical replies were significantly more willing to sanction the speaker than those shown the same tweet with no replies.</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">This paper shows that sanctioning offensive speech on social media has a performative element: it allows users to signal their party allegiance and loyalty.</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">This paper helps shed light on the dynamics and prevalence of online cancel culture. The authors found that most people will readily “pile on” to existing online criticism, but are more reluctant to be the first to criticize. Likes, comments and reshares are visible on social media platforms, and algorithms tend to amplify this moralized content, which is why cancel culture seems to spread rapidly online, even if relatively few people engage in such behavior.</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://academic.oup.com/pnasnexus/article/3/12/pgae534/7906876" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#sanctioning-political-speech-on-social-media-is-driven-by-pa');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="causally-estimating-the-effect-of-youtube-s-recommender-syst" data-faculty="duncan watts" data-year="2024" data-themes="Social Media & Platforms">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://www.pnas.org/doi/10.1073/pnas.2313377121" target="_blank" rel="noopener" onclick="event.stopPropagation()">Causally estimating the effect of YouTube’s recommender system using counterfactual bots</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span></div>
+      </div>
+      <div class="entry-faculty">Duncan Watts</div>
+      <div class="entry-date">2/13/2024</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">While recommendation algorithms may shape content exposure and user preferences on online platforms like YouTube, this paper suggests that narratives about widespread algorithmic manipulation may be overstated.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text">This research paper seeks to causally estimate the effect of YouTube’s recommendation algorithm on consumption of “partisan content” on the platform. The authors accomplish this by comparing bots that replicate the YouTube consumption patterns of real users with what they call, “counterfactual bots” wherein consumption preferences “rely exclusively on recommendations” from YouTube’s algorithm. Here are some key findings:
+1.  Relying solely on Youtube’s recommendation system “results in a more moderate experience on YouTube relative to the real user.”
+2.  When Youtube users shift from consuming partisan content to more moderate content, the sidebar is quick to reflect the change in content preferences while “homepage recommendations react more slowly.”</div>
+        </div>
+        <div class="detail-block takeaway-full">
+          <h4>Key Takeaway</h4>
+          <div class="detail-text">While recommendation algorithms may shape content exposure and user preferences on online platforms like YouTube, this paper suggests that narratives about widespread algorithmic manipulation may be overstated.</div>
+        </div>
+        
+            <div class="detail-block importance">
+              <h4>Why Is This Important?</h4>
+              <div class="detail-text">With over 2.5 billion active monthly users, YouTube is one the biggest online platforms in the world. While in some ways, the platform democratized video sharing and consumption, it's also been criticized for hosting radical content, much like other Big Tech companies like Meta. But is the consumption and proliferation of radical content a consequence of user choice or recommendation algorithms that are optimized to drive engagement? Disentangling the effects of algorithmic amplification from user intentions is difficult and this paper provides a framework to do so. 
+By causally estimating the role of recommendation algorithms in driving partisan content consumption, this paper’s findings have important implications for policymakers seeking to hold platforms accountable for the content they host.</div>
+            </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.pnas.org/doi/10.1073/pnas.2313377121" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="navigator.clipboard.writeText(window.location.origin+window.location.pathname+'#causally-estimating-the-effect-of-youtube-s-recommender-syst');this.textContent='Link copied!';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+      </div>
+    </div>
+  </div>
+  <div class="no-results" id="noResults">No entries match your filters.</div>
+</div>
+
+<script>
+  let activeThemes = new Set();
+  let activeYears = new Set();
+  let allExpanded = false;
+
+  function toggleEntry(topEl) {
+    topEl.closest('.entry').classList.toggle('open');
+  }
+  function toggleExpandAll() {
+    allExpanded = !allExpanded;
+    document.querySelectorAll('.entry:not([style*="display: none"])').forEach(e => e.classList.toggle('open', allExpanded));
+    document.getElementById('expandAllBtn').textContent = allExpanded ? 'Collapse all' : 'Expand all';
+  }
+  function toggleTheme(btn) {
+    const t = btn.dataset.theme;
+    activeThemes.has(t) ? (activeThemes.delete(t), btn.classList.remove('active')) : (activeThemes.add(t), btn.classList.add('active'));
+    applyFilters();
+  }
+  function toggleYear(btn) {
+    const y = btn.dataset.year;
+    activeYears.has(y) ? (activeYears.delete(y), btn.classList.remove('active')) : (activeYears.add(y), btn.classList.add('active'));
+    applyFilters();
+  }
+  function clearFilters() {
+    activeThemes.clear(); activeYears.clear();
+    document.querySelectorAll('.theme-pill.active,.year-btn.active').forEach(el => el.classList.remove('active'));
+    document.getElementById('searchInput').value = '';
+    document.getElementById('authorSelect').value = '';
+    applyFilters();
+  }
+  function applyFilters() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const author = document.getElementById('authorSelect').value.toLowerCase();
+    let visible = 0;
+    document.querySelectorAll('.entry').forEach(entry => {
+      const text = entry.innerText.toLowerCase();
+      const show = (!query || text.includes(query))
+        && (!author || (entry.dataset.faculty||'').includes(author))
+        && (activeYears.size === 0 || activeYears.has(entry.dataset.year))
+        && (activeThemes.size === 0 || [...activeThemes].some(t => (entry.dataset.themes||'').includes(t)));
+      entry.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    document.getElementById('entryCount').textContent = visible + ' entr' + (visible===1?'y':'ies');
+    document.getElementById('noResults').style.display = visible===0 ? 'block' : 'none';
+    document.getElementById('clearBtn').style.display = (activeThemes.size||activeYears.size||query||author) ? 'inline':'none';
+    updateChips();
+  }
+  function updateChips() {
+    const c = document.getElementById('activeChips');
+    c.innerHTML = '';
+    const author = document.getElementById('authorSelect').value;
+    const query = document.getElementById('searchInput').value;
+    if (author) addChip(c,'Author: '+author,()=>{document.getElementById('authorSelect').value='';applyFilters();});
+    if (query) addChip(c,'Search: "'+query+'"',()=>{document.getElementById('searchInput').value='';applyFilters();});
+    activeYears.forEach(y=>addChip(c,y,()=>{activeYears.delete(y);document.querySelectorAll('.year-btn[data-year="'+y+'"]').forEach(b=>b.classList.remove('active'));applyFilters();}));
+    activeThemes.forEach(t=>addChip(c,t,()=>{activeThemes.delete(t);document.querySelectorAll('.theme-pill').forEach(p=>{if(p.dataset.theme===t)p.classList.remove('active');});applyFilters();}));
+    c.style.display = c.children.length ? 'flex':'none';
+  }
+  function addChip(container, label, onRemove) {
+    const chip = document.createElement('div');
+    chip.className = 'chip';
+    chip.innerHTML = label+'<button>×</button>';
+    chip.querySelector('button').addEventListener('click', onRemove);
+    container.appendChild(chip);
+  }
+  function sortEntries() {
+    const val = document.getElementById('sortSelect').value;
+    const container = document.getElementById('entriesList');
+    const entries = Array.from(container.querySelectorAll('.entry'));
+    entries.sort((a,b) => {
+      if (val==='faculty') return a.dataset.faculty.localeCompare(b.dataset.faculty);
+      const aD=new Date(a.querySelector('.entry-date').textContent.trim());
+      const bD=new Date(b.querySelector('.entry-date').textContent.trim());
+      return val==='newest' ? bD-aD : aD-bD;
+    });
+    entries.forEach(e=>container.insertBefore(e,document.getElementById('noResults')));
+  }
+</script>
+</body>
+</html>
