@@ -217,6 +217,55 @@
     .link-btn { border: none; background: none; font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 12px; color: var(--link); cursor: pointer; padding: 0; }
     .link-btn:hover { text-decoration: underline; }
     .no-results { font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 14px; color: #999; padding: 52px 0; text-align: center; display: none; background: white; border-radius: 8px; border: 1px solid var(--border); }
+
+    /* RESPONSIVE */
+    @media (max-width: 780px) {
+      .page-title-band { padding: 24px 24px 20px; }
+      .controls-top { padding: 11px 24px; }
+      .theme-row { padding: 9px 24px; }
+      .active-chips { padding: 0 24px 9px; }
+      .entries { padding: 12px 24px 48px; }
+
+      /* Hide fixed-column header — labels live inside each entry */
+      .table-header { display: none; }
+
+      /* Re-layout entry rows using named grid areas */
+      .entry-top {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+          "title  title"
+          "faculty date"
+          "takeaway takeaway";
+        gap: 6px 16px;
+      }
+      .entry-title-col  { grid-area: title; }
+      .entry-faculty    { grid-area: faculty; padding-top: 0; }
+      .entry-date       { grid-area: date;    padding-top: 0; }
+      .entry-takeaway   { grid-area: takeaway; padding-top: 0; }
+
+      /* Expanded detail: single column */
+      .detail-grid { grid-template-columns: 1fr; }
+      .detail-block.full-width { grid-column: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .page-title-band { padding: 18px 16px 16px; }
+      .controls-top { padding: 10px 16px; }
+      .controls-top input { width: 100%; }
+      .theme-row { padding: 8px 16px; }
+      .active-chips { padding: 0 16px 8px; }
+      .entries { padding: 10px 16px 40px; }
+
+      .entry-top {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "title"
+          "faculty"
+          "date"
+          "takeaway";
+      }
+      .entry-faculty { padding-right: 0; }
+    }
   </style>
 </head>
 <body>
