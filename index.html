@@ -31,13 +31,37 @@
       font-size: 26px; font-weight: 700;
       color: var(--navy); margin-bottom: 14px;
     }
+    .page-title-cols {
+      display: flex; gap: 36px; align-items: flex-start; flex-wrap: wrap;
+    }
+    .page-title-left { flex: 3 1 0; min-width: 0; }
+    .page-title-right { flex: 2 1 0; min-width: 260px; }
     .page-desc {
       font-family: 'Merriweather', Georgia, serif;
-      font-size: 14px; font-weight: 300;
-      color: var(--text); max-width: 860px;
+      font-size: 15.5px; font-weight: 300;
+      color: var(--text);
       line-height: 1.85; margin-bottom: 10px;
     }
     .page-desc:last-child { margin-bottom: 0; }
+    .newsletter-box h3 {
+      font-family: 'Merriweather Sans', Arial, sans-serif;
+      font-size: 13px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .7px; color: var(--navy);
+      border-bottom: 2px solid var(--gold-bright);
+      padding-bottom: 6px; margin-bottom: 11px;
+    }
+    .newsletter-box p, .newsletter-box li {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 14.5px; font-weight: 300;
+      color: var(--text); line-height: 1.8;
+    }
+    .newsletter-box ul {
+      margin: 9px 0 0 0; padding-left: 16px; list-style: disc;
+    }
+    .newsletter-box li { margin-bottom: 7px; }
+    .newsletter-box li:last-child { margin-bottom: 0; }
+    .newsletter-box a { color: var(--link); text-decoration: none; }
+    .newsletter-box a:hover { text-decoration: underline; color: var(--navy); }
 
     /* CONTROLS */
     .controls-wrap {
@@ -200,8 +224,21 @@
 <!-- PAGE TITLE — no nav, no header; WordPress provides those -->
 <div class="page-title-band">
   <h1>Research Compendium</h1>
-  <p class="page-desc">This research compendium <em>(still in development!)</em> curates and translates University of Pennsylvania research on the quantitative study of the information ecosystem and its impact on democracy. It brings together empirical work examining issues such as information integrity, media ecosystems, political speech, and democratic resilience, with the aim of making rigorous academic research more accessible and actionable.</p>
-  <p class="page-desc">The compendium features research from seven schools and centers at Penn—the Annenberg School for Communication, the Annenberg Public Policy Center, the Wharton School, SAS Political Science, SEAS Computer and Information Science, the School of Social Policy and Practice, and the Carey Law School—and is designed to serve journalists, media leaders, civil society organizations, and policymakers seeking evidence-based insights into the functioning and governance of digital information systems.</p>
+  <div class="page-title-cols">
+    <div class="page-title-left">
+      <p class="page-desc">This research compendium <em>(still in development!)</em> curates and translates University of Pennsylvania research on the quantitative study of the information ecosystem and its impact on democracy. It brings together empirical work examining issues such as information integrity, media ecosystems, political speech, and democratic resilience, with the aim of making rigorous academic research more accessible and actionable.</p>
+      <p class="page-desc">The compendium features research from seven schools and centers at Penn—the Annenberg School for Communication, the Annenberg Public Policy Center, the Wharton School, SAS Political Science, SEAS Computer and Information Science, the School of Social Policy and Practice, and the Carey Law School—and is designed to serve journalists, media leaders, civil society organizations, and policymakers seeking evidence-based insights into the functioning and governance of digital information systems.</p>
+    </div>
+    <div class="page-title-right newsletter-box">
+      <h3>Center Newsletter</h3>
+      <p><a href="https://signup.e2ma.net/signup/2017639/1984707/" target="_blank" rel="noopener">Subscribe</a> to our (occasional) newsletter for updates with the latest research, events, and announcements from the Center.</p>
+      <ul>
+        <li><a href="https://t.e2ma.net/webview/htvldv/098dc58eec48180e59997bded5c81538" target="_blank" rel="noopener">Read about the announcement of the affiliated faculty, flagship conference, and new abbreviation</a> – February 2026.</li>
+        <li><a href="https://t.e2ma.net/webview/1odgwu/d30c49ebf9bccf8f52c4d5cb2f85b22b" target="_blank" rel="noopener">Read an introduction to the Center from Faculty Directors Duncan Watts and Christopher Yoo</a> – December 2025.</li>
+        <li><a href="https://t.e2ma.net/webview/18gwau/f3bf403bfb16141de59c8ef099bb8d83" target="_blank" rel="noopener">Read the inaugural Center newsletter from Executive Director Alex Engler</a> – October 2025.</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <!-- STICKY CONTROLS -->
