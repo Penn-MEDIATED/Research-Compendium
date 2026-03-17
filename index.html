@@ -1477,5 +1477,18 @@ By causally estimating the role of recommendation algorithms in driving partisan
     entries.forEach(e=>container.insertBefore(e,document.getElementById('noResults')));
   }
 </script>
+
+  <script>
+    // Auto-resize: sends page height to parent iframe so WordPress can resize accordingly
+    function sendHeight() {
+      var height = document.documentElement.scrollHeight;
+      window.parent.postMessage({ frameHeight: height }, "*");
+    }
+    // Send on load
+    window.addEventListener("load", sendHeight);
+    // Send whenever content changes (e.g. entries expand/collapse)
+    var observer = new ResizeObserver(sendHeight);
+    observer.observe(document.body);
+  </script>
 </body>
 </html>
