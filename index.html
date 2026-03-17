@@ -221,6 +221,8 @@
     /* RESPONSIVE */
     @media (max-width: 780px) {
       .page-title-band { padding: 24px 24px 20px; }
+      .page-title-band h1 { font-size: 22px; margin-bottom: 12px; }
+      .page-title-cols { gap: 24px; }
       .controls-top { padding: 11px 24px; }
       .theme-row { padding: 9px 24px; }
       .active-chips { padding: 0 24px 9px; }
@@ -248,8 +250,24 @@
       .detail-block.full-width { grid-column: 1; }
     }
 
+    /* Stack description + newsletter at this breakpoint */
+    @media (max-width: 640px) {
+      .page-title-cols { flex-direction: column; gap: 0; }
+      .page-title-left  { flex: none; width: 100%; }
+      .page-title-right {
+        flex: none; width: 100%;
+        margin-top: 20px; padding-top: 20px;
+        border-top: 2px solid var(--gold-bright);
+      }
+      .page-desc { font-size: 14.5px; }
+      .newsletter-box p, .newsletter-box li { font-size: 14px; }
+    }
+
     @media (max-width: 600px) {
       .page-title-band { padding: 18px 16px 16px; }
+      .page-title-band h1 { font-size: 20px; }
+      .page-desc { font-size: 14px; }
+      .newsletter-box p, .newsletter-box li { font-size: 13.5px; }
       .controls-top { padding: 10px 16px; }
       .controls-top input { width: 100%; }
       .theme-row { padding: 8px 16px; }
