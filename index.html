@@ -350,14 +350,14 @@
     <button class="expand-all-btn" id="expandAllBtn" onclick="toggleExpandAll()">Expand all</button>
   </div>
   <div class="theme-row">
-    <span class="theme-row-label">Theme</span>
-    <button class="theme-pill" data-theme="AI & LLMs" style="--tc:#4f46e5;--tb:#ede9fe" onclick="toggleTheme(this)">AI & LLMs <span class="pill-count">8</span></button>
-<button class="theme-pill" data-theme="Misinformation & Belief Change" style="--tc:#b91c1c;--tb:#fee2e2" onclick="toggleTheme(this)">Misinformation & Belief Change <span class="pill-count">4</span></button>
-<button class="theme-pill" data-theme="Political Polarization" style="--tc:#0369a1;--tb:#e0f2fe" onclick="toggleTheme(this)">Political Polarization <span class="pill-count">6</span></button>
-<button class="theme-pill" data-theme="Social Media & Platforms" style="--tc:#0f766e;--tb:#ccfbf1" onclick="toggleTheme(this)">Social Media & Platforms <span class="pill-count">5</span></button>
-<button class="theme-pill" data-theme="Persuasion & Communication" style="--tc:#b45309;--tb:#fef3c7" onclick="toggleTheme(this)">Persuasion & Communication <span class="pill-count">6</span></button>
-<button class="theme-pill" data-theme="Research Methods" style="--tc:#6b21a8;--tb:#f3e8ff" onclick="toggleTheme(this)">Research Methods <span class="pill-count">4</span></button>
 
+    <span class="theme-row-label">Theme</span>
+    <button class="theme-pill" data-theme="LLMs & Civic Discourse" style="--tc:#4f46e5;--tb:#ede9fe" onclick="toggleTheme(this)">LLMs & Civic Discourse <span class="pill-count">8</span></button>
+    <button class="theme-pill" data-theme="Misinformation" style="--tc:#b91c1c;--tb:#fee2e2" onclick="toggleTheme(this)">Misinformation <span class="pill-count">3</span></button>
+    <button class="theme-pill" data-theme="Political Polarization" style="--tc:#0369a1;--tb:#e0f2fe" onclick="toggleTheme(this)">Political Polarization <span class="pill-count">7</span></button>
+    <button class="theme-pill" data-theme="Social Media & Platforms" style="--tc:#0f766e;--tb:#ccfbf1" onclick="toggleTheme(this)">Social Media & Platforms <span class="pill-count">5</span></button>
+    <button class="theme-pill" data-theme="Persuasion & Behavior Change" style="--tc:#b45309;--tb:#fef3c7" onclick="toggleTheme(this)">Persuasion & Behavior Change <span class="pill-count">7</span></button>
+    <button class="theme-pill" data-theme="Guiding the Field" style="--tc:#6b21a8;--tb:#f3e8ff" onclick="toggleTheme(this)">Guiding the Field <span class="pill-count">4</span></button>
     <button class="clear-filters" id="clearBtn" onclick="clearFilters()">✕ Clear all filters</button>
   </div>
   <div class="active-chips" id="activeChips"></div>
@@ -371,11 +371,11 @@
 <!-- ENTRIES -->
 <div class="entries" id="entriesList">
 
-  <div class="entry" id="a-large-scale-evaluation-of-commonsense-knowledge-in-humans" data-faculty="duncan watts" data-year="2026" data-themes="AI & LLMs">
+  <div class="entry" id="a-large-scale-evaluation-of-commonsense-knowledge-in-humans" data-faculty="duncan watts" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><span class="new-badge">New</span><a href="https://arxiv.org/pdf/2505.10309" target="_blank" rel="noopener" onclick="event.stopPropagation()">A large-scale evaluation of commonsense knowledge in humans and large language models</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs & Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#duncan" target="_blank" rel="noopener">Duncan Watts</a></div>
       <div class="entry-date">1/21/2026</div>
@@ -415,11 +415,11 @@
     </div>
   </div>
 
-  <div class="entry" id="how-well-do-large-language-models-understand-african-america" data-faculty="desmond patton" data-year="2026" data-themes="AI & LLMs">
+  <div class="entry" id="how-well-do-large-language-models-understand-african-america" data-faculty="desmond patton" data-year="2026" data-themes="LLMs & Civic Discourse">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://www.annualreviews.org/content/journals/10.1146/annurev-linguistics-041824-050629" target="_blank" rel="noopener" onclick="event.stopPropagation()">How Well Do Large Language Models Understand African American Language? Causes and Implications</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs & Civic Discourse</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#desmond" target="_blank" rel="noopener">Desmond Patton</a></div>
       <div class="entry-date">1/4/2026</div>
@@ -461,11 +461,11 @@ The inability for LLMs to accurately interpret AAL has significant impacts: AAL 
     </div>
   </div>
 
-  <div class="entry" id="computational-social-science-past-present-and-future" data-faculty="duncan watts" data-year="2025" data-themes="Research Methods">
+  <div class="entry" id="computational-social-science-past-present-and-future" data-faculty="duncan watts" data-year="2025" data-themes="Guiding the Field">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://www.elgaronline.com/edcollchap/book/9781802207309/chapter2.xml" target="_blank" rel="noopener" onclick="event.stopPropagation()">Computational Social Science: Past, Present, and Future</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Research Methods</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#duncan" target="_blank" rel="noopener">Duncan Watts</a></div>
       <div class="entry-date">12/11/2025</div>
@@ -499,11 +499,11 @@ Looking to the future, the authors identify 5 key challenges that would shape th
     </div>
   </div>
 
-  <div class="entry" id="the-post-api-age-of-social-media-data-access-past-present-an" data-faculty="deen freelon" data-year="2025" data-themes="Social Media & Platforms,Research Methods">
+  <div class="entry" id="the-post-api-age-of-social-media-data-access-past-present-an" data-faculty="deen freelon" data-year="2025" data-themes="Social Media & Platforms,Guiding the Field">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://journals.sagepub.com/doi/full/10.1177/00027162251372557" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Post-API Age of Social Media Data Access: Past, Present, and Future</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Research Methods</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#deen" target="_blank" rel="noopener">Deen Freelon</a></div>
       <div class="entry-date">12/15/2025</div>
@@ -541,11 +541,11 @@ The authors close with recommendations urging platforms to make data more freely
     </div>
   </div>
 
-  <div class="entry" id="a-megastudy-of-behavioral-interventions-to-increase-voter-re" data-faculty="emily b. falk" data-year="2025" data-themes="Political Polarization,Persuasion & Communication">
+  <div class="entry" id="a-megastudy-of-behavioral-interventions-to-increase-voter-re" data-faculty="emily b. falk" data-year="2025" data-themes="Political Polarization,Persuasion & Behavior Change">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://sciety.org/articles/activity/10.31234/osf.io/p6b2e_v2" target="_blank" rel="noopener" onclick="event.stopPropagation()">A Megastudy Of Behavioral Interventions To Increase Voter Registration Ahead Of The 2024 U.S. Presidential Election</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Communication</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Behavior Change</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#emily" target="_blank" rel="noopener">Emily B. Falk</a></div>
       <div class="entry-date">12/03/2025</div>
@@ -586,11 +586,11 @@ The authors close with recommendations urging platforms to make data more freely
     </div>
   </div>
 
-  <div class="entry" id="rethinking-news-framing-with-large-language-models" data-faculty="duncan watts" data-year="2025" data-themes="AI & LLMs,Misinformation & Belief Change">
+  <div class="entry" id="rethinking-news-framing-with-large-language-models" data-faculty="duncan watts" data-year="2025" data-themes="LLMs & Civic Discourse,Persuasion & Behavior Change">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://www.nature.com/articles/s41598-025-29519-9" target="_blank" rel="noopener" onclick="event.stopPropagation()">Rethinking news framing with large language models</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation & Belief Change</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs & Civic Discourse</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Behavior Change</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#duncan" target="_blank" rel="noopener">Duncan Watts</a></div>
       <div class="entry-date">11/28/2025</div>
@@ -631,11 +631,11 @@ The authors close with recommendations urging platforms to make data more freely
     </div>
   </div>
 
-  <div class="entry" id="using-a-mental-model-approach-to-undercut-the-effects-of-exp" data-faculty="kathleen hall jamieson" data-year="2025" data-themes="Misinformation & Belief Change,Persuasion & Communication">
+  <div class="entry" id="using-a-mental-model-approach-to-undercut-the-effects-of-exp" data-faculty="kathleen hall jamieson" data-year="2025" data-themes="Misinformation,Persuasion & Behavior Change">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://www.pnas.org/doi/10.1073/pnas.2517067122" target="_blank" rel="noopener" onclick="event.stopPropagation()">Using a mental model approach to undercut the effects of exposure to mRNA vaccination misconceptions: Two randomized trials</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation & Belief Change</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Communication</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Behavior Change</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#kathleen" target="_blank" rel="noopener">Kathleen Hall Jamieson</a></div>
       <div class="entry-date">11/24/2025</div>
@@ -677,11 +677,11 @@ The researchers also examined if exposure to misinformation would increase misco
     </div>
   </div>
 
-  <div class="entry" id="brain-activity-explains-message-effectiveness-a-mega-analysi" data-faculty="emily b. falk" data-year="2025" data-themes="Persuasion & Communication">
+  <div class="entry" id="brain-activity-explains-message-effectiveness-a-mega-analysi" data-faculty="emily b. falk" data-year="2025" data-themes="Persuasion & Behavior Change">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://pubmed.ncbi.nlm.nih.gov/41200100/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Brain activity explains message effectiveness: A mega-analysis of 16 neuroimaging studies</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Communication</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Behavior Change</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#emily" target="_blank" rel="noopener">Emily B. Falk</a></div>
       <div class="entry-date">11/4/2025</div>
@@ -722,11 +722,11 @@ The researchers also examined if exposure to misinformation would increase misco
     </div>
   </div>
 
-  <div class="entry" id="identity-related-speech-suppression-in-generative-ai-content" data-faculty="danaé metaxa" data-year="2025" data-themes="AI & LLMs">
+  <div class="entry" id="identity-related-speech-suppression-in-generative-ai-content" data-faculty="danaé metaxa" data-year="2025" data-themes="LLMs & Civic Discourse">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://dl.acm.org/doi/10.1145/3757887.3763010" target="_blank" rel="noopener" onclick="event.stopPropagation()">Identity-related Speech Suppression in Generative AI Content Moderation</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs & Civic Discourse</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#danae" target="_blank" rel="noopener">Danaé Metaxa</a></div>
       <div class="entry-date">11/4/2025</div>
@@ -767,11 +767,11 @@ The researchers also examined if exposure to misinformation would increase misco
     </div>
   </div>
 
-  <div class="entry" id="experimental-evidence-of-the-effects-of-large-language-model" data-faculty="shiri melumad" data-year="2025" data-themes="AI & LLMs">
+  <div class="entry" id="experimental-evidence-of-the-effects-of-large-language-model" data-faculty="shiri melumad" data-year="2025" data-themes="LLMs & Civic Discourse">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://academic.oup.com/pnasnexus/article/4/10/pgaf316/8303888" target="_blank" rel="noopener" onclick="event.stopPropagation()">Experimental evidence of the effects of large language models versus web search on depth of learning</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs & Civic Discourse</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#shiri" target="_blank" rel="noopener">Shiri Melumad</a></div>
       <div class="entry-date">10/28/2025</div>
@@ -812,11 +812,11 @@ The researchers also examined if exposure to misinformation would increase misco
     </div>
   </div>
 
-  <div class="entry" id="persuasion-and-dissuasion-in-political-campaigns-communicati" data-faculty="pinar yildirim" data-year="2025" data-themes="Political Polarization,Persuasion & Communication">
+  <div class="entry" id="persuasion-and-dissuasion-in-political-campaigns-communicati" data-faculty="pinar yildirim" data-year="2025" data-themes="Political Polarization,Persuasion & Behavior Change">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://link.springer.com/article/10.1007/s11129-025-09300-y" target="_blank" rel="noopener" onclick="event.stopPropagation()">Persuasion and dissuasion in political campaigns: Communication and media coverage in senate races</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Communication</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Behavior Change</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#pinar" target="_blank" rel="noopener">Pinar Yildirim</a></div>
       <div class="entry-date">10/22/2025</div>
@@ -859,11 +859,11 @@ To address this, the authors developed a method to separately measure persuasion
     </div>
   </div>
 
-  <div class="entry" id="culturally-aware-conversations-a-framework-amp-benchmark-for" data-faculty="lyle ungar" data-year="2025" data-themes="AI & LLMs,Research Methods">
+  <div class="entry" id="culturally-aware-conversations-a-framework-amp-benchmark-for" data-faculty="lyle ungar" data-year="2025" data-themes="LLMs & Civic Discourse,Guiding the Field">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://arxiv.org/pdf/2510.11563" target="_blank" rel="noopener" onclick="event.stopPropagation()">Culturally-Aware Conversations: A Framework &amp; Benchmark for LLMs</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Research Methods</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs & Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#lyle" target="_blank" rel="noopener">Lyle Ungar</a></div>
       <div class="entry-date">10/13/2025</div>
@@ -902,11 +902,11 @@ understand, respect, and adapt to diversity in communication.”</p></div>
     </div>
   </div>
 
-  <div class="entry" id="learning-human-perceived-fakeness-in-ai-generated-videos-via" data-faculty="chris callison-burch and dan roth" data-year="2025" data-themes="AI & LLMs,Misinformation & Belief Change">
+  <div class="entry" id="learning-human-perceived-fakeness-in-ai-generated-videos-via" data-faculty="chris callison-burch and dan roth" data-year="2025" data-themes="LLMs & Civic Discourse,Misinformation">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://arxiv.org/abs/2509.22646" target="_blank" rel="noopener" onclick="event.stopPropagation()">Learning Human-Perceived Fakeness in AI-Generated Videos Via Multimodal LLMs</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation & Belief Change</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs & Civic Discourse</span><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#chris" target="_blank" rel="noopener">Chris Callison-Burch</a> and <a href="https://infodem.upenn.edu/affiliated-faculty/#dan" target="_blank" rel="noopener">Dan Roth</a></div>
       <div class="entry-date">10/01/2025</div>
@@ -992,11 +992,11 @@ This paper challenges this assumption, providing empirical evidence suggesting t
     </div>
   </div>
 
-  <div class="entry" id="changing-beliefs-or-changing-behavior-understanding-the-beli" data-faculty="dolores albarracín" data-year="2025" data-themes="Misinformation & Belief Change,Persuasion & Communication">
+  <div class="entry" id="changing-beliefs-or-changing-behavior-understanding-the-beli" data-faculty="dolores albarracín" data-year="2025" data-themes="Misinformation,Persuasion & Behavior Change">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://myscp.onlinelibrary.wiley.com/doi/abs/10.1002/jcpy.70014" target="_blank" rel="noopener" onclick="event.stopPropagation()">Changing beliefs or changing behavior? Understanding the belief-to-behavior process and intervening to curb the impact of misinformation</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation & Belief Change</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Communication</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Behavior Change</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#dolores" target="_blank" rel="noopener">Dolores Albarracín</a></div>
       <div class="entry-date">9/10/2025</div>
@@ -1084,11 +1084,11 @@ to behavior change."</li>
     </div>
   </div>
 
-  <div class="entry" id="talking-point-based-ideological-discourse-analysis-in-news-e" data-faculty="daniel j. hopkins" data-year="2025" data-themes="AI & LLMs,Research Methods">
+  <div class="entry" id="talking-point-based-ideological-discourse-analysis-in-news-e" data-faculty="daniel j. hopkins" data-year="2025" data-themes="LLMs & Civic Discourse">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://aclanthology.org/2025.findings-acl.32.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Talking Point based Ideological Discourse Analysis in News Events</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">AI & LLMs</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Research Methods</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs & Civic Discourse</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#daniel" target="_blank" rel="noopener">Daniel J. Hopkins</a></div>
       <div class="entry-date">7/27/2025</div>
@@ -1223,11 +1223,11 @@ discourage cross-party dialogue.”</p></div>
     </div>
   </div>
 
-  <div class="entry" id="listen-for-a-change-a-longitudinal-field-experiment-on-liste" data-faculty="erik santoro" data-year="2025" data-themes="Persuasion & Communication">
+  <div class="entry" id="listen-for-a-change-a-longitudinal-field-experiment-on-liste" data-faculty="erik santoro" data-year="2025" data-themes="Persuasion & Behavior Change">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://www.pnas.org/doi/10.1073/pnas.2421982122" target="_blank" rel="noopener" onclick="event.stopPropagation()">Listen for a change? A longitudinal field experiment on listening’s potential to enhance persuasion</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Communication</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion & Behavior Change</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#erik" target="_blank" rel="noopener">Erik Santoro</a></div>
       <div class="entry-date">2/20/2025</div>
@@ -1268,11 +1268,11 @@ discourage cross-party dialogue.”</p></div>
     </div>
   </div>
 
-  <div class="entry" id="short-term-exposure-to-filter-bubble-recommendation-systems" data-faculty="dean knox" data-year="2025" data-themes="Social Media & Platforms">
+  <div class="entry" id="short-term-exposure-to-filter-bubble-recommendation-systems" data-faculty="dean knox" data-year="2025" data-themes="Political Polarization,Social Media & Platforms">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
         <div class="entry-title-text"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2318127122" target="_blank" rel="noopener" onclick="event.stopPropagation()">Short-term exposure to filter-bubble recommendation systems has limited polarization effects: Naturalistic experiments on YouTube</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#dean" target="_blank" rel="noopener">Dean Knox</a></div>
       <div class="entry-date">2/18/2025</div>
