@@ -1314,10 +1314,7 @@ By causally estimating the role of recommendation algorithms in driving partisan
 
 <script>
   function copyLink(hash, btn) {
-    var base;
-    try { base = window.parent.location.origin + window.parent.location.pathname; }
-    catch(e) { base = window.location.origin + window.location.pathname; }
-    var url = base + hash;
+    var url = 'https://infodem.upenn.edu/research-compendium/' + hash;
     function done() {
       btn.textContent = 'Link copied!';
       setTimeout(function(){ btn.textContent = 'Copy Link to Entry'; }, 2000);
