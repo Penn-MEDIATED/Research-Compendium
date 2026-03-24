@@ -1418,31 +1418,26 @@ By causally estimating the role of recommendation algorithms in driving partisan
   </script>
   <script>
     // Handle anchor/hash navigation — works when page is embedded in a WordPress iframe.
-    // The hash lives on the parent page URL, not the iframe src, so we read window.parent.location.hash.
-    function navigateToHash() {
-      var hash = '';
-      try {
-        hash = window.parent.location.hash || window.location.hash;
-      } catch(e) {
-        hash = window.location.hash;
-      }
+    // The parent page sends the hash via postMessage; we also try reading it directly as a fallback.
+    function navigateToHash(hash) {
+      hash = hash || window.location.hash;
+      try { hash = hash || window.parent.location.hash; } catch(e) {}
       if (!hash) return;
       var id = hash.replace(/^#/, '');
       var entry = document.getElementById(id);
       if (!entry || entry.style.display === 'none') return;
-      // Expand the entry so the detail is visible
       entry.classList.add('open');
-      // Scroll the entry into view within the iframe; the parent will also need to scroll.
-      // We post the entry's offsetTop so the WordPress page can scroll to the right position.
       setTimeout(function() {
         entry.scrollIntoView({ behavior: 'smooth', block: 'start' });
         window.parent.postMessage({ scrollToHash: id, offsetTop: entry.getBoundingClientRect().top + window.scrollY }, '*');
       }, 150);
     }
-    document.addEventListener('DOMContentLoaded', navigateToHash);
-    // Also re-run if the parent's hash changes (e.g. browser back/forward)
-    window.addEventListener('hashchange', navigateToHash);
-    try { window.parent.addEventListener('hashchange', navigateToHash); } catch(e) {}
+    // Listen for hash sent by parent WordPress page
+    window.addEventListener('message', function(e) {
+      if (e.data && e.data.navigateToHash) navigateToHash(e.data.navigateToHash);
+    });
+    // Fallback: try on load in case iframe is loaded directly with a hash
+    window.addEventListener('load', function() { navigateToHash(); });
   </script>
 </body>
 </html>
