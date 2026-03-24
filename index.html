@@ -1063,6 +1063,48 @@ to behavior change."</li>
     </div>
   </div>
 
+  <div class="entry" id="model-dependent-moderation-inconsistencies-in-hate-speech-det" data-faculty="yphtach lelkes" data-year="2025" data-themes="LLMs & Civic Discourse">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://aclanthology.org/2025.findings-acl.1144/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Model-Dependent Moderation: Inconsistencies in Hate Speech Detection Across LLM-based Systems</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs & Civic Discourse</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/affiliated-faculty/#yphtach" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
+      <div class="entry-date">7/27/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Automated moderation systems based on out-of-the-box LLMs, despite their sophistication, may perpetuate and not mitigate "existing social inequities in online spaces."</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>Social media platforms are using large language models in content moderation, especially for hate speech detection. But is hate speech classification consistent across models? Using a novel synthetic dataset of over 1.3 million sentences spanning 125 demographic groups, the researchers tested how seven leading automated content moderation systems evaluate and classify hate speech. Here's what they found:
+Here are some key findings:</p>
+<ol class="findings-list">
+  <li><strong>Content moderation systems are inconsistent:</strong> The authors found substantial differences in how different models evaluated and classified hate speech. The Mistral moderation endpoint had high detection value and consistent classifications, meaning that it classified more posts as hate speech compared to its competitors. Open AI's moderation endpoint was found to be more inconsistent in hate speech classification, while OpenAI's GPT 4 and Google's Perspective API were the "most measured", meaning they had comparatively lower rates of finding hate speech violations.</li>
+  <li><strong>Demographic variations:</strong> Across models, the researchers found that hate speech targeting race, gender and sexual orientation were more easily detected by the models,  compared to education, showing that the models "generally recognize hate speech targeting traditional protected classes more readily than content targeting other groups." Content targeting "woke people" was flagged as hate speech by some models but not by others.. For content targeting Christians, the Mistral Moderation Endpoint classified it as hate speech, while the Perspective API assigned the identical content a substantially lower score. For content containing the most severe anti-Black slur, some models assigned the maximum possible hate speech score, while others classified the same content as less hateful.</li>
+  <li><strong>Implicit hate speech detection:</strong> The researchers also tested how systems handled sentences that paired positive language with slurs, such as "All [slur] are great people." Positive sentences containing anti-Black slur received the highest average hate speech scores across models, while positive statements about ideological groups like "commies" received "lower hate values" despite identical sentence structure. The disagreements were starkest for statements about "alt-right members," where the Mistral Moderation Endpoint classified the content as near-maximum hate speech while GPT-4o assigned it a score of zero. This reveals a fundamental disagreement between systems: some, like Claude 3.5 Sonnet, treat slurs as harmful regardless of positive context, while "less sensitive systems" prioritize "overall positive sentiment."</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>As platforms increasingly delegate content moderation to automated AI systems, the inconsistencies across models in hate speech classification revealed in this paper raise serious concerns about fairness and accountability. Marginalized groups may receive uneven protection depending on the models used for moderation. The authors call for standardized benchmarks, greater transparency in how these systems are built, and industry-academic collaboration to establish more consistent and equitable moderation standards.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://aclanthology.org/2025.findings-acl.1144/" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="copyLink('#model-dependent-moderation-inconsistencies-in-hate-speech-det',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
   <div class="entry" id="talking-point-based-ideological-discourse-analysis-in-news-e" data-faculty="daniel j. hopkins" data-year="2025" data-themes="LLMs & Civic Discourse">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
