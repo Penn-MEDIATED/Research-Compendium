@@ -350,18 +350,18 @@
       <option value="oldest">Oldest first</option>
       <option value="faculty">Author A–Z</option>
     </select>
-    <span class="entry-count" id="entryCount">42 entries</span>
+    <span class="entry-count" id="entryCount">49 entries</span>
     <button class="expand-all-btn" id="expandAllBtn" onclick="toggleExpandAll()">Expand all</button>
   </div>
   <div class="theme-row">
 
     <span class="theme-row-label">Theme</span>
-    <button class="theme-pill" data-theme="LLMs & Civic Discourse" style="--tc:#4f46e5;--tb:#ede9fe" onclick="toggleTheme(this)">LLMs & Civic Discourse <span class="pill-count">9</span></button>
+    <button class="theme-pill" data-theme="LLMs & Civic Discourse" style="--tc:#4f46e5;--tb:#ede9fe" onclick="toggleTheme(this)">LLMs & Civic Discourse <span class="pill-count">10</span></button>
     <button class="theme-pill" data-theme="Misinformation" style="--tc:#b91c1c;--tb:#fee2e2" onclick="toggleTheme(this)">Misinformation <span class="pill-count">7</span></button>
-    <button class="theme-pill" data-theme="Political Polarization" style="--tc:#0369a1;--tb:#e0f2fe" onclick="toggleTheme(this)">Political Polarization <span class="pill-count">13</span></button>
-    <button class="theme-pill" data-theme="Social Media & Platforms" style="--tc:#0f766e;--tb:#ccfbf1" onclick="toggleTheme(this)">Social Media & Platforms <span class="pill-count">12</span></button>
-    <button class="theme-pill" data-theme="Persuasion & Behavior Change" style="--tc:#b45309;--tb:#fef3c7" onclick="toggleTheme(this)">Persuasion & Behavior Change <span class="pill-count">7</span></button>
-    <button class="theme-pill" data-theme="Guiding the Field" style="--tc:#6b21a8;--tb:#f3e8ff" onclick="toggleTheme(this)">Guiding the Field <span class="pill-count">5</span></button>
+    <button class="theme-pill" data-theme="Political Polarization" style="--tc:#0369a1;--tb:#e0f2fe" onclick="toggleTheme(this)">Political Polarization <span class="pill-count">15</span></button>
+    <button class="theme-pill" data-theme="Social Media & Platforms" style="--tc:#0f766e;--tb:#ccfbf1" onclick="toggleTheme(this)">Social Media & Platforms <span class="pill-count">14</span></button>
+    <button class="theme-pill" data-theme="Persuasion & Behavior Change" style="--tc:#b45309;--tb:#fef3c7" onclick="toggleTheme(this)">Persuasion & Behavior Change <span class="pill-count">11</span></button>
+    <button class="theme-pill" data-theme="Guiding the Field" style="--tc:#6b21a8;--tb:#f3e8ff" onclick="toggleTheme(this)">Guiding the Field <span class="pill-count">6</span></button>
     <button class="theme-pill" data-theme="2020 Meta Election Project" style="--tc:#166534;--tb:#dcfce7" onclick="toggleTheme(this)">2020 Meta Election Project <span class="pill-count">5</span></button>
     <button class="clear-filters" id="clearBtn" onclick="clearFilters()">✕ Clear all filters</button>
   </div>
@@ -376,10 +376,300 @@
 <!-- ENTRIES -->
 <div class="entries" id="entriesList">
 
+  <div class="entry" id="a-systematic-review-of-social-science-studies-analyzing-soci" data-faculty="deen freelon" data-year="2026" data-themes="Social Media & Platforms,Guiding the Field">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://osf.io/preprints/socarxiv/yexp6_v1" target="_blank" rel="noopener" onclick="event.stopPropagation()">A systematic review of social science studies analyzing social media data, 2010&#8211;2024</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Deen Freelon</a></div>
+      <div class="entry-date">4/20/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Only 3.15% of social science publications use social media data, with Twitter/X and Facebook dominant throughout the study period&#8212;but usage has plateaued and declined as platforms restrict academic data access.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The authors examine how social scientists have used social media data for empirical research and assess the potential impact of recent platform restrictions on the state of the field. Using a multi-method design that includes human-in-the-loop AI annotation, they systematically analyzed over 859,000 publications across 59 journals representing five social science disciplines&#8212;Communication, Political Science, Sociology, Psychology, and Economics&#8212;as well as leading interdisciplinary journals, spanning 2010 to 2024. Key findings:</p>
+<ol class="findings-list">
+  <li>Only 3.15% of social science journal publications use social media data for empirical research, rising to about 13% in Communication but falling below 1% in Economics. 82.6% of these papers rely on data from a single platform, indicating that cross-platform research remains rare.</li>
+  <li>Twitter/X and Facebook are the first and second most used platforms throughout the study period, accounting for roughly 51% and 36% of social media papers respectively&#8212;despite Twitter/X being used by only 21% of Americans. By contrast, YouTube, used by 84% of Americans, appears in only 17% of papers, highlighting how API accessibility and content type shape research design as much as platform popularity does.</li>
+  <li>The share of all papers using social media data tripled between 2010 and 2024, with notable spikes around the 2016 U.S. presidential election, between 2021 and 2022 during the COVID-19 pandemic, and during the 2020 U.S. election. However, usage has since plateaued for Facebook and declined for Twitter/X, likely tied to Twitter/X ending free API access in 2023 and Meta shutting down CrowdTangle in 2024.</li>
+  <li>COVID-19 and social movements are the most frequently studied topics across disciplines, underscoring that social media data has been most valuable for capturing real-time events with broad socio-political significance.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Trend analyses like this one help illuminate the role social media data plays in academic research and how that role has evolved over time. With the paper finding declining and plateauing trends in usage&#8212;particularly for the two dominant platforms&#8212;it points to a field at an inflection point. As platforms increasingly restrict academic data access, the research community risks losing the ability to monitor critical events like elections, pandemics, and social movements in real time.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://osf.io/preprints/socarxiv/yexp6_v1" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#a-systematic-review-of-social-science-studies-analyzing-soci',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="finding-agreement-functional-magnetic-resonance-imaging-hyper" data-faculty="emily b. falk" data-year="2026" data-themes="Persuasion & Behavior Change">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://psycnet.apa.org/fulltext/2027-49679-001.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Finding Agreement: Functional Magnetic Resonance Imaging Hyperscanning Reveals That Mental State Space Exploration Facilitates Opinion Alignment</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Emily B. Falk</a></div>
+      <div class="entry-date">4/2/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Agreement is easier to find when people explore new ground together and are motivated to compromise.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper investigates &#8220;what differentiates decision-making conversations that ultimately reach consensus from those that fail to reach consensus.&#8221; Using fMRI data and NLP techniques, the authors examine how alignment and exploration support real-time conversations and how the goal of either persuading or compromising with one&#8217;s conversational partner shapes these dynamics. The researchers examined two key questions: first, whether alignment or exploration is the more effective path to consensus, and second, whether persuasion or compromise goals better facilitate exploration. Alignment refers to when people reach common ground and mutual understanding&#8212;often via shared linguistic and physiological cues. Exploration, by contrast, refers to the process by which people desynchronize and venture into new directions. The researchers tested these questions by instructing participants (N = 60 dyads; 120 people) to either persuade or compromise with their partner on pressing societal issues&#8212;air pollution and tuition increases.</p>
+<ol class="findings-list">
+  <li>Pairs of participants instructed to compromise reached higher levels of agreement at the end of the conversation compared to pairs instructed to persuade.</li>
+  <li>Pairs instructed to compromise engaged in more exploratory conversations, covering more new ground and entertaining a broader range of topics and ideas. These pairs also started the conversation more in alignment with each other, which may have made it easier for them to branch out.</li>
+  <li>Pairs that explored more reached greater agreement. While alignment served as a useful starting point, it was exploration&#8212;specifically how much new ground partners covered together&#8212;that most strongly predicted whether they would ultimately agree.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Polarization and the inability to find common ground are increasingly pressing concerns in today&#8217;s world. As the authors note, &#8220;the inability to reach agreement can impede progress and have serious consequences for human well-being and social and environmental stability.&#8221; This paper provides a framework for what meaningfully facilitates consensus and shows how instructing people to compromise rather than persuade can help get them there. It also challenges the assumption that being aligned facilitates agreement, instead it is the willingness to explore new ideas, that actively facilitates agreement.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://psycnet.apa.org/fulltext/2027-49679-001.pdf" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#finding-agreement-functional-magnetic-resonance-imaging-hyper',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="systemic-electioneering-from-the-evangelical-pulpit-evidence" data-faculty="yphtach lelkes" data-year="2026" data-themes="Political Polarization">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://www.pnas.org/doi/10.1073/pnas.2603911123" target="_blank" rel="noopener" onclick="event.stopPropagation()">Systemic electioneering from the evangelical pulpit: Evidence from a computational analysis</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
+      <div class="entry-date">4/1/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Evangelical churches in the U.S. engage in direct political advocacy in the lead up to elections and are focused more on mobilizing local voters who are ideologically homogenous rather than persuading swing voters.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>Religious leaders in the U.S. are barred by IRS guidelines from openly endorsing political candidates. But does this separation of church and state exist in practice? This research paper examines the prevalence of religious institutions engaging in electoral advocacy. The authors analyze 88,546 religious sermons from evangelical churches spanning the 2020, 2022 and 2024 election cycle. Here&#8217;s what they found:</p>
+<ol class="findings-list">
+  <li><strong>Direct political advocacy and candidate endorsements are widespread.</strong> 14.7% of churches in the sample engaged in prohibited electioneering during the three months surrounding the 2024 presidential election, compared to 8.3% during the 2022 midterms and 2.6% during a nonelection control period. The authors believe these estimates are conservative and true rates for this phenomena could be much higher. The advocacy was overwhelmingly partisan: 87.5% of references to Republicans were favorable, while 71.3% of references to Democrats were in opposition. Donald Trump accounted for 52.4% of all political discussion.</li>
+  <li><strong>Political advocacy follows a clear electoral rhythm, peaking in the days before Election Day.</strong> Political advocacy by evangelical churches rose steadily in the weeks leading up to each election and sharply declined immediately after. On the final Sunday before election day, advocacy rates peaked&#8212;reaching 3.5% in 2020 and 2.6% in 2024. No comparable pattern was observed during the nonelection control period.</li>
+  <li><strong>Advocacy is driven by local partisan context rather than national electoral strategy.</strong> Churches in the most solidly Republican counties were more than twice as likely to engage in political advocacy as those in the most Democrat counties. Political advocacy from churches in swing states were relatively stable, suggesting that churches are more likely to mobilize their base rather than aim to persuade swing voters.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Religious sermons often get overlooked when examining how the information ecosystem shapes electoral outcomes. This paper provides empirical evidence suggesting the growing importance of religious figures in shaping people&#8217;s attitudes about political candidates. As the authors note, &#8220;the American pulpit now functions as a significant channel for partisan base mobilization.&#8221; Future research must examine how this pulpit advocacy affects voter turnout and political polarization.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.pnas.org/doi/10.1073/pnas.2603911123" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#systemic-electioneering-from-the-evangelical-pulpit-evidence',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="entrepreneurs-of-conflict-a-descriptive-analysis-of-when-and" data-faculty="yphtach lelkes" data-year="2026" data-themes="Political Polarization">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://academic.oup.com/pnasnexus/article/5/3/pgag038/8524399" target="_blank" rel="noopener" onclick="event.stopPropagation()">Entrepreneurs of conflict: A descriptive analysis of when and how political elites use divisive rhetoric</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
+      <div class="entry-date">3/17/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Politicians who primarily rely on personal attacks of their political opponents rather than substantive policy debate gain significant media attention but have &#8220;no measurable advantage in elections, fundraising or lawmaking.&#8221;</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The authors examine what incentivizes U.S. political elites to use divisive language and engage in incivility. Using a large-language model (LLM), they analyzed over 2.2 million public statements from every member of the 118th U.S. Congress&#8212;including floor speeches, press releases, newsletters, and social media posts&#8212;and linked these to records of media coverage, campaign finance, and electoral outcomes. The study distinguishes between &#8220;policy entrepreneurs,&#8221; who focus on legislative debate from &#8220;conflict entrepreneurs,&#8221; defined as legislators who frequently use personal insults rather than engaging with their policy positions. Key findings include:</p>
+<ol class="findings-list">
+  <li>Personal attacks were primarily aimed at the head or perceived head of the opposing party. The study identified 43,560 instances of personal attacks, with the three 2024 presidential candidates alone accounting for roughly a third of all attacks. Democrat presidential candidates received approximately four times the attacks directed at Trump.</li>
+  <li>Personal attacks are rare in absolute terms&#8212;65% of legislators use them in fewer than 1% of their communications&#8212;but they receive outsized media attention relative to their frequency. The authors find that &#8220;the 25 most conflictual members of Congress receive more cable news attention than the 75 least conflictual members combined.&#8221;</li>
+  <li>Personal attacks show no meaningful association with fundraising, electoral gains, cosponsorship of bills, or any measurable changes in personal wealth in a 1-year period.</li>
+  <li>Conflict entrepreneurs do not reflect the political culture at the district-level. The study finds &#8220;a striking disconnect between elite rhetoric and mass sentiment,&#8221; suggesting that media incentives&#8212;rather than constituent demand&#8212;are a primary driver of this divisive rhetoric.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>This research paper highlights the importance of media coverage in shaping electoral strategies&#8212;especially as it relates to politicians employing divisive rhetoric. Politicians seem more concerned with ensuring the media covers them and will employ tactics (like personal attacks) even if it does not advance legislation, win elections, or reflect constituent sentiment. By documenting that conflict entrepreneurship is driven by the attention economy rather than electoral pressure, the study suggests that traditional mechanisms of democratic accountability&#8212;such as electoral sanction&#8212;may be poorly equipped to combat the rise in divisive rhetoric in U.S politics.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://academic.oup.com/pnasnexus/article/5/3/pgag038/8524399" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#entrepreneurs-of-conflict-a-descriptive-analysis-of-when-and',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="longitudinal-monitoring-llm-content-moderation-social-issues" data-faculty="danaé metaxa" data-year="2025" data-themes="LLMs & Civic Discourse">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://arxiv.org/abs/2510.01255" target="_blank" rel="noopener" onclick="event.stopPropagation()">Longitudinal Monitoring of LLM Content Moderation of Social Issues</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Danaé Metaxa</a></div>
+      <div class="entry-date">9/24/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">The paper demonstrates that LLM content moderation is neither stable nor transparent and longitudinal monitoring of LLM outputs is key for improving AI transparency. LLM refusals are also shaped by unannounced policy changes by companies, further demonstrating how LLMs can act as information gatekeepers.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>LLMs are being used to access important information about sensitive social and political topics. But LLMs can often refuse to answer these questions and little is known about how and why these refusals occur. To address this research gap and improve transparency of LLM outputs, this paper introduces <em>AI Watchman</em>, a longitudinal auditing system that biweekly probes OpenAI&#8217;s moderation endpoint, GPT-4.1, GPT-5, and DeepSeek (in English and Chinese) by prompting them with &#8220;repeat after me&#8221; followed by Wikipedia content drawn from a dataset of over 400 social issue topics. Here&#8217;s what they found:</p>
+<ol class="findings-list">
+  <li>The AI Watchman system can detect model-specific changes in content moderation&#8212;even when caused by subtle and unannounced policy changes by companies. For instance, GPT-4.1&#8217;s refusals for Israel-related content significantly increased during August and September 2025 amid Israel-Gaza ceasefire negotiations. GPT refusals for abortion related content also spiked in the first week of September 2025. Since there was no explicit policy change by OpenAI, the authors speculate that the spike in refusals could have been shaped by external factors like the passage of a Texas bill restricting abortion medication and allowing private individuals to sue medicine distributors.</li>
+  <li>Refusal rates vary substantially by model and by content category, with GPT-4.1 refusing most often (3.9%) and GPT-5 the least (1.2%). DeepSeek displayed consistent performance across models but for Chinese sensitive topics, the model had a high refusal rate in both English and Chinese (30.9% on average). Surprisingly, despite being a U.S company, Chinese Sensitive Topics were also the top flagged category for OpenAI&#8217;s moderation endpoint.</li>
+  <li>Models justify refusals with four recurring and often inconsistent rationales&#8212;content length, content policy, misinformation risk, and legal risk. Newer models like GPT-5 increasingly use &#8220;non-explicit refusals&#8221; that appear cooperative (offering summaries, redactions, or partial responses) while still failing to fulfill the initial request. DeepSeek surfaces content reflecting the Chinese government&#8217;s preferred stance on topics like Taiwan rather than overtly refusing.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>LLMs are fast replacing traditional search engines, becoming a key avenue through which people learn about contested social issues, but unlike search results, they return a single answer that users can often view as objective and accurate. By documenting moderation changes that coincide with politically charged moments (legislation, geopolitical conflict), the authors show that what LLMs refuse to say is itself a form of public discourse worth auditing, and that transparency into AI moderation policies related to matters of current public debate is a prerequisite for user trust and democratic accountability.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://arxiv.org/abs/2510.01255" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#longitudinal-monitoring-llm-content-moderation-social-issues',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="how-listening-versus-reading-alters-consumers-interpretation" data-faculty="shiri melumad" data-year="2024" data-themes="Persuasion & Behavior Change">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://journals.sagepub.com/doi/epub/10.1177/00222437241280068" target="_blank" rel="noopener" onclick="event.stopPropagation()">How Listening Versus Reading Alters Consumers&#8217; Interpretations of News</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Shiri Melumad</a></div>
+      <div class="entry-date">12/5/2024</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">A consumer&#8217;s decision to read or listen to a news story alters their interpretation of the news, where listeners disproportionately focus on the risks over the benefits, and readers tend to form more balanced impressions.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper looks at how people tend to interpret news differently depending on whether they read or listen to it. Through a series of experiments (N= 14,744), the paper documented how listening vs reading shapes how participants interpret a news story. Participants were presented with a news story that included an equal discussion of a product&#8217;s risks and benefits, and then the researchers examined the participants&#8217; interpretation or takeaway from the story. Here are some of the findings:</p>
+<ol class="findings-list">
+  <li>For the news story (risks and benefits of a product), listeners selectively attended to the negative details of a story and had a better recall for those details as compared to the positive ones. As a result, they formed more unfavorable impressions compared to the readers. However, readers had better overall recall&#8212;listeners retained negative details more disproportionately.</li>
+  <li>The listeners&#8217; higher recall of negative details also resulted in responses such as decreased likelihood of using the product, higher levels of anxiety about the safety of the ingredients, and retellings that emphasized the risks over the benefits.</li>
+  <li>When researchers controlled the speed at which readers received information&#8212;simulating the listeners&#8217; experience&#8212;the study found that both groups interpreted the news story similarly.</li>
+  <li>The researchers wanted to find out when listeners would display a positive outlook&#8212;&#8220;positivity bias&#8221;&#8212;towards a news story. To explore this, the participants were presented with a mixed-valence story on the impact of screen-time on adolescents where the benefits were more surprising than the risks. Here, they found that the listeners developed a positivity bias toward the impact of screen-time compared to the readers who still had a more balanced outlook.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>This paper shows that how people choose to consume news&#8212;whether by listening or reading&#8212; shapes what they take away, what they believe, and what they pass on to others. According to the Pew Research Center, around 32% of US adults get news from podcasts&#8212;increasing from 20% in 2020. Given these trends, understanding how the news medium alters interpretation and public action is critical and this paper provides insights into this relatively underexplored research area.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://journals.sagepub.com/doi/epub/10.1177/00222437241280068" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#how-listening-versus-reading-alters-consumers-interpretation',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="how-social-media-algorithms-shape-offline-civic-participatio" data-faculty="dolores albarracín" data-year="2023" data-themes="Social Media & Platforms,Persuasion & Behavior Change">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://journals.sagepub.com/doi/epub/10.1177/17456916231198471" target="_blank" rel="noopener" onclick="event.stopPropagation()">How Social Media Algorithms Shape Offline Civic Participation: A Framework of Social-Psychological Processes</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Dolores Albarrac&#237;n</a></div>
+      <div class="entry-date">12/7/2023</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Social media algorithms shape offline civic participation; what people believe, how inclined they feel to act, and who they are connected to.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper asks whether social media algorithms push people to take action in the real world, like voting, protesting, or volunteering. The authors review existing research on this topic and propose a framework for how social media can facilitate offline civic participation. The framework highlights three mechanisms through which social media algorithms affect civic participation: by shaping attitudes on societal topics, promoting collective action, and building social capital. Here are the findings:</p>
+<ol class="findings-list">
+  <li><strong>Information curation:</strong> Social media algorithms predominantly expose users to content that aligns with their existing beliefs, strengthening their beliefs and making them more likely to act on them. These algorithms also diversify information exposure, and this combination of factors, the authors argue, could benefit offline civic participation.</li>
+  <li><strong>Promoting action:</strong> Social media platforms are designed to reward actions&#8212;liking, sharing, commenting&#8212;over inactivity, which may instill a general tendency toward action among habitual users. Small online actions may also serve as a &#8220;critical gateway&#8221; to higher effort real-world commitments over time.</li>
+  <li><strong>Building social capital:</strong> Social media algorithms lower the barriers to forming new social connections organized around shared interests and values. Frequent interactions with like-minded others build trust and group identity that can translate into offline action.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>This paper examines the psychological factors that mediate the relationship between social media use and offline civic participation. The authors interpret the body of research to say, perhaps counterintuitively, that social media algorithms reinforce users&#8217; existing beliefs while also &#8220;diversifying the information pool.&#8221; The authors also offer direct design implications&#8212;rather than algorithms that show users only what they already agree with, platforms could be designed differently. As the authors note, some algorithms could &#8220;easily limit the heterogeneity of information, which may hurt civic participation,&#8221; suggesting that how platforms are built affect democratic participation and civic engagement.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://journals.sagepub.com/doi/epub/10.1177/17456916231198471" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#how-social-media-algorithms-shape-offline-civic-participatio',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
   <div class="entry" id="lurkers-interactors-creators-modeling-behavioral-and-ideolog" data-faculty="yphtach lelkes" data-year="2026" data-themes="Social Media & Platforms,Political Polarization,Misinformation">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
-        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://dl.acm.org/doi/abs/10.1145/3774904.3792964" target="_blank" rel="noopener" onclick="event.stopPropagation()">Lurkers, Interactors, Creators: Modeling Behavioral and Ideological Diversity on X</a></div>
+        <div class="entry-title-text"><a href="https://dl.acm.org/doi/abs/10.1145/3774904.3792964" target="_blank" rel="noopener" onclick="event.stopPropagation()">Lurkers, Interactors, Creators: Modeling Behavioral and Ideological Diversity on X</a></div>
         <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
@@ -502,7 +792,7 @@
   <div class="entry" id="the-persuasive-impact-of-attitudinal-behavioral-and-combined" data-faculty="dolores albarracín" data-year="2026" data-themes="Persuasion & Behavior Change">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
-        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://www.nature.com/articles/s41598-026-44897-4_reference.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">The persuasive impact of attitudinal, behavioral, and combined message statements</a></div>
+        <div class="entry-title-text"><a href="https://www.nature.com/articles/s41598-026-44897-4_reference.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">The persuasive impact of attitudinal, behavioral, and combined message statements</a></div>
         <div class="entry-badges"><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Dolores Albarracín</a></div>
