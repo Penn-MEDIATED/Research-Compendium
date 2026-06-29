@@ -293,7 +293,7 @@
   <h1>Research Compendium</h1>
   <div class="page-title-cols">
     <div class="page-title-left">
-      <p class="page-desc">This research compendium <em>(still in development!)</em> curates and translates University of Pennsylvania research on the quantitative study of the information ecosystem and its impact on democracy. It brings together empirical work examining issues such as information integrity, media ecosystems, political speech, and democratic resilience, with the aim of making rigorous academic research more accessible and actionable.</p>
+      <p class="page-desc">This research compendium curates and translates University of Pennsylvania research on the quantitative study of the information ecosystem and its impact on democracy. It brings together empirical work examining issues such as information integrity, media ecosystems, political speech, and democratic resilience, with the aim of making rigorous academic research more accessible and actionable.</p>
       <p class="page-desc">The compendium features research from seven schools and centers at Penn—the Annenberg School for Communication, the Annenberg Public Policy Center, the Wharton School, SAS Political Science, SEAS Computer and Information Science, the School of Social Policy and Practice, and the Carey Law School—and is designed to serve journalists, media leaders, civil society organizations, and policymakers seeking evidence-based insights into the functioning and governance of digital information systems.</p>
     </div>
     <div class="page-title-right newsletter-box">
@@ -350,17 +350,17 @@
       <option value="oldest">Oldest first</option>
       <option value="faculty">Author A–Z</option>
     </select>
-    <span class="entry-count" id="entryCount">49 entries</span>
+    <span class="entry-count" id="entryCount">53 entries</span>
     <button class="expand-all-btn" id="expandAllBtn" onclick="toggleExpandAll()">Expand all</button>
   </div>
   <div class="theme-row">
 
     <span class="theme-row-label">Theme</span>
-    <button class="theme-pill" data-theme="LLMs & Civic Discourse" style="--tc:#4f46e5;--tb:#ede9fe" onclick="toggleTheme(this)">LLMs & Civic Discourse <span class="pill-count">10</span></button>
+    <button class="theme-pill" data-theme="LLMs & Civic Discourse" style="--tc:#4f46e5;--tb:#ede9fe" onclick="toggleTheme(this)">LLMs & Civic Discourse <span class="pill-count">11</span></button>
     <button class="theme-pill" data-theme="Misinformation" style="--tc:#b91c1c;--tb:#fee2e2" onclick="toggleTheme(this)">Misinformation <span class="pill-count">7</span></button>
-    <button class="theme-pill" data-theme="Political Polarization" style="--tc:#0369a1;--tb:#e0f2fe" onclick="toggleTheme(this)">Political Polarization <span class="pill-count">15</span></button>
-    <button class="theme-pill" data-theme="Social Media & Platforms" style="--tc:#0f766e;--tb:#ccfbf1" onclick="toggleTheme(this)">Social Media & Platforms <span class="pill-count">14</span></button>
-    <button class="theme-pill" data-theme="Persuasion & Behavior Change" style="--tc:#b45309;--tb:#fef3c7" onclick="toggleTheme(this)">Persuasion & Behavior Change <span class="pill-count">11</span></button>
+    <button class="theme-pill" data-theme="Political Polarization" style="--tc:#0369a1;--tb:#e0f2fe" onclick="toggleTheme(this)">Political Polarization <span class="pill-count">16</span></button>
+    <button class="theme-pill" data-theme="Social Media & Platforms" style="--tc:#0f766e;--tb:#ccfbf1" onclick="toggleTheme(this)">Social Media & Platforms <span class="pill-count">17</span></button>
+    <button class="theme-pill" data-theme="Persuasion & Behavior Change" style="--tc:#b45309;--tb:#fef3c7" onclick="toggleTheme(this)">Persuasion & Behavior Change <span class="pill-count">12</span></button>
     <button class="theme-pill" data-theme="Guiding the Field" style="--tc:#6b21a8;--tb:#f3e8ff" onclick="toggleTheme(this)">Guiding the Field <span class="pill-count">6</span></button>
     <button class="theme-pill" data-theme="2020 Meta Election Project" style="--tc:#166534;--tb:#dcfce7" onclick="toggleTheme(this)">2020 Meta Election Project <span class="pill-count">5</span></button>
     <button class="clear-filters" id="clearBtn" onclick="clearFilters()">✕ Clear all filters</button>
@@ -375,6 +375,130 @@
 
 <!-- ENTRIES -->
 <div class="entries" id="entriesList">
+
+  <div class="entry" id="llm-assisted-reranking-to-operationalize-nuanced-objectives" data-faculty="duncan watts" data-year="2026" data-themes="LLMs & Civic Discourse,Social Media & Platforms">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://arxiv.org/html/2606.02883v1" target="_blank" rel="noopener" onclick="event.stopPropagation()">LLM-Assisted Reranking to Operationalize Nuanced Objectives in Recommender Systems</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Duncan Watts</a></div>
+      <div class="entry-date">June 2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">For users who have a history of watching extremist content on YouTube, &#8220;LLM-based reranking amplifies exposure by ranking such videos higher.&#8221;</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>Recommender systems shape content exposure on online platforms, and a growing body of research suggests these systems&#8212;optimized for engagement&#8212;can promote filter bubbles, reduce ideological diversity, and in some cases, heighten online radicalization. This paper investigates how LLM-based reranking of YouTube recommendations reshapes political content exposure, and whether prompt-level constraints can reduce the promotion of conspiratorial and extremist content without sacrificing personalization. Here are the key findings:</p>
+<ol class="findings-list">
+  <li>LLM-based content reranking improves personalization and aligns video recommendations more closely to a user&#8217;s prior viewing. LLM-based rankings also made suggestions more strongly aligned with the ideological leaning of a user&#8217;s watch history, compared to YouTube&#8217;s baseline. For users with watch histories containing conspiratorial or extremist content, it amplified exposure to that material.</li>
+  <li>Safer prompt guidelines reduced exposure to problematic content without hampering personalization of video recommendations. This suggests that, &#8220;it is not language-based models per se that promote problematic content, but the absence of explicit regularization.&#8221;</li>
+  <li>For topics like abortion and immigration, the LLM prioritized topic relevance over partisan alignment&#8212;sometimes even surfacing opposing viewpoints. For broader topics like elections, where partisan language is more intertwined with other issues, it prioritized partisan alignment over topic. This mixed behavior suggests LLMs operate on statistical language patterns rather than ideological understanding.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Platforms recommend content to maximize engagement and time spent on the platform, which has reinforced filter bubbles and undermined ideological diversity. This paper shows that naively deploying LLM-based recommendation systems can reproduce&#8212;and even amplify&#8212;these harms. However, with appropriate prompting safeguards, the authors show that LLM-based systems can mitigate these threats without sacrificing personalization.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://arxiv.org/html/2606.02883v1" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#llm-assisted-reranking-to-operationalize-nuanced-objectives',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="the-limits-of-de-politicizing-and-also-of-annotation-a-case" data-faculty="daniel j. hopkins" data-year="2026" data-themes="Social Media & Platforms">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://ojs.aaai.org/index.php/ICWSM/article/view/42672/50232" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Limits of De-Politicizing&#8211;and Also of Annotation: A Case Study in Russian Media Outlets&#8217; Social Media Posts, 2016&#8211;2024</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Daniel J. Hopkins</a></div>
+      <div class="entry-date">5/25/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Russia&#8217;s 2022 invasion of Ukraine exposed the limits of de-politicization as an autocratic media strategy: when events generate enough public demand for political news, outlets produce more of it and audiences actively seek it out, forcing regimes toward more overt censorship instead.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper asks how Russia&#8217;s February 2022 invasion of Ukraine changed the content of Russian media. Specifically, it examines whether autocratic governments can maintain their strategy of keeping news apolitical when major events&#8212;like a war&#8212;force politics into the spotlight. To investigate this, the authors collected over two million social media posts from 20 prominent Russian-language media outlets across V&#8217;Kontakte (Russia&#8217;s largest social media platform), Facebook, and Telegram between 2016 and 2024, using a combination of human reviewers and AI tools to categorize the content. Key findings include:</p>
+<ol class="findings-list">
+  <li>The February 2022 invasion triggered a sharp and durable spike in political coverage across outlets. In the three months before the invasion, 47% of posts from the sample were political; in the three months after, that rose to 76%.</li>
+  <li>Independent outlets&#8217; political coverage declined relative to pro-government outlets after March 2022, when new laws criminalizing &#8220;discrediting the armed forces&#8221; took effect and drove some outlets out of Russia entirely. Further analyses also show that independent and pro-government outlets&#8217; posts briefly converged in language immediately after the invasion, suggesting the new legal environment narrowed the space for distinct independent coverage.</li>
+  <li>Before February 2022, V&#8217;Kontakte users were often less likely to like or share political posts. After the invasion, this flipped&#8212;political content, and Ukraine-related posts in particular, began generating significantly more engagement, suggesting the war created a demand for political news that outlets could not ignore.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>This paper provides direct evidence that de-politicization can be upended by major events which generate audience demand that outlets cannot ignore. The finding that independent and pro-government outlets&#8217; coverage converged after the invasion, combined with the documented decline in independent outlets&#8217; relative political coverage, illustrates how legal repression can accomplish what subtler de-politicization could not.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/42672/50232" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#the-limits-of-de-politicizing-and-also-of-annotation-a-case',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="perceptions-of-discrimination-against-white-people-in-post-f" data-faculty="matt levendusky" data-year="2026" data-themes="Political Polarization,Persuasion & Behavior Change">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://link.springer.com/article/10.1007/s11109-026-10140-z" target="_blank" rel="noopener" onclick="event.stopPropagation()">Perceptions of Discrimination Against White People in Post-Floyd America: Media Coverage and Public Opinion, 2020&#8211;2024</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Matt Levendusky</a></div>
+      <div class="entry-date">5/19/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">By dominating media space on racial justice after the Floyd protests, conservative counter-messaging successfully reframed Diversity, Equity, and Inclusion (DEI) and Critical Race Theory (CRT) as anti-white discrimination&#8212;reshaping public opinion in ways Democrats never effectively challenged.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper examines how media coverage, elite messaging, and public perceptions of racial discrimination shifted in the years following the 2020 George Floyd protests. Using cable news data from the Stanford Cable TV News Analyzer, congressional tweet archives, and a longitudinal panel survey of voters in Michigan, Pennsylvania, and Wisconsin tracked from 2020 to 2024, the authors document how a conservative counter-narrative&#8212;arguing that efforts to remedy racial injustice discriminated against white people&#8212;came to dominate public discourse and reshape Americans&#8217; racial attitudes. Key findings include:</p>
+<ol class="findings-list">
+  <li>Media coverage turned overwhelmingly negative: While Black Lives Matter (BLM) dominated coverage at its peak in June 2020, attention quickly pivoted toward Critical Race Theory (CRT) and Diversity, Equity, and Inclusion (DEI) framed as threats to white people. Fox News devoted four times more coverage to CRT than MSNBC or CNN in 2021, and 97% of its coverage of these topics was negative. Even on MSNBC, only 8% of CRT coverage made an explicitly pro-CRT argument&#8212;most simply criticized Republicans for attacking it rather than defending it on its merits.</li>
+  <li>Elite messaging was one-sided: Republicans tweeted twice as much as Democrats about racial justice topics overall and nearly four times as much after 2021. Two-thirds of Republican tweets were negative in tone, while only one quarter of Democratic tweets were positive&#8212;leaving critical messaging to dominate across the board.</li>
+  <li>Perceptions of discrimination against white people grew across all groups: Americans came to perceive less discrimination against Black people and more against white people between 2020 and 2024. Opposition to CRT was strongly linked to higher perceived discrimination against white people. This was especially the case for consumers of conservative media, and the authors argue the media coverage was likely reinforcing existing beliefs rather than changing minds.</li>
+  <li>Party identity became increasingly tied to racial attitudes: Partisan polarization in racial attitudes grew by nearly 27% over this period, with people more likely to adopt the racial views of their party than to switch parties because of their racial views&#8212;though both directions were at work.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>This paper shows how unchallenged media coverage and elite messaging can reshape public attitudes on even the most stable issues. The rollback of DEI mandates and affirmative action under the second Trump administration reflects how a narrative left unanswered for years can translate into lasting policy change&#8212;and with perceived discrimination against white people now a defining axis of partisan identity, these divides are unlikely to recede.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://link.springer.com/article/10.1007/s11109-026-10140-z" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#perceptions-of-discrimination-against-white-people-in-post-f',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
 
   <div class="entry" id="a-systematic-review-of-social-science-studies-analyzing-soci" data-faculty="deen freelon" data-year="2026" data-themes="Social Media & Platforms,Guiding the Field">
     <div class="entry-top" onclick="toggleEntry(this)">
@@ -503,7 +627,7 @@
   <div class="entry" id="entrepreneurs-of-conflict-a-descriptive-analysis-of-when-and" data-faculty="yphtach lelkes" data-year="2026" data-themes="Political Polarization">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://academic.oup.com/pnasnexus/article/5/3/pgag038/8524399" target="_blank" rel="noopener" onclick="event.stopPropagation()">Entrepreneurs of conflict: A descriptive analysis of when and how political elites use divisive rhetoric</a></div>
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://academic.oup.com/pnasnexus/article/5/3/pgag038/8524399" target="_blank" rel="noopener" onclick="event.stopPropagation()">Entrepreneurs of conflict: A descriptive analysis of when and how political elites use divisive rhetoric</a></div>
         <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
@@ -621,6 +745,47 @@
       <div class="entry-actions">
         <a href="https://journals.sagepub.com/doi/epub/10.1177/00222437241280068" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
         <button class="link-btn" onclick="copyLink('#how-listening-versus-reading-alters-consumers-interpretation',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="lower-quantity-higher-quality-auditing-news-content-and-user" data-faculty="danaé metaxa" data-year="2024" data-themes="Social Media & Platforms">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://dl.acm.org/doi/epdf/10.1145/3687046" target="_blank" rel="noopener" onclick="event.stopPropagation()">Lower Quantity, Higher Quality: Auditing News Content and User Perceptions on Twitter/X Algorithmic versus Chronological Timelines</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Danaé Metaxa</a></div>
+      <div class="entry-date">11/8/2024</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Twitter/X&#8217;s algorithm reduces news exposure relative to a chronological timeline, but also provides more diverse and reliable news.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The researchers examine how Twitter/X&#8217;s recommendation algorithm shapes the news content that users encounter, and how exposure to an alternative chronological feed affects user behavior and perceptions. To investigate this, 243 Twitter/X users installed a custom browser extension over three weeks: one week of passive observation followed by two weeks of intervention, during which users were randomly assigned to either the algorithmic (&#8220;For You&#8221;) or chronological (&#8220;Following&#8221;) timeline and then switched to the other. Key findings include:</p>
+<ol class="findings-list">
+  <li>Contrary to concerns about filter bubbles and radicalization, the algorithmic timeline produced lower quantity but higher quality news: users viewing the algorithmic feed saw more diverse and reliable news sources compared to those viewing chronological feed. The news users see from accounts they follow themselves appear more ideologically similar than purely algorithmic recommendations.</li>
+  <li>The algorithmic timeline kept users more engaged&#8212;they loaded more tweets and interacted more&#8212;but at the cost of news exposure, showing them significantly fewer news links. Notably, when users did encounter news, they engaged with it at similar rates regardless of which feed they were on.</li>
+  <li>Users were more satisfied with Twitter/X during the week they could freely choose their timeline than during either intervention week, regardless of which feed they were assigned to.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Widespread concern about algorithmic amplification of partisan and extreme content has shaped both public discourse and policy debates around social media. But, this study finds that, at least on Twitter/X, the algorithmic timeline actually performs better than the chronological one on key measures of news quality, suggesting that users who distrust the algorithm and opt for the chronological feed may inadvertently expose themselves to more extreme and ideologically congruent content.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://dl.acm.org/doi/epdf/10.1145/3687046" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#lower-quantity-higher-quality-auditing-news-content-and-user',this)">Copy Link to Entry</button>
       </div>
     </div>
   </div>
