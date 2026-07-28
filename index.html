@@ -343,6 +343,7 @@
 <button class="year-btn" data-year="2025" onclick="toggleYear(this)">2025</button>
 <button class="year-btn" data-year="2024" onclick="toggleYear(this)">2024</button>
 <button class="year-btn" data-year="2023" onclick="toggleYear(this)">2023</button>
+<button class="year-btn" data-year="2022" onclick="toggleYear(this)">2022</button>
     <div class="ctrl-divider"></div>
     <span class="ctrl-label">Sort</span>
     <select id="sortSelect" onchange="sortEntries()">
@@ -350,19 +351,19 @@
       <option value="oldest">Oldest first</option>
       <option value="faculty">Author A–Z</option>
     </select>
-    <span class="entry-count" id="entryCount">53 entries</span>
+    <span class="entry-count" id="entryCount">62 entries</span>
     <button class="expand-all-btn" id="expandAllBtn" onclick="toggleExpandAll()">Expand all</button>
   </div>
   <div class="theme-row">
 
     <span class="theme-row-label">Theme</span>
-    <button class="theme-pill" data-theme="LLMs & Civic Discourse" style="--tc:#4f46e5;--tb:#ede9fe" onclick="toggleTheme(this)">LLMs & Civic Discourse <span class="pill-count">11</span></button>
-    <button class="theme-pill" data-theme="Misinformation" style="--tc:#b91c1c;--tb:#fee2e2" onclick="toggleTheme(this)">Misinformation <span class="pill-count">7</span></button>
-    <button class="theme-pill" data-theme="Political Polarization" style="--tc:#0369a1;--tb:#e0f2fe" onclick="toggleTheme(this)">Political Polarization <span class="pill-count">16</span></button>
-    <button class="theme-pill" data-theme="Social Media & Platforms" style="--tc:#0f766e;--tb:#ccfbf1" onclick="toggleTheme(this)">Social Media & Platforms <span class="pill-count">17</span></button>
-    <button class="theme-pill" data-theme="Persuasion & Behavior Change" style="--tc:#b45309;--tb:#fef3c7" onclick="toggleTheme(this)">Persuasion & Behavior Change <span class="pill-count">12</span></button>
-    <button class="theme-pill" data-theme="Guiding the Field" style="--tc:#6b21a8;--tb:#f3e8ff" onclick="toggleTheme(this)">Guiding the Field <span class="pill-count">6</span></button>
-    <button class="theme-pill" data-theme="2020 Meta Election Project" style="--tc:#166534;--tb:#dcfce7" onclick="toggleTheme(this)">2020 Meta Election Project <span class="pill-count">5</span></button>
+    <button class="theme-pill" data-theme="LLMs & Civic Discourse" style="--tc:#4f46e5;--tb:#ede9fe" onclick="toggleTheme(this)">LLMs & Civic Discourse <span class="pill-count">14</span></button>
+    <button class="theme-pill" data-theme="Misinformation" style="--tc:#b91c1c;--tb:#fee2e2" onclick="toggleTheme(this)">Misinformation <span class="pill-count">10</span></button>
+    <button class="theme-pill" data-theme="Political Polarization" style="--tc:#0369a1;--tb:#e0f2fe" onclick="toggleTheme(this)">Political Polarization <span class="pill-count">25</span></button>
+    <button class="theme-pill" data-theme="Social Media & Platforms" style="--tc:#0f766e;--tb:#ccfbf1" onclick="toggleTheme(this)">Social Media & Platforms <span class="pill-count">24</span></button>
+    <button class="theme-pill" data-theme="Persuasion & Behavior Change" style="--tc:#b45309;--tb:#fef3c7" onclick="toggleTheme(this)">Persuasion & Behavior Change <span class="pill-count">15</span></button>
+    <button class="theme-pill" data-theme="Guiding the Field" style="--tc:#6b21a8;--tb:#f3e8ff" onclick="toggleTheme(this)">Guiding the Field <span class="pill-count">9</span></button>
+    <button class="theme-pill" data-theme="2020 Meta Election Project" style="--tc:#166534;--tb:#dcfce7" onclick="toggleTheme(this)">2020 Meta Election Project <span class="pill-count">9</span></button>
     <button class="clear-filters" id="clearBtn" onclick="clearFilters()">✕ Clear all filters</button>
   </div>
   <div class="active-chips" id="activeChips"></div>
@@ -375,6 +376,130 @@
 
 <!-- ENTRIES -->
 <div class="entries" id="entriesList">
+
+  <div class="entry" id="quantifying-the-prevalence-and-impact-of-overreaching-causal" data-faculty="duncan watts" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://calvinisch.com/papers/Causal_Claims_in_Social_Science_Main.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Quantifying the prevalence and impact of overreaching causal claims in social science</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Duncan Watts</a></div>
+      <div class="entry-date">2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Causal overclaiming has grown sharply over the past two decades. This problem is exacerbated by readers and AI systems alike tending to default toward causal interpretations even when researchers don&#8217;t imply causation or include limitations.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The authors review how often social scientists claim their findings are causal. The authors used an LLM to scan 194,631 social science research paper abstracts published between 1980 and 2024, classifying whether each one used causal language (e.g., "X causes Y") versus more accurate associational language (e.g., "X is linked to Y"). They validated this LLM-based classification against expert human coders before applying it at scale. Beyond simply counting causal claims, the authors ran a set of experiments to test how this language affects readers and how AI tools respond to it. In one experiment, 1,105 college-educated adults read study abstracts—either in their original causal form or a rewritten associational version, sometimes paired with a note explaining the study's limitations—and reported whether they believed the results showed causation. In a parallel experiment, the authors fed the same materials to several AI language models to see whether AI-generated summaries introduced or removed causal overreach. Key findings include:</p>
+<ol class="findings-list">
+  <li>Causal language is common: Across the full 44-year period, 46.3% of cross-sectional abstracts used causal language despite their design not supporting it. This rate nearly tripled since 2000, climbing from about 20% to over 60% by 2024, with business journals showing the highest rates and sociology the lowest.</li>
+  <li>Readers default to inferring causation, and it's hard to correct. Even when abstracts were rewritten in purely associational language or flagged with a methodological warning, many participants still concluded the study demonstrated causation and used causal language themselves when summarizing it.</li>
+  <li>AI models can make the problem worse—but are more correctable than humans. Language models often introduced causal claims that weren't present in the original associational abstracts, especially when prompted to write "simple" or "practical" summaries. However, unlike human readers, models responded strongly to a prompt explicitly asking for methodological caution, substantially reducing overreach.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>The paper highlights rewriting abstracts and adding "this study is correlational" notes did little to stop human readers from walking away believing they'd seen causal evidence, suggesting the issue isn't just sloppy writing but a deeper cognitive pull toward causal stories. AI models, by contrast, were far more responsive to a simple "be careful" instruction. That asymmetry matters as more people rely on AI-generated research summaries.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://calvinisch.com/papers/Causal_Claims_in_Social_Science_Main.pdf" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#quantifying-the-prevalence-and-impact-of-overreaching-causal',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="the-elite-effect-blocking-political-leaders-on-x-decreases-m" data-faculty="yphtach lelkes" data-year="2026" data-themes="Social Media & Platforms,Misinformation">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://assets-eu.researchsquare.com/files/rs-9347980/v1_covered_34b1e523-22c8-4c60-9dda-6db5edda3cc8.pdf?c=1781833331" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Elite Effect: Blocking Political Leaders on X Decreases Misinformation Susceptibility and Low-credibility Content Sharing</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
+      <div class="entry-date">6/19/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Filtering political elites from social media feeds measurably improves factual knowledge and reduces misinformation susceptibility, with no impact on political engagement or heightened polarization.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The authors test whether reducing users&#8217; exposure to political elites on social media can improve the accuracy of their beliefs. They built a custom X (formerly Twitter) app called Twilly and ran an experiment from September to December 2024 with over 1,200 active US users. Participants were randomly assigned to one of three conditions for one month: a normal unaltered feed (control), Elite Blocking (posts authored by political elites hidden), or Elite Scrubbing (posts from elites and those mentioning elites removed). Participants kept their existing follow networks and scrolled normally—only content posted/mentioning elites was filtered. Here are a few key findings:</p>
+<ol class="findings-list">
+  <li>Both interventions reduced exposure to low-credibility and highly partisan content. Views of low-credibility content fell by about 6 percentage points under both conditions, and partisan content by roughly 14 points. Retweets of partisan content dropped even more sharply—around 20 percentage points under both interventions—suggesting the interventions curbed not just exposure but virality.</li>
+  <li>Participants for whom elite posts were removed (and more so when removing mentions of those elites) showed improved factual knowledge and became meaningfully less susceptible to misinformation, with the largest effects on misleading image-headline pairings.</li>
+  <li>Elite Scrubbing produced larger reductions in low-credibility exposure than Elite Blocking alone, suggesting that posts about elites (replies, quote-tweets, commentary) carry their own misinformation risk, separate from elites&#8217; own posts.</li>
+  <li>Neither intervention affected affective polarization, institutional trust, political interest, or media trust—reducing elite visibility for one month improved what people knew, without changing how they felt about politics.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>The findings produce further evidence that elite speech is a leading contributor to misinformation, and that social media platform design plays a significant role in amplifying emotionally charged and polarizing narratives.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://assets-eu.researchsquare.com/files/rs-9347980/v1_covered_34b1e523-22c8-4c60-9dda-6db5edda3cc8.pdf?c=1781833331" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#the-elite-effect-blocking-political-leaders-on-x-decreases-m',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="beyond-right-and-wrong-evaluating-second-order-social-reason" data-faculty="lyle ungar" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://osf.io/preprints/psyarxiv/mrey3_v1" target="_blank" rel="noopener" onclick="event.stopPropagation()">Beyond Right and Wrong: Evaluating Second-order Social Reasoning in Large Language Models</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Lyle Ungar</a></div>
+      <div class="entry-date">6/12/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">LLMs overestimate how harshly people respond to norm violations, miss how much those responses depend on social relationships, and blur the line between describing behavior and prescribing it.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper examines whether AI models can do more than recognize right from wrong—specifically, whether they can reason about the social consequences that follow when a norm is broken. The authors call this "second-order" social reasoning: understanding not just that an act is wrong, but who is expected to react, how strongly, and whether any reaction is warranted. To test how LLMs reason about this, the authors built NormReact, a dataset of 450 everyday norm-violation scenarios (e.g., a coworker taking credit for someone else's work) drawn from Reddit, and collected annotations from 871 human participants on how violators and bystanders would likely feel and behave. They then compared those human judgments against predictions from six leading LLMs. Key findings include:</p>
+<ol class="findings-list">
+  <li>LLMs consistently predict a harsher social world than humans do. Across all six models, they overpredict negative sanctions—anger, confrontation, and social exclusion—in situations where humans would expect inaction or restraint. The models appear to treat norm violations as automatically deserving punishment, when in reality humans exercise considerable tolerance depending on context.</li>
+  <li>LLMs under-predict self-focused emotions (shame, guilt) and over-predict other-focused emotions for observers: Closed source models reasonably approximate the shame and guilt that humans feel toward someone who violates a norm (shame at 19% and guilt at 22%) but open-source models overestimate both. Interestingly, the bigger gap is with observers: people still report meaningful shame and guilt when someone close to them breaks a norm (a combined 19% for close ties, declining to about 9% for strangers), whereas both open- and closed-source models predict lower rates (roughly 4-11% for close ties and nearly zero for weak ties/strangers).</li>
+  <li>LLMs are more action-oriented and confrontational: LLMs disproportionately predict gossip and verbal confrontation as the appropriate reaction across all observer types, with open-source models overpredicting gossip by up to 66% for weak ties. When asked for the ideal response rather than the likely one, they escalate from gossip to direct confrontation, while humans stay restrained under both framings.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>When people consult AI systems about interpersonal situations—a social misstep, a conflict, a content moderation call—they may receive a picture of social life that is more punitive and less forgiving than reality. At scale, this could quietly shift people&#8217;s sense of how their communities actually respond to behavior, making the world feel harsher than it is.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://osf.io/preprints/psyarxiv/mrey3_v1" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#beyond-right-and-wrong-evaluating-second-order-social-reason',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
 
   <div class="entry" id="llm-assisted-reranking-to-operationalize-nuanced-objectives" data-faculty="duncan watts" data-year="2026" data-themes="LLMs & Civic Discourse,Social Media & Platforms">
     <div class="entry-top" onclick="toggleEntry(this)">
@@ -500,6 +625,47 @@
     </div>
   </div>
 
+  <div class="entry" id="belief-strength-and-the-attitudinal-and-behavioural-correlat" data-faculty="dolores albarracín" data-year="2026" data-themes="Misinformation,Persuasion & Behavior Change">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://bpspsychub.onlinelibrary.wiley.com/doi/pdf/10.1111/bjso.70104" target="_blank" rel="noopener" onclick="event.stopPropagation()">Belief strength and the attitudinal and behavioural correlates of conspiracy beliefs</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Dolores Albarracín</a></div>
+      <div class="entry-date">5/18/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Not all conspiracy beliefs are equally likely to drive behavior. A belief becomes most consequential when the person holding it feels certain it is true, considers it personally important, and sees it as a useful guide for action.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper asks why conspiracy beliefs sometimes lead people to act on them and other times do not. The authors propose that it is not just what someone believes, but how they believe it that matters. They introduce the concept of ‘belief strength,’ which captures three qualities of a belief: how certain someone is that it is true, how personally important they consider it, and how relevant they think it is for guiding their decisions (perceived actionability). Across three studies totaling over 6,000 U.S. participants, the authors tested whether these qualities predicted whether conspiracy beliefs translated into attitudes (for instance how positive, risky, or effective something is evaluated to be) and real-world behaviors across three domains—anti-immigration sentiment, COVID-19 vaccination, and political participation. Key findings include:</p>
+<ol class="findings-list">
+  <li>Certainty and importance consistently strengthened the link between conspiracy beliefs and attitudes. Across the three studies—which measured certainty, importance, or both—people who held a conspiracy belief with greater conviction or personal investment were more likely to develop attitudes consistent with that belief than those who held the same belief with less certainty or importance.</li>
+  <li>Perceived actionability amplified the role of certainty and importance, but did not drive attitudes on its own. When people viewed their belief as a useful guide for decisions, the attitudinal difference between high- and low-certainty believers grew even wider. When perceived actionability was low, high- and low-certainty believers looked much more similar to each other.</li>
+  <li>Attitudes were the bridge between beliefs and behavior. Conspiracy beliefs did not directly predict behavior—instead, they shaped how people felt about certain actions, and those feelings predicted what people actually did, whether that meant getting vaccinated or engaging in political activities like attending rallies or donating to campaigns.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Debunking conspiracy theories is critical to improve the information ecosystem. But believing in a conspiracy does not always predict behavior, and this paper shows that factors like how certain one feels about the conspiracy theory belief, how important it is, and whether it calls for action all mediate that relationship. For instance, believing that the moon landing was fake can lead someone to post false information, but belief about a stolen election may have more direct behavioral outcomes. Thus, counter-messaging interventions that seek to curb the influence of conspiracies must go beyond debunking claims to look to understand how these beliefs are formed and how deeply tied they are to an individual&#8217;s desire to act on them.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://bpspsychub.onlinelibrary.wiley.com/doi/pdf/10.1111/bjso.70104" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#belief-strength-and-the-attitudinal-and-behavioural-correlat',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
   <div class="entry" id="a-systematic-review-of-social-science-studies-analyzing-soci" data-faculty="deen freelon" data-year="2026" data-themes="Social Media & Platforms,Guiding the Field">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
@@ -538,6 +704,47 @@
       <div class="entry-actions">
         <a href="https://osf.io/preprints/socarxiv/yexp6_v1" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
         <button class="link-btn" onclick="copyLink('#a-systematic-review-of-social-science-studies-analyzing-soci',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="lurkers-interactors-creators-modeling-behavioral-and-ideolog" data-faculty="yphtach lelkes" data-year="2026" data-themes="Social Media & Platforms,Political Polarization,Misinformation">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://dl.acm.org/doi/abs/10.1145/3774904.3792964" target="_blank" rel="noopener" onclick="event.stopPropagation()">Lurkers, Interactors, Creators: Modeling Behavioral and Ideological Diversity on X</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
+      <div class="entry-date">4/12/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">The researchers found that, "interactors and lurkers skew younger and Democratic, whereas creators skew older and more Republican, consuming more ideological and low-credibility content."</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper examines the composition of users on X (formerly Twitter), by analyzing their behavior, demographic makeup, and content consumption patterns. The researchers analyze the activity logs of 209 U.S.-based users and group them into distinct behavioral profiles based on how they consume and interact with content on the platform. Here are some of the findings:</p>
+<ol class="findings-list">
+  <li><strong>Three distinct user groups:</strong> Using 22 tracked activity types—such as timeline browsing, tweet viewing, and liking—users were sorted into three distinct groups. The majority were lurkers (60.45%), followed by interactors (32.52%), and creators (7.03%). Lurkers are users who passively consume social media content; interactors engage with content via likes/comments and creators are involved in making and sharing content.</li>
+  <li><strong>Partisan demographics by user type:</strong> Demographically, interactors were primarily Democrats (84.5%) and younger. Lurkers were majority Democrat (64.6%). Creators skewed older and Republican (52.7%), though this group was very small, comprising only 15 users.</li>
+  <li><strong>Exposure to low-credibility content:</strong> Exposure to low-credibility content differed notably across the three groups—much lower for interactors (23.3%), moderate for lurkers (29.3%), and much higher for creators (44.1%). This tracks closely with each group's partisan makeup: Republican users were far more likely than Democrat users to consume low-credibility content across all three groups.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>This paper shows how user behavior on platforms can shape the information they are exposed to. Thus, platform-level interventions will "operate unevenly across user types." A deeper understanding of how people participate on online platforms can encourage "profile-aware platform governance and content moderation strategies."</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://dl.acm.org/doi/abs/10.1145/3774904.3792964" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="copyLink('#lurkers-interactors-creators-modeling-behavioral-and-ideolog',this)">Copy Link to Entry</button>
       </div>
     </div>
   </div>
@@ -624,254 +831,6 @@
     </div>
   </div>
 
-  <div class="entry" id="entrepreneurs-of-conflict-a-descriptive-analysis-of-when-and" data-faculty="yphtach lelkes" data-year="2026" data-themes="Political Polarization">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://academic.oup.com/pnasnexus/article/5/3/pgag038/8524399" target="_blank" rel="noopener" onclick="event.stopPropagation()">Entrepreneurs of conflict: A descriptive analysis of when and how political elites use divisive rhetoric</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
-      <div class="entry-date">3/17/2026</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">Politicians who primarily rely on personal attacks of their political opponents rather than substantive policy debate gain significant media attention but have &#8220;no measurable advantage in elections, fundraising or lawmaking.&#8221;</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>The authors examine what incentivizes U.S. political elites to use divisive language and engage in incivility. Using a large-language model (LLM), they analyzed over 2.2 million public statements from every member of the 118th U.S. Congress&#8212;including floor speeches, press releases, newsletters, and social media posts&#8212;and linked these to records of media coverage, campaign finance, and electoral outcomes. The study distinguishes between &#8220;policy entrepreneurs,&#8221; who focus on legislative debate from &#8220;conflict entrepreneurs,&#8221; defined as legislators who frequently use personal insults rather than engaging with their policy positions. Key findings include:</p>
-<ol class="findings-list">
-  <li>Personal attacks were primarily aimed at the head or perceived head of the opposing party. The study identified 43,560 instances of personal attacks, with the three 2024 presidential candidates alone accounting for roughly a third of all attacks. Democrat presidential candidates received approximately four times the attacks directed at Trump.</li>
-  <li>Personal attacks are rare in absolute terms&#8212;65% of legislators use them in fewer than 1% of their communications&#8212;but they receive outsized media attention relative to their frequency. The authors find that &#8220;the 25 most conflictual members of Congress receive more cable news attention than the 75 least conflictual members combined.&#8221;</li>
-  <li>Personal attacks show no meaningful association with fundraising, electoral gains, cosponsorship of bills, or any measurable changes in personal wealth in a 1-year period.</li>
-  <li>Conflict entrepreneurs do not reflect the political culture at the district-level. The study finds &#8220;a striking disconnect between elite rhetoric and mass sentiment,&#8221; suggesting that media incentives&#8212;rather than constituent demand&#8212;are a primary driver of this divisive rhetoric.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>This research paper highlights the importance of media coverage in shaping electoral strategies&#8212;especially as it relates to politicians employing divisive rhetoric. Politicians seem more concerned with ensuring the media covers them and will employ tactics (like personal attacks) even if it does not advance legislation, win elections, or reflect constituent sentiment. By documenting that conflict entrepreneurship is driven by the attention economy rather than electoral pressure, the study suggests that traditional mechanisms of democratic accountability&#8212;such as electoral sanction&#8212;may be poorly equipped to combat the rise in divisive rhetoric in U.S politics.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://academic.oup.com/pnasnexus/article/5/3/pgag038/8524399" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
-        <button class="link-btn" onclick="copyLink('#entrepreneurs-of-conflict-a-descriptive-analysis-of-when-and',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="longitudinal-monitoring-llm-content-moderation-social-issues" data-faculty="danaé metaxa" data-year="2025" data-themes="LLMs & Civic Discourse">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://arxiv.org/abs/2510.01255" target="_blank" rel="noopener" onclick="event.stopPropagation()">Longitudinal Monitoring of LLM Content Moderation of Social Issues</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Danaé Metaxa</a></div>
-      <div class="entry-date">9/24/2025</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">The paper demonstrates that LLM content moderation is neither stable nor transparent and longitudinal monitoring of LLM outputs is key for improving AI transparency. LLM refusals are also shaped by unannounced policy changes by companies, further demonstrating how LLMs can act as information gatekeepers.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>LLMs are being used to access important information about sensitive social and political topics. But LLMs can often refuse to answer these questions and little is known about how and why these refusals occur. To address this research gap and improve transparency of LLM outputs, this paper introduces <em>AI Watchman</em>, a longitudinal auditing system that biweekly probes OpenAI&#8217;s moderation endpoint, GPT-4.1, GPT-5, and DeepSeek (in English and Chinese) by prompting them with &#8220;repeat after me&#8221; followed by Wikipedia content drawn from a dataset of over 400 social issue topics. Here&#8217;s what they found:</p>
-<ol class="findings-list">
-  <li>The AI Watchman system can detect model-specific changes in content moderation&#8212;even when caused by subtle and unannounced policy changes by companies. For instance, GPT-4.1&#8217;s refusals for Israel-related content significantly increased during August and September 2025 amid Israel-Gaza ceasefire negotiations. GPT refusals for abortion related content also spiked in the first week of September 2025. Since there was no explicit policy change by OpenAI, the authors speculate that the spike in refusals could have been shaped by external factors like the passage of a Texas bill restricting abortion medication and allowing private individuals to sue medicine distributors.</li>
-  <li>Refusal rates vary substantially by model and by content category, with GPT-4.1 refusing most often (3.9%) and GPT-5 the least (1.2%). DeepSeek displayed consistent performance across models but for Chinese sensitive topics, the model had a high refusal rate in both English and Chinese (30.9% on average). Surprisingly, despite being a U.S company, Chinese Sensitive Topics were also the top flagged category for OpenAI&#8217;s moderation endpoint.</li>
-  <li>Models justify refusals with four recurring and often inconsistent rationales&#8212;content length, content policy, misinformation risk, and legal risk. Newer models like GPT-5 increasingly use &#8220;non-explicit refusals&#8221; that appear cooperative (offering summaries, redactions, or partial responses) while still failing to fulfill the initial request. DeepSeek surfaces content reflecting the Chinese government&#8217;s preferred stance on topics like Taiwan rather than overtly refusing.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>LLMs are fast replacing traditional search engines, becoming a key avenue through which people learn about contested social issues, but unlike search results, they return a single answer that users can often view as objective and accurate. By documenting moderation changes that coincide with politically charged moments (legislation, geopolitical conflict), the authors show that what LLMs refuse to say is itself a form of public discourse worth auditing, and that transparency into AI moderation policies related to matters of current public debate is a prerequisite for user trust and democratic accountability.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://arxiv.org/abs/2510.01255" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
-        <button class="link-btn" onclick="copyLink('#longitudinal-monitoring-llm-content-moderation-social-issues',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="how-listening-versus-reading-alters-consumers-interpretation" data-faculty="shiri melumad" data-year="2024" data-themes="Persuasion & Behavior Change">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://journals.sagepub.com/doi/epub/10.1177/00222437241280068" target="_blank" rel="noopener" onclick="event.stopPropagation()">How Listening Versus Reading Alters Consumers&#8217; Interpretations of News</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Shiri Melumad</a></div>
-      <div class="entry-date">12/5/2024</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">A consumer&#8217;s decision to read or listen to a news story alters their interpretation of the news, where listeners disproportionately focus on the risks over the benefits, and readers tend to form more balanced impressions.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>This paper looks at how people tend to interpret news differently depending on whether they read or listen to it. Through a series of experiments (N= 14,744), the paper documented how listening vs reading shapes how participants interpret a news story. Participants were presented with a news story that included an equal discussion of a product&#8217;s risks and benefits, and then the researchers examined the participants&#8217; interpretation or takeaway from the story. Here are some of the findings:</p>
-<ol class="findings-list">
-  <li>For the news story (risks and benefits of a product), listeners selectively attended to the negative details of a story and had a better recall for those details as compared to the positive ones. As a result, they formed more unfavorable impressions compared to the readers. However, readers had better overall recall&#8212;listeners retained negative details more disproportionately.</li>
-  <li>The listeners&#8217; higher recall of negative details also resulted in responses such as decreased likelihood of using the product, higher levels of anxiety about the safety of the ingredients, and retellings that emphasized the risks over the benefits.</li>
-  <li>When researchers controlled the speed at which readers received information&#8212;simulating the listeners&#8217; experience&#8212;the study found that both groups interpreted the news story similarly.</li>
-  <li>The researchers wanted to find out when listeners would display a positive outlook&#8212;&#8220;positivity bias&#8221;&#8212;towards a news story. To explore this, the participants were presented with a mixed-valence story on the impact of screen-time on adolescents where the benefits were more surprising than the risks. Here, they found that the listeners developed a positivity bias toward the impact of screen-time compared to the readers who still had a more balanced outlook.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>This paper shows that how people choose to consume news&#8212;whether by listening or reading&#8212; shapes what they take away, what they believe, and what they pass on to others. According to the Pew Research Center, around 32% of US adults get news from podcasts&#8212;increasing from 20% in 2020. Given these trends, understanding how the news medium alters interpretation and public action is critical and this paper provides insights into this relatively underexplored research area.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://journals.sagepub.com/doi/epub/10.1177/00222437241280068" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
-        <button class="link-btn" onclick="copyLink('#how-listening-versus-reading-alters-consumers-interpretation',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="lower-quantity-higher-quality-auditing-news-content-and-user" data-faculty="danaé metaxa" data-year="2024" data-themes="Social Media & Platforms">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://dl.acm.org/doi/epdf/10.1145/3687046" target="_blank" rel="noopener" onclick="event.stopPropagation()">Lower Quantity, Higher Quality: Auditing News Content and User Perceptions on Twitter/X Algorithmic versus Chronological Timelines</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Danaé Metaxa</a></div>
-      <div class="entry-date">11/8/2024</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">Twitter/X&#8217;s algorithm reduces news exposure relative to a chronological timeline, but also provides more diverse and reliable news.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>The researchers examine how Twitter/X&#8217;s recommendation algorithm shapes the news content that users encounter, and how exposure to an alternative chronological feed affects user behavior and perceptions. To investigate this, 243 Twitter/X users installed a custom browser extension over three weeks: one week of passive observation followed by two weeks of intervention, during which users were randomly assigned to either the algorithmic (&#8220;For You&#8221;) or chronological (&#8220;Following&#8221;) timeline and then switched to the other. Key findings include:</p>
-<ol class="findings-list">
-  <li>Contrary to concerns about filter bubbles and radicalization, the algorithmic timeline produced lower quantity but higher quality news: users viewing the algorithmic feed saw more diverse and reliable news sources compared to those viewing chronological feed. The news users see from accounts they follow themselves appear more ideologically similar than purely algorithmic recommendations.</li>
-  <li>The algorithmic timeline kept users more engaged&#8212;they loaded more tweets and interacted more&#8212;but at the cost of news exposure, showing them significantly fewer news links. Notably, when users did encounter news, they engaged with it at similar rates regardless of which feed they were on.</li>
-  <li>Users were more satisfied with Twitter/X during the week they could freely choose their timeline than during either intervention week, regardless of which feed they were assigned to.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>Widespread concern about algorithmic amplification of partisan and extreme content has shaped both public discourse and policy debates around social media. But, this study finds that, at least on Twitter/X, the algorithmic timeline actually performs better than the chronological one on key measures of news quality, suggesting that users who distrust the algorithm and opt for the chronological feed may inadvertently expose themselves to more extreme and ideologically congruent content.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://dl.acm.org/doi/epdf/10.1145/3687046" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
-        <button class="link-btn" onclick="copyLink('#lower-quantity-higher-quality-auditing-news-content-and-user',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="how-social-media-algorithms-shape-offline-civic-participatio" data-faculty="dolores albarracín" data-year="2023" data-themes="Social Media & Platforms,Persuasion & Behavior Change">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://journals.sagepub.com/doi/epub/10.1177/17456916231198471" target="_blank" rel="noopener" onclick="event.stopPropagation()">How Social Media Algorithms Shape Offline Civic Participation: A Framework of Social-Psychological Processes</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Dolores Albarrac&#237;n</a></div>
-      <div class="entry-date">12/7/2023</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">Social media algorithms shape offline civic participation; what people believe, how inclined they feel to act, and who they are connected to.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>This paper asks whether social media algorithms push people to take action in the real world, like voting, protesting, or volunteering. The authors review existing research on this topic and propose a framework for how social media can facilitate offline civic participation. The framework highlights three mechanisms through which social media algorithms affect civic participation: by shaping attitudes on societal topics, promoting collective action, and building social capital. Here are the findings:</p>
-<ol class="findings-list">
-  <li><strong>Information curation:</strong> Social media algorithms predominantly expose users to content that aligns with their existing beliefs, strengthening their beliefs and making them more likely to act on them. These algorithms also diversify information exposure, and this combination of factors, the authors argue, could benefit offline civic participation.</li>
-  <li><strong>Promoting action:</strong> Social media platforms are designed to reward actions&#8212;liking, sharing, commenting&#8212;over inactivity, which may instill a general tendency toward action among habitual users. Small online actions may also serve as a &#8220;critical gateway&#8221; to higher effort real-world commitments over time.</li>
-  <li><strong>Building social capital:</strong> Social media algorithms lower the barriers to forming new social connections organized around shared interests and values. Frequent interactions with like-minded others build trust and group identity that can translate into offline action.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>This paper examines the psychological factors that mediate the relationship between social media use and offline civic participation. The authors interpret the body of research to say, perhaps counterintuitively, that social media algorithms reinforce users&#8217; existing beliefs while also &#8220;diversifying the information pool.&#8221; The authors also offer direct design implications&#8212;rather than algorithms that show users only what they already agree with, platforms could be designed differently. As the authors note, some algorithms could &#8220;easily limit the heterogeneity of information, which may hurt civic participation,&#8221; suggesting that how platforms are built affect democratic participation and civic engagement.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://journals.sagepub.com/doi/epub/10.1177/17456916231198471" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
-        <button class="link-btn" onclick="copyLink('#how-social-media-algorithms-shape-offline-civic-participatio',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="lurkers-interactors-creators-modeling-behavioral-and-ideolog" data-faculty="yphtach lelkes" data-year="2026" data-themes="Social Media & Platforms,Political Polarization,Misinformation">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://dl.acm.org/doi/abs/10.1145/3774904.3792964" target="_blank" rel="noopener" onclick="event.stopPropagation()">Lurkers, Interactors, Creators: Modeling Behavioral and Ideological Diversity on X</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
-      <div class="entry-date">4/12/2026</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">The researchers found that, "interactors and lurkers skew younger and Democratic, whereas creators skew older and more Republican, consuming more ideological and low-credibility content."</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>This paper examines the composition of users on X (formerly Twitter), by analyzing their behavior, demographic makeup, and content consumption patterns. The researchers analyze the activity logs of 209 U.S.-based users and group them into distinct behavioral profiles based on how they consume and interact with content on the platform. Here are some of the findings:</p>
-<ol class="findings-list">
-  <li><strong>Three distinct user groups:</strong> Using 22 tracked activity types—such as timeline browsing, tweet viewing, and liking—users were sorted into three distinct groups. The majority were lurkers (60.45%), followed by interactors (32.52%), and creators (7.03%). Lurkers are users who passively consume social media content; interactors engage with content via likes/comments and creators are involved in making and sharing content.</li>
-  <li><strong>Partisan demographics by user type:</strong> Demographically, interactors were primarily Democrats (84.5%) and younger. Lurkers were majority Democrat (64.6%). Creators skewed older and Republican (52.7%), though this group was very small, comprising only 15 users.</li>
-  <li><strong>Exposure to low-credibility content:</strong> Exposure to low-credibility content differed notably across the three groups—much lower for interactors (23.3%), moderate for lurkers (29.3%), and much higher for creators (44.1%). This tracks closely with each group's partisan makeup: Republican users were far more likely than Democrat users to consume low-credibility content across all three groups.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>This paper shows how user behavior on platforms can shape the information they are exposed to. Thus, platform-level interventions will "operate unevenly across user types." A deeper understanding of how people participate on online platforms can encourage "profile-aware platform governance and content moderation strategies."</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://dl.acm.org/doi/abs/10.1145/3774904.3792964" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
-        <button class="link-btn" onclick="copyLink('#lurkers-interactors-creators-modeling-behavioral-and-ideolog',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
   <div class="entry" id="how-deceptive-online-networks-reached-millions-in-the-us-2020" data-faculty="sandra gonzález-bailón deen freelon" data-year="2026" data-themes="Social Media & Platforms,Misinformation,Political Polarization,2020 Meta Election Project">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
@@ -914,46 +873,6 @@
     </div>
   </div>
 
-  <div class="entry" id="animosity-is-for-the-audience-how-social-context-shapes-expr" data-faculty="yphtach lelkes" data-year="2026" data-themes="Political Polarization">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://ideas.repec.org/p/osf/socarx/9tseb_v1.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Animosity is for the Audience: How Social Context Shapes Expressions of Political Hostility</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
-      <div class="entry-date">3/11/2026</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">Expressions of partisan animosity are sometimes used as a tool for forging ties and building trust within groups that share similar political views.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>The authors examine whether partisan animosity reflects deep-rooted hatred or serves as a means to signal "loyalty and conformity" to one's social group. They conducted two studies to test this claim: first, they analyzed interview data from the 2012 American National Election Studies (ANES) to see whether respondents adjusted their feelings of animosity based on the partisanship of the interviewer. Second, they conducted a real-time online news-sharing experiment with 1,510 participants to see if animosity was amplified when participants were randomly partnered with someone with similar political leanings. Here are some key findings:</p>
-<ol class="findings-list">
-  <li>The analysis of the ANES data revealed that respondents expressed more hostility toward the opposing party when they believed the interviewer shared their political views. This suggests that partisan animosity is partially based on who the audience is and serves a social signal rather than only reflecting political beliefs.</li>
-  <li>In the online news-sharing experiment, respondents were more likely to express negative views about an opposing political party if their "partner's partisanship was disclosed and matched their own." However, the researchers were unable to identify whether the respondent was exaggerating their beliefs based on their partner's or felt more comfortable expressing them.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>This research suggests that online expressions of partisan animosity depend on who is watching—people express hostility in front of an audience that rewards it, using it as a way to signal trust and belonging within their political group. This study potentially suggests the anger we see online may not only reflect what people believe, but also what they feel socially motivated to express.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://ideas.repec.org/p/osf/socarx/9tseb_v1.html" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
-        <button class="link-btn" onclick="copyLink('#animosity-is-for-the-audience-how-social-context-shapes-expr',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
   <div class="entry" id="the-persuasive-impact-of-attitudinal-behavioral-and-combined" data-faculty="dolores albarracín" data-year="2026" data-themes="Persuasion & Behavior Change">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
@@ -991,6 +910,88 @@
       <div class="entry-actions">
         <a href="https://www.nature.com/articles/s41598-026-44897-4_reference.pdf" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
         <button class="link-btn" onclick="copyLink('#the-persuasive-impact-of-attitudinal-behavioral-and-combined',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="entrepreneurs-of-conflict-a-descriptive-analysis-of-when-and" data-faculty="yphtach lelkes" data-year="2026" data-themes="Political Polarization">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://academic.oup.com/pnasnexus/article/5/3/pgag038/8524399" target="_blank" rel="noopener" onclick="event.stopPropagation()">Entrepreneurs of conflict: A descriptive analysis of when and how political elites use divisive rhetoric</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
+      <div class="entry-date">3/17/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Politicians who primarily rely on personal attacks of their political opponents rather than substantive policy debate gain significant media attention but have &#8220;no measurable advantage in elections, fundraising or lawmaking.&#8221;</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The authors examine what incentivizes U.S. political elites to use divisive language and engage in incivility. Using a large-language model (LLM), they analyzed over 2.2 million public statements from every member of the 118th U.S. Congress&#8212;including floor speeches, press releases, newsletters, and social media posts&#8212;and linked these to records of media coverage, campaign finance, and electoral outcomes. The study distinguishes between &#8220;policy entrepreneurs,&#8221; who focus on legislative debate from &#8220;conflict entrepreneurs,&#8221; defined as legislators who frequently use personal insults rather than engaging with their policy positions. Key findings include:</p>
+<ol class="findings-list">
+  <li>Personal attacks were primarily aimed at the head or perceived head of the opposing party. The study identified 43,560 instances of personal attacks, with the three 2024 presidential candidates alone accounting for roughly a third of all attacks. Democrat presidential candidates received approximately four times the attacks directed at Trump.</li>
+  <li>Personal attacks are rare in absolute terms&#8212;65% of legislators use them in fewer than 1% of their communications&#8212;but they receive outsized media attention relative to their frequency. The authors find that &#8220;the 25 most conflictual members of Congress receive more cable news attention than the 75 least conflictual members combined.&#8221;</li>
+  <li>Personal attacks show no meaningful association with fundraising, electoral gains, cosponsorship of bills, or any measurable changes in personal wealth in a 1-year period.</li>
+  <li>Conflict entrepreneurs do not reflect the political culture at the district-level. The study finds &#8220;a striking disconnect between elite rhetoric and mass sentiment,&#8221; suggesting that media incentives&#8212;rather than constituent demand&#8212;are a primary driver of this divisive rhetoric.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>This research paper highlights the importance of media coverage in shaping electoral strategies&#8212;especially as it relates to politicians employing divisive rhetoric. Politicians seem more concerned with ensuring the media covers them and will employ tactics (like personal attacks) even if it does not advance legislation, win elections, or reflect constituent sentiment. By documenting that conflict entrepreneurship is driven by the attention economy rather than electoral pressure, the study suggests that traditional mechanisms of democratic accountability&#8212;such as electoral sanction&#8212;may be poorly equipped to combat the rise in divisive rhetoric in U.S politics.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://academic.oup.com/pnasnexus/article/5/3/pgag038/8524399" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#entrepreneurs-of-conflict-a-descriptive-analysis-of-when-and',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="animosity-is-for-the-audience-how-social-context-shapes-expr" data-faculty="yphtach lelkes" data-year="2026" data-themes="Political Polarization">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://ideas.repec.org/p/osf/socarx/9tseb_v1.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Animosity is for the Audience: How Social Context Shapes Expressions of Political Hostility</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
+      <div class="entry-date">3/11/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Expressions of partisan animosity are sometimes used as a tool for forging ties and building trust within groups that share similar political views.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The authors examine whether partisan animosity reflects deep-rooted hatred or serves as a means to signal "loyalty and conformity" to one's social group. They conducted two studies to test this claim: first, they analyzed interview data from the 2012 American National Election Studies (ANES) to see whether respondents adjusted their feelings of animosity based on the partisanship of the interviewer. Second, they conducted a real-time online news-sharing experiment with 1,510 participants to see if animosity was amplified when participants were randomly partnered with someone with similar political leanings. Here are some key findings:</p>
+<ol class="findings-list">
+  <li>The analysis of the ANES data revealed that respondents expressed more hostility toward the opposing party when they believed the interviewer shared their political views. This suggests that partisan animosity is partially based on who the audience is and serves a social signal rather than only reflecting political beliefs.</li>
+  <li>In the online news-sharing experiment, respondents were more likely to express negative views about an opposing political party if their "partner's partisanship was disclosed and matched their own." However, the researchers were unable to identify whether the respondent was exaggerating their beliefs based on their partner's or felt more comfortable expressing them.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>This research suggests that online expressions of partisan animosity depend on who is watching—people express hostility in front of an audience that rewards it, using it as a way to signal trust and belonging within their political group. This study potentially suggests the anger we see online may not only reflect what people believe, but also what they feel socially motivated to express.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://ideas.repec.org/p/osf/socarx/9tseb_v1.html" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="copyLink('#animosity-is-for-the-audience-how-social-context-shapes-expr',this)">Copy Link to Entry</button>
       </div>
     </div>
   </div>
@@ -1117,162 +1118,6 @@ The inability for LLMs to accurately interpret AAL has significant impacts: AAL 
     </div>
   </div>
 
-  <div class="entry" id="the-illusion-of-empathy-how-ai-chatbots-shape-conversation-p" data-faculty="lyle ungar" data-year="2025" data-themes="LLMs & Civic Discourse">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/33569" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Illusion of Empathy: How AI Chatbots Shape Conversation Perception</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Lyle Ungar</a></div>
-      <div class="entry-date">4/1/2025</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">The paper shows that achieving genuine perceived empathy in human-AI interactions requires more than linguistic strategies, pointing to a deeper gap between the empathy chatbots express and the empathy users actually experience.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>As AI chatbots are increasingly designed to present as empathetic, a key question remains unanswered: do users actually experience them as empathetic? This paper examines how chatbot identity and perceived empathy shape users' overall conversation experience, analyzing 155 conversations in which participants interacted with either a human or a GPT-based chatbot. Using a combination of user self-reports and multiple computational measures of empathy, the researchers compared how empathy and conversation quality were perceived across human and chatbot interactions. Here's what they found:</p>
-<ol class="findings-list">
-  <li><strong>Higher quality but lower empathy for chatbots:</strong> Participants reported higher conversation quality with GPT-based chatbots but they were also consistently perceived as less empathetic than human conversational partners.</li>
-  <li><strong>Independent GPT-4o evaluation aligns with user perceptions:</strong> GPT-4o, used as an independent evaluator, rated chatbots as less empathetic than humans without being told which was which, aligning with what users reported in their self-assessments.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>Chatbots are increasingly deployed in high-stakes contexts like mental health support, healthcare, and crisis intervention, where perceived empathy is essential to effective communication. This paper shows that even when the language used by models and human conversational partners is similar, users can tell the difference between human empathy and chatbots emulating empathy. Thus, achieving better quality human-chatbot interactions requires "addressing the nuanced ways users interpret and experience empathy in conversations with chatbots."</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/33569" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
-        <button class="link-btn" onclick="copyLink('#the-illusion-of-empathy-how-ai-chatbots-shape-conversation-p',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="perceiving-politics-on-tiktok-a-user-centered-approach-to-u" data-faculty="danaé metaxa" data-year="2025" data-themes="Social Media & Platforms">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://steph-w.github.io/assets/2025/CHI_25__News_Futures.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Perceiving Politics on TikTok: A User-Centered Approach to Understanding Political Content on TikTok</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Danaé Metaxa</a></div>
-      <div class="entry-date">5/1/2025</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">A majority of political content on TikTok is associated with positive sentiments and news content on TikTok is rarely from official accounts. If researchers use news content as a proxy for examining political content, it may be "challenging to implement and miss the bigger picture if applied to TikTok."</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>Tiktok's popularity has grown substantially in recent years, with recent Pew research suggesting that four in ten young adults in the US get their news from Tiktok. Yet, little is known about the prevalence and impact of political content on the platform. In this paper, the authors used a "novel browser-based tool to track users' exposure to and perceptions of political content," across 368 U.S.-based participants. Using a combination of annotations by users and natural language processing, the authors identify and categorize political topics encountered by TikTok users. They find that most of the users have a positive experience on TikTok and do not see political content. Other key findings include:</p>
-<ol class="findings-list">
-  <li>When users were initially asked to describe political content, they defaulted to broad terms like "politician" or "election." But when reacting to actual videos in their feeds, they identified specific topics like race, gender rights, and policing.</li>
-  <li>Most political topics evoked positive sentiment and fewer negative responses (anger or sadness). However, the strongest positive and negative sentiments were about content related to "COVID" and "TRUMP." Thus, overall political content on TikTok "often leans positive," but polarizing topics are still portrayed with strong sentiments across party lines.</li>
-  <li>The authors found that even when users encountered content that appeared to be from news broadcasts, it was rarely posted by official news media accounts. The authors suggest this indicates that "traditional news media accounts have yet to fully breach the TikTok platform."</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>Public and legislative anxieties about TikTok do not accurately represent what users actually experience in terms of content. This study matters because it grounds that debate in real behavioral data. By capturing what ordinary users saw and flagged as political in real time, it reveals a meaningful gap between how people describe political content in the abstract versus what they actually perceive as political when watching—a distinction with direct implications for how platforms and policymakers define and regulate political content.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://steph-w.github.io/assets/2025/CHI_25__News_Futures.pdf" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
-        <button class="link-btn" onclick="copyLink('#perceiving-politics-on-tiktok-a-user-centered-approach-to-u',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="the-effect-of-deactivating-facebook-and-instagram-on-users-e" data-faculty="sandra gonzález-bailón deen freelon" data-year="2025" data-themes="Social Media & Platforms,2020 Meta Election Project">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://www.nber.org/papers/w33697" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Effect of Deactivating Facebook and Instagram on Users' Emotional State</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span><span class="theme-badge" style="color:#166534;background:#dcfce7">2020 Meta Election Project</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Sandra González-Bailón</a> &amp; <a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Deen Freelon</a></div>
-      <div class="entry-date">4/1/2025</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">Deactivating Facebook and Instagram in the weeks before the 2020 US presidential election modestly improved people's mental health—the effect was more pronounced for Facebook.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>This paper examines whether deactivating Facebook or Instagram improves users' emotional wellbeing. In an experiment 20 times larger than previous experiments, the researchers recruited 19,857 Facebook users and 15,585 Instagram users and paid a subset of participants to deactivate their accounts for the six weeks leading up to the 2020 US presidential election. They then measured self-reported levels of happiness, depression, and anxiety at the start and end of the study. Here are some of the findings:</p>
-<ol class="findings-list">
-  <li><strong>Deactivating Facebook improved emotional wellbeing:</strong> Users who deactivated their accounts reported a small improvement in overall emotional state compared to those who did not, with the largest effects seen in users over 35.</li>
-  <li><strong>Deactivating Instagram improved wellbeing for young women:</strong> While there was no overall change in users' state, women aged 18-24 reported modest improvements in emotional wellbeing.</li>
-  <li><strong>The improvements were not explained by increased offline time:</strong> The study found that users migrated to other platforms rather than going offline entirely, suggesting the improvement in mental health was not solely a consequence of reduced screen time.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>Despite growing concern over social media's impact on mental health, evidence remains mixed. This paper contributes to the debate by isolating the effects of Facebook and Instagram deactivation, revealing that their emotional impact varies by age and gender—with Facebook affecting 35+ users and Instagram affecting young women most.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://www.nber.org/papers/w33697" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
-        <button class="link-btn" onclick="copyLink('#the-effect-of-deactivating-facebook-and-instagram-on-users-e',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="computational-social-science-past-present-and-future" data-faculty="duncan watts" data-year="2025" data-themes="Guiding the Field">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://www.elgaronline.com/edcollchap/book/9781802207309/chapter2.xml" target="_blank" rel="noopener" onclick="event.stopPropagation()">Computational Social Science: Past, Present, and Future</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Duncan Watts</a></div>
-      <div class="entry-date">12/11/2025</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">Computational social science is a "a collection of compelling and consequential problems, grounded in the rise of socio-technical systems: systems of devices, platforms, algorithms, and data that are equally social and computational, and that cannot be understood or managed through either lens in isolation of the other."</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>This introductory chapter lays out Duncan Watts and David Lazer's "subjective appraisal of the field of computational social science (CSS)." They first trace the field's history beginning in the late 90s and its growth in popularity during the Web 2.0 revolution which allowed researchers access to unprecedented amounts of online data because of the growing reliance on digital tools. In 2007, Duncan Watts shared that if handled well, data about online communications could "revolutionize our understanding of collective human behavior." Incidentally, 2007 was also the year where people began interpreting CSS as a field that could "produce an understanding of the global network on which many global problems exist: SARS and infectious disease, global warming, strife due to cultural collisions, and the livability of our cities.” 
-What is the current state of CSS? Watts and Lazer argue that computational social science (CSS) has produced a substantial number of empirical insights that would have been difficult or impossible in the pre-digital era. Examples include large-scale validation of network science theories using online social networks, measuring “structural virality” across billions of social media cascades and predicting poverty levels from mobile phone metadata. But has the field's impact extended beyond the realm of scientific publishing? The authors conclude that potential exists but the evidence thus far is "inconclusive."
-Looking to the future, the authors identify 5 key challenges that would shape the field in the next decade. First, the field's overreliance on industry data creates a power imbalance wherein platforms get to decide which data to share with researchers and what data remains "locked up." Second, CSS researchers will continue grappling with "the difference between what is measured and what would ideally be measured." Third, CSS should pursue solution-oriented research intended to tackle real-world problems. Finally, embracing open science and developing ethical frameworks for digital data will be essential to ensure research is reliable, transparent, and socially responsible.</p></div>
-        </div>
-        
-      </div>
-      <div class="entry-actions">
-        <a href="https://www.elgaronline.com/edcollchap/book/9781802207309/chapter2.xml" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
-        <button class="link-btn" onclick="copyLink('#computational-social-science-past-present-and-future',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
   <div class="entry" id="the-post-api-age-of-social-media-data-access-past-present-an" data-faculty="deen freelon" data-year="2025" data-themes="Social Media & Platforms,Guiding the Field">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
@@ -1307,6 +1152,40 @@ The authors close with recommendations urging platforms to make data more freely
       <div class="entry-actions">
         <a href="https://journals.sagepub.com/doi/full/10.1177/00027162251372557" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
         <button class="link-btn" onclick="copyLink('#the-post-api-age-of-social-media-data-access-past-present-an',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="computational-social-science-past-present-and-future" data-faculty="duncan watts" data-year="2025" data-themes="Guiding the Field">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://www.elgaronline.com/edcollchap/book/9781802207309/chapter2.xml" target="_blank" rel="noopener" onclick="event.stopPropagation()">Computational Social Science: Past, Present, and Future</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Duncan Watts</a></div>
+      <div class="entry-date">12/11/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Computational social science is a "a collection of compelling and consequential problems, grounded in the rise of socio-technical systems: systems of devices, platforms, algorithms, and data that are equally social and computational, and that cannot be understood or managed through either lens in isolation of the other."</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This introductory chapter lays out Duncan Watts and David Lazer's "subjective appraisal of the field of computational social science (CSS)." They first trace the field's history beginning in the late 90s and its growth in popularity during the Web 2.0 revolution which allowed researchers access to unprecedented amounts of online data because of the growing reliance on digital tools. In 2007, Duncan Watts shared that if handled well, data about online communications could "revolutionize our understanding of collective human behavior." Incidentally, 2007 was also the year where people began interpreting CSS as a field that could "produce an understanding of the global network on which many global problems exist: SARS and infectious disease, global warming, strife due to cultural collisions, and the livability of our cities.” 
+What is the current state of CSS? Watts and Lazer argue that computational social science (CSS) has produced a substantial number of empirical insights that would have been difficult or impossible in the pre-digital era. Examples include large-scale validation of network science theories using online social networks, measuring “structural virality” across billions of social media cascades and predicting poverty levels from mobile phone metadata. But has the field's impact extended beyond the realm of scientific publishing? The authors conclude that potential exists but the evidence thus far is "inconclusive."
+Looking to the future, the authors identify 5 key challenges that would shape the field in the next decade. First, the field's overreliance on industry data creates a power imbalance wherein platforms get to decide which data to share with researchers and what data remains "locked up." Second, CSS researchers will continue grappling with "the difference between what is measured and what would ideally be measured." Third, CSS should pursue solution-oriented research intended to tackle real-world problems. Finally, embracing open science and developing ethical frameworks for digital data will be essential to ensure research is reliable, transparent, and socially responsible.</p></div>
+        </div>
+        
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.elgaronline.com/edcollchap/book/9781802207309/chapter2.xml" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="copyLink('#computational-social-science-past-present-and-future',this)">Copy Link to Entry</button>
       </div>
     </div>
   </div>
@@ -1722,6 +1601,47 @@ The researchers then evaluated 13 existing AI models on their ability to identif
     </div>
   </div>
 
+  <div class="entry" id="longitudinal-monitoring-llm-content-moderation-social-issues" data-faculty="danaé metaxa" data-year="2025" data-themes="LLMs & Civic Discourse">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://arxiv.org/abs/2510.01255" target="_blank" rel="noopener" onclick="event.stopPropagation()">Longitudinal Monitoring of LLM Content Moderation of Social Issues</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Danaé Metaxa</a></div>
+      <div class="entry-date">9/24/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">The paper demonstrates that LLM content moderation is neither stable nor transparent and longitudinal monitoring of LLM outputs is key for improving AI transparency. LLM refusals are also shaped by unannounced policy changes by companies, further demonstrating how LLMs can act as information gatekeepers.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>LLMs are being used to access important information about sensitive social and political topics. But LLMs can often refuse to answer these questions and little is known about how and why these refusals occur. To address this research gap and improve transparency of LLM outputs, this paper introduces <em>AI Watchman</em>, a longitudinal auditing system that biweekly probes OpenAI&#8217;s moderation endpoint, GPT-4.1, GPT-5, and DeepSeek (in English and Chinese) by prompting them with &#8220;repeat after me&#8221; followed by Wikipedia content drawn from a dataset of over 400 social issue topics. Here&#8217;s what they found:</p>
+<ol class="findings-list">
+  <li>The AI Watchman system can detect model-specific changes in content moderation&#8212;even when caused by subtle and unannounced policy changes by companies. For instance, GPT-4.1&#8217;s refusals for Israel-related content significantly increased during August and September 2025 amid Israel-Gaza ceasefire negotiations. GPT refusals for abortion related content also spiked in the first week of September 2025. Since there was no explicit policy change by OpenAI, the authors speculate that the spike in refusals could have been shaped by external factors like the passage of a Texas bill restricting abortion medication and allowing private individuals to sue medicine distributors.</li>
+  <li>Refusal rates vary substantially by model and by content category, with GPT-4.1 refusing most often (3.9%) and GPT-5 the least (1.2%). DeepSeek displayed consistent performance across models but for Chinese sensitive topics, the model had a high refusal rate in both English and Chinese (30.9% on average). Surprisingly, despite being a U.S company, Chinese Sensitive Topics were also the top flagged category for OpenAI&#8217;s moderation endpoint.</li>
+  <li>Models justify refusals with four recurring and often inconsistent rationales&#8212;content length, content policy, misinformation risk, and legal risk. Newer models like GPT-5 increasingly use &#8220;non-explicit refusals&#8221; that appear cooperative (offering summaries, redactions, or partial responses) while still failing to fulfill the initial request. DeepSeek surfaces content reflecting the Chinese government&#8217;s preferred stance on topics like Taiwan rather than overtly refusing.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>LLMs are fast replacing traditional search engines, becoming a key avenue through which people learn about contested social issues, but unlike search results, they return a single answer that users can often view as objective and accurate. By documenting moderation changes that coincide with politically charged moments (legislation, geopolitical conflict), the authors show that what LLMs refuse to say is itself a form of public discourse worth auditing, and that transparency into AI moderation policies related to matters of current public debate is a prerequisite for user trust and democratic accountability.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://arxiv.org/abs/2510.01255" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#longitudinal-monitoring-llm-content-moderation-social-issues',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
   <div class="entry" id="why-depolarization-is-hard-evaluating-attempts-to-decrease-p" data-faculty="yphtach lelkes" data-year="2025" data-themes="Political Polarization">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
@@ -1931,6 +1851,170 @@ The paper then seeks to assess whether the LLM-based framework can predict the p
     </div>
   </div>
 
+  <div class="entry" id="more-platforms-less-attention-to-news-a-multi-platform-analy" data-faculty="sandra gonzález-bailón" data-year="2025" data-themes="Social Media & Platforms">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://journals.sagepub.com/doi/full/10.1177/14614448251341496" target="_blank" rel="noopener" onclick="event.stopPropagation()">More platforms, less attention to news? A multi-platform analysis of news exposure across TV, web, and YouTube in the United States</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Sandra González-Bailón</a></div>
+      <div class="entry-date">5/29/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">This study shows that in a world where most people tend to avoid news, a "committed minority" of news consumers have a disproportionate influence on how news is disseminated.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper explores how news consumption is shaped by a "multi-platform media environment" and whether exposure to multiple media platforms "alleviates or exacerbates observed inequalities in attention to news." To do so, the researchers tracked and analyzed news exposure across TV, the web and YouTube for 55000 unique panelists across 39 months. Results from this study provide insights into the fraction of news consumers specific to each platform and their demographic profiles. Further analyses looks at whether multi-platform news exposure affects time spent engaging with news sources. Here are some key findings:</p>
+<ol class="findings-list">
+  <li>TV has the largest reach when it comes to news exposure, with 80% of panelists reporting seeing at least one news channel. Less than half of the panelists reported accessing news via the web while only 5% of overall visits to YouTube were to access news sources.</li>
+  <li>When looking at time spent accessing news, the study finds that the "the skewness of the distribution becomes more prominent as we move from TV to the web and to YouTube." This trend indicates the possibility of "news fatigue" on TV and web searchers while YouTube news consumption is on the rise despite being a very small component of overall YouTube traffic.</li>
+  <li>Young people are comparatively less interested in news consumption and multi-platform news consumers tend to be older and more educated.</li>
+  <li>Lastly, exposure to more media platforms only increases news consumption for the "the unrepresentative minority of news consumers, who generate most engagement with online news."</li>
+</ol></div>
+        </div>
+        
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Based on their findings, the researchers importantly conclude that "online media is amplifying the already high levels of interest of cross-platform consumers, setting them farther apart from the average citizen." Moreover, with results showing that TV is still the most common avenue to access news, this research makes the case for why the amount of scholarly interest on online news exposure is disproportionate to the relative impact these sources have compared to TV."</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://journals.sagepub.com/doi/full/10.1177/14614448251341496" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="copyLink('#more-platforms-less-attention-to-news-a-multi-platform-analy',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="perceiving-politics-on-tiktok-a-user-centered-approach-to-u" data-faculty="danaé metaxa" data-year="2025" data-themes="Social Media & Platforms">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://steph-w.github.io/assets/2025/CHI_25__News_Futures.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Perceiving Politics on TikTok: A User-Centered Approach to Understanding Political Content on TikTok</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Danaé Metaxa</a></div>
+      <div class="entry-date">5/1/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">A majority of political content on TikTok is associated with positive sentiments and news content on TikTok is rarely from official accounts. If researchers use news content as a proxy for examining political content, it may be "challenging to implement and miss the bigger picture if applied to TikTok."</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>Tiktok's popularity has grown substantially in recent years, with recent Pew research suggesting that four in ten young adults in the US get their news from Tiktok. Yet, little is known about the prevalence and impact of political content on the platform. In this paper, the authors used a "novel browser-based tool to track users' exposure to and perceptions of political content," across 368 U.S.-based participants. Using a combination of annotations by users and natural language processing, the authors identify and categorize political topics encountered by TikTok users. They find that most of the users have a positive experience on TikTok and do not see political content. Other key findings include:</p>
+<ol class="findings-list">
+  <li>When users were initially asked to describe political content, they defaulted to broad terms like "politician" or "election." But when reacting to actual videos in their feeds, they identified specific topics like race, gender rights, and policing.</li>
+  <li>Most political topics evoked positive sentiment and fewer negative responses (anger or sadness). However, the strongest positive and negative sentiments were about content related to "COVID" and "TRUMP." Thus, overall political content on TikTok "often leans positive," but polarizing topics are still portrayed with strong sentiments across party lines.</li>
+  <li>The authors found that even when users encountered content that appeared to be from news broadcasts, it was rarely posted by official news media accounts. The authors suggest this indicates that "traditional news media accounts have yet to fully breach the TikTok platform."</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Public and legislative anxieties about TikTok do not accurately represent what users actually experience in terms of content. This study matters because it grounds that debate in real behavioral data. By capturing what ordinary users saw and flagged as political in real time, it reveals a meaningful gap between how people describe political content in the abstract versus what they actually perceive as political when watching—a distinction with direct implications for how platforms and policymakers define and regulate political content.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://steph-w.github.io/assets/2025/CHI_25__News_Futures.pdf" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="copyLink('#perceiving-politics-on-tiktok-a-user-centered-approach-to-u',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="the-illusion-of-empathy-how-ai-chatbots-shape-conversation-p" data-faculty="lyle ungar" data-year="2025" data-themes="LLMs & Civic Discourse">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/33569" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Illusion of Empathy: How AI Chatbots Shape Conversation Perception</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Lyle Ungar</a></div>
+      <div class="entry-date">4/1/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">The paper shows that achieving genuine perceived empathy in human-AI interactions requires more than linguistic strategies, pointing to a deeper gap between the empathy chatbots express and the empathy users actually experience.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>As AI chatbots are increasingly designed to present as empathetic, a key question remains unanswered: do users actually experience them as empathetic? This paper examines how chatbot identity and perceived empathy shape users' overall conversation experience, analyzing 155 conversations in which participants interacted with either a human or a GPT-based chatbot. Using a combination of user self-reports and multiple computational measures of empathy, the researchers compared how empathy and conversation quality were perceived across human and chatbot interactions. Here's what they found:</p>
+<ol class="findings-list">
+  <li><strong>Higher quality but lower empathy for chatbots:</strong> Participants reported higher conversation quality with GPT-based chatbots but they were also consistently perceived as less empathetic than human conversational partners.</li>
+  <li><strong>Independent GPT-4o evaluation aligns with user perceptions:</strong> GPT-4o, used as an independent evaluator, rated chatbots as less empathetic than humans without being told which was which, aligning with what users reported in their self-assessments.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Chatbots are increasingly deployed in high-stakes contexts like mental health support, healthcare, and crisis intervention, where perceived empathy is essential to effective communication. This paper shows that even when the language used by models and human conversational partners is similar, users can tell the difference between human empathy and chatbots emulating empathy. Thus, achieving better quality human-chatbot interactions requires "addressing the nuanced ways users interpret and experience empathy in conversations with chatbots."</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/33569" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="copyLink('#the-illusion-of-empathy-how-ai-chatbots-shape-conversation-p',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="the-effect-of-deactivating-facebook-and-instagram-on-users-e" data-faculty="sandra gonzález-bailón deen freelon" data-year="2025" data-themes="Social Media & Platforms,2020 Meta Election Project">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://www.nber.org/papers/w33697" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Effect of Deactivating Facebook and Instagram on Users' Emotional State</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span><span class="theme-badge" style="color:#166534;background:#dcfce7">2020 Meta Election Project</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Sandra González-Bailón</a> &amp; <a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Deen Freelon</a></div>
+      <div class="entry-date">4/1/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Deactivating Facebook and Instagram in the weeks before the 2020 US presidential election modestly improved people's mental health—the effect was more pronounced for Facebook.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper examines whether deactivating Facebook or Instagram improves users' emotional wellbeing. In an experiment 20 times larger than previous experiments, the researchers recruited 19,857 Facebook users and 15,585 Instagram users and paid a subset of participants to deactivate their accounts for the six weeks leading up to the 2020 US presidential election. They then measured self-reported levels of happiness, depression, and anxiety at the start and end of the study. Here are some of the findings:</p>
+<ol class="findings-list">
+  <li><strong>Deactivating Facebook improved emotional wellbeing:</strong> Users who deactivated their accounts reported a small improvement in overall emotional state compared to those who did not, with the largest effects seen in users over 35.</li>
+  <li><strong>Deactivating Instagram improved wellbeing for young women:</strong> While there was no overall change in users' state, women aged 18-24 reported modest improvements in emotional wellbeing.</li>
+  <li><strong>The improvements were not explained by increased offline time:</strong> The study found that users migrated to other platforms rather than going offline entirely, suggesting the improvement in mental health was not solely a consequence of reduced screen time.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Despite growing concern over social media's impact on mental health, evidence remains mixed. This paper contributes to the debate by isolating the effects of Facebook and Instagram deactivation, revealing that their emotional impact varies by age and gender—with Facebook affecting 35+ users and Instagram affecting young women most.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.nber.org/papers/w33697" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
+        <button class="link-btn" onclick="copyLink('#the-effect-of-deactivating-facebook-and-instagram-on-users-e',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
   <div class="entry" id="unraveling-a-cancel-culture-dynamic-when-why-and-which-ameri" data-faculty="matt levendusky" data-year="2025" data-themes="Political Polarization">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
@@ -1970,48 +2054,6 @@ discourage cross-party dialogue.”</p></div>
       <div class="entry-actions">
         <a href="https://www.journals.uchicago.edu/doi/full/10.1086/733004" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
         <button class="link-btn" onclick="copyLink('#unraveling-a-cancel-culture-dynamic-when-why-and-which-ameri',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="more-platforms-less-attention-to-news-a-multi-platform-analy" data-faculty="sandra gonzález-bailón" data-year="2025" data-themes="Social Media & Platforms">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://journals.sagepub.com/doi/full/10.1177/14614448251341496" target="_blank" rel="noopener" onclick="event.stopPropagation()">More platforms, less attention to news? A multi-platform analysis of news exposure across TV, web, and YouTube in the United States</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media & Platforms</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Sandra González-Bailón</a></div>
-      <div class="entry-date">5/29/2025</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">This study shows that in a world where most people tend to avoid news, a "committed minority" of news consumers have a disproportionate influence on how news is disseminated.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>This paper explores how news consumption is shaped by a "multi-platform media environment" and whether exposure to multiple media platforms "alleviates or exacerbates observed inequalities in attention to news." To do so, the researchers tracked and analyzed news exposure across TV, the web and YouTube for 55000 unique panelists across 39 months. Results from this study provide insights into the fraction of news consumers specific to each platform and their demographic profiles. Further analyses looks at whether multi-platform news exposure affects time spent engaging with news sources. Here are some key findings:</p>
-<ol class="findings-list">
-  <li>TV has the largest reach when it comes to news exposure, with 80% of panelists reporting seeing at least one news channel. Less than half of the panelists reported accessing news via the web while only 5% of overall visits to YouTube were to access news sources.</li>
-  <li>When looking at time spent accessing news, the study finds that the "the skewness of the distribution becomes more prominent as we move from TV to the web and to YouTube." This trend indicates the possibility of "news fatigue" on TV and web searchers while YouTube news consumption is on the rise despite being a very small component of overall YouTube traffic.</li>
-  <li>Young people are comparatively less interested in news consumption and multi-platform news consumers tend to be older and more educated.</li>
-  <li>Lastly, exposure to more media platforms only increases news consumption for the "the unrepresentative minority of news consumers, who generate most engagement with online news."</li>
-</ol></div>
-        </div>
-        
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>Based on their findings, the researchers importantly conclude that "online media is amplifying the already high levels of interest of cross-platform consumers, setting them farther apart from the average citizen." Moreover, with results showing that TV is still the most common avenue to access news, this research makes the case for why the amount of scholarly interest on online news exposure is disproportionate to the relative impact these sources have compared to TV."</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://journals.sagepub.com/doi/full/10.1177/14614448251341496" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
-        <button class="link-btn" onclick="copyLink('#more-platforms-less-attention-to-news-a-multi-platform-analy',this)">Copy Link to Entry</button>
       </div>
     </div>
   </div>
@@ -2097,6 +2139,47 @@ discourage cross-party dialogue.”</p></div>
     </div>
   </div>
 
+  <div class="entry" id="political-diversity-in-us-police-agencies" data-faculty="dean knox" data-year="2025" data-themes="Political Polarization">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ajps.12945" target="_blank" rel="noopener" onclick="event.stopPropagation()">Political diversity in U.S. police agencies</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Dean Knox</a></div>
+      <div class="entry-date">2/14/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Despite being more Republican than the people they police, officers' party affiliation has little detectable effect on how they do their jobs. Race, on the other hand, consistently shapes policing behavior in ways that party affiliation does not.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper asks whether the political makeup of police forces reflects the communities they serve—and whether it matters for how officers actually behave on the job. To find out, the authors collected roster data from 99 of the 100 largest local U.S. police agencies, covering roughly 220,000 officers, and matched those records to voter files to determine each officer&#8217;s party affiliation. They then used detailed data from Chicago and Houston to compare how Democratic and Republican officers behaved when assigned to the same beats, at the same times, facing the same conditions. Key findings include:</p>
+<ol class="findings-list">
+  <li>Police officers skew more Republican than the communities they serve. Across the largest police agencies, roughly 32% of officers are registered Republicans, compared to about 14% of civilians in those same jurisdictions. Officers are also more likely to be White, higher-income, and more frequent voters. This mismatch holds even at the district level—in every single Chicago district, and nearly every Houston division, officers skew more Republican than local residents. That said, there is meaningful variation: some agencies, like Birmingham, AL, closely mirror their communities, while others, like Rochester, NY, are dramatically out of step.</li>
+  <li>Party affiliation has little effect on how officers actually behave. Democratic and Republican officers showed no significant differences in stops, arrests, or use of force when working comparable assignments. The one exception: among White officers in Chicago, Democrats made more arrests for violent crimes than Republicans.</li>
+  <li>Race, not party, is what more consistently predicts officer behavior. Black and Hispanic officers in Chicago made significantly fewer stops and arrests, and used force less often, than White officers in comparable situations—particularly in encounters with Black civilians. In Houston the picture is more mixed: Black officers used force less frequently than their White peers, while Hispanic officers made more stops than White officers.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Partisan divides over policing are intense, yet this study finds they largely stop at the precinct door. What does shape on-the-ground enforcement is officer race—a finding that reinforces the case for racial diversity in policing even as it complicates arguments centered on political representation.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ajps.12945" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#political-diversity-in-us-police-agencies',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
   <div class="entry" id="the-diffusion-and-reach-of-misinformation-on-facebook-during" data-faculty="sandra gonzález-bailón deen freelon" data-year="2024" data-themes="Social Media & Platforms,Misinformation,2020 Meta Election Project">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
@@ -2134,6 +2217,48 @@ discourage cross-party dialogue.”</p></div>
       <div class="entry-actions">
         <a href="https://sociologicalscience.com/articles-v11-41-1124/" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
         <button class="link-btn" onclick="copyLink('#the-diffusion-and-reach-of-misinformation-on-facebook-during',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="how-listening-versus-reading-alters-consumers-interpretation" data-faculty="shiri melumad" data-year="2024" data-themes="Persuasion & Behavior Change">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://journals.sagepub.com/doi/epub/10.1177/00222437241280068" target="_blank" rel="noopener" onclick="event.stopPropagation()">How Listening Versus Reading Alters Consumers&#8217; Interpretations of News</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Shiri Melumad</a></div>
+      <div class="entry-date">12/5/2024</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">A consumer&#8217;s decision to read or listen to a news story alters their interpretation of the news, where listeners disproportionately focus on the risks over the benefits, and readers tend to form more balanced impressions.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper looks at how people tend to interpret news differently depending on whether they read or listen to it. Through a series of experiments (N= 14,744), the paper documented how listening vs reading shapes how participants interpret a news story. Participants were presented with a news story that included an equal discussion of a product&#8217;s risks and benefits, and then the researchers examined the participants&#8217; interpretation or takeaway from the story. Here are some of the findings:</p>
+<ol class="findings-list">
+  <li>For the news story (risks and benefits of a product), listeners selectively attended to the negative details of a story and had a better recall for those details as compared to the positive ones. As a result, they formed more unfavorable impressions compared to the readers. However, readers had better overall recall&#8212;listeners retained negative details more disproportionately.</li>
+  <li>The listeners&#8217; higher recall of negative details also resulted in responses such as decreased likelihood of using the product, higher levels of anxiety about the safety of the ingredients, and retellings that emphasized the risks over the benefits.</li>
+  <li>When researchers controlled the speed at which readers received information&#8212;simulating the listeners&#8217; experience&#8212;the study found that both groups interpreted the news story similarly.</li>
+  <li>The researchers wanted to find out when listeners would display a positive outlook&#8212;&#8220;positivity bias&#8221;&#8212;towards a news story. To explore this, the participants were presented with a mixed-valence story on the impact of screen-time on adolescents where the benefits were more surprising than the risks. Here, they found that the listeners developed a positivity bias toward the impact of screen-time compared to the readers who still had a more balanced outlook.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>This paper shows that how people choose to consume news&#8212;whether by listening or reading&#8212; shapes what they take away, what they believe, and what they pass on to others. According to the Pew Research Center, around 32% of US adults get news from podcasts&#8212;increasing from 20% in 2020. Given these trends, understanding how the news medium alters interpretation and public action is critical and this paper provides insights into this relatively underexplored research area.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://journals.sagepub.com/doi/epub/10.1177/00222437241280068" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#how-listening-versus-reading-alters-consumers-interpretation',this)">Copy Link to Entry</button>
       </div>
     </div>
   </div>
@@ -2217,6 +2342,47 @@ discourage cross-party dialogue.”</p></div>
       <div class="entry-actions">
         <a href="https://psycnet.apa.org/fulltext/2025-47011-001.pdf" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
         <button class="link-btn" onclick="copyLink('#bypassing-versus-correcting-misinformation-efficacy-and-funda',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="lower-quantity-higher-quality-auditing-news-content-and-user" data-faculty="danaé metaxa" data-year="2024" data-themes="Social Media & Platforms">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://dl.acm.org/doi/epdf/10.1145/3687046" target="_blank" rel="noopener" onclick="event.stopPropagation()">Lower Quantity, Higher Quality: Auditing News Content and User Perceptions on Twitter/X Algorithmic versus Chronological Timelines</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Danaé Metaxa</a></div>
+      <div class="entry-date">11/8/2024</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Twitter/X&#8217;s algorithm reduces news exposure relative to a chronological timeline, but also provides more diverse and reliable news.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The researchers examine how Twitter/X&#8217;s recommendation algorithm shapes the news content that users encounter, and how exposure to an alternative chronological feed affects user behavior and perceptions. To investigate this, 243 Twitter/X users installed a custom browser extension over three weeks: one week of passive observation followed by two weeks of intervention, during which users were randomly assigned to either the algorithmic (&#8220;For You&#8221;) or chronological (&#8220;Following&#8221;) timeline and then switched to the other. Key findings include:</p>
+<ol class="findings-list">
+  <li>Contrary to concerns about filter bubbles and radicalization, the algorithmic timeline produced lower quantity but higher quality news: users viewing the algorithmic feed saw more diverse and reliable news sources compared to those viewing chronological feed. The news users see from accounts they follow themselves appear more ideologically similar than purely algorithmic recommendations.</li>
+  <li>The algorithmic timeline kept users more engaged&#8212;they loaded more tweets and interacted more&#8212;but at the cost of news exposure, showing them significantly fewer news links. Notably, when users did encounter news, they engaged with it at similar rates regardless of which feed they were on.</li>
+  <li>Users were more satisfied with Twitter/X during the week they could freely choose their timeline than during either intervention week, regardless of which feed they were assigned to.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Widespread concern about algorithmic amplification of partisan and extreme content has shaped both public discourse and policy debates around social media. But, this study finds that, at least on Twitter/X, the algorithmic timeline actually performs better than the chronological one on key measures of news quality, suggesting that users who distrust the algorithm and opt for the chronological feed may inadvertently expose themselves to more extreme and ideologically congruent content.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://dl.acm.org/doi/epdf/10.1145/3687046" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#lower-quantity-higher-quality-auditing-news-content-and-user',this)">Copy Link to Entry</button>
       </div>
     </div>
   </div>
@@ -2385,6 +2551,89 @@ By causally estimating the role of recommendation algorithms in driving partisan
       </div>
     </div>
   </div>
+  <div class="entry" id="whats-in-your-pie-understanding-the-contents-of-personalized" data-faculty="deen freelon" data-year="2024" data-themes="Social Media & Platforms,Guiding the Field">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://asistdl.onlinelibrary.wiley.com/doi/full/10.1002/asi.24869" target="_blank" rel="noopener" onclick="event.stopPropagation()">What's in your PIE? Understanding the contents of personalized information environments with PIEGraph</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Deen Freelon</a></div>
+      <div class="entry-date">1/12/2024</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">When measured by what actually shows up in feeds rather than what people click on, X/Twitter environments look fairly moderate, left-leaning, and low in political and low-quality content relative to other evaluations.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper examines how users consume social media content and what their online information environment actually looks like. Most past research relies on surveys, diaries, or click data, all of which capture only a small slice of what shows up in someone&#8217;s feed. To get a fuller picture, the authors built a tool called PIEGraph, which collected the full X/Twitter timelines of 790 participants (everything posted by the accounts they follow) and paired that with survey data on their demographics, politics, and media habits. Because data collection happened to overlap with Elon Musk's takeover of X/Twitter, the authors were also able to see whether feeds changed after the acquisition. Key findings include:</p>
+<ol class="findings-list">
+  <li>Political content is a small share of feeds, but larger than previously thought: Just over 10% of links in participants&#8217; feeds were political, higher than the 2&#8211;3% found in earlier click-based studies.</li>
+  <li>Feeds lean left and skew toward high factual quality: About 80% of participants had left-of-center feeds, and low-quality content was rare.</li>
+  <li>Musk's takeover didn't cause a dramatic shift: Post volume dropped after October 2022, but ideological leaning, political content, and factual quality stayed roughly stable.</li>
+  <li>Individual differences mattered more than platform changes: Mainstream media use and the belief that January 6th attack was exaggerated all predicted more conservative, lower-quality feeds. The belief that Jewish people control the media and government predicted higher fact quality, which the authors suggest may reflect people consuming outlets they distrust just to criticize them.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>This study pushes back on the idea that social media feeds are dominated by extreme or unreliable content, showing that fear may outpace reality once you look at what people are actually exposed to. It&#8217;s also a reminder of how fragile this kind of research is: the same data access that was free during this study cost at least $5,000 a month by the time it was published, showing how much control platforms hold over what researchers can study.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://asistdl.onlinelibrary.wiley.com/doi/full/10.1002/asi.24869" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#whats-in-your-pie-understanding-the-contents-of-personalized',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="how-social-media-algorithms-shape-offline-civic-participatio" data-faculty="dolores albarracín" data-year="2023" data-themes="Social Media & Platforms,Persuasion & Behavior Change">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://journals.sagepub.com/doi/epub/10.1177/17456916231198471" target="_blank" rel="noopener" onclick="event.stopPropagation()">How Social Media Algorithms Shape Offline Civic Participation: A Framework of Social-Psychological Processes</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Dolores Albarrac&#237;n</a></div>
+      <div class="entry-date">12/7/2023</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Social media algorithms shape offline civic participation; what people believe, how inclined they feel to act, and who they are connected to.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper asks whether social media algorithms push people to take action in the real world, like voting, protesting, or volunteering. The authors review existing research on this topic and propose a framework for how social media can facilitate offline civic participation. The framework highlights three mechanisms through which social media algorithms affect civic participation: by shaping attitudes on societal topics, promoting collective action, and building social capital. Here are the findings:</p>
+<ol class="findings-list">
+  <li><strong>Information curation:</strong> Social media algorithms predominantly expose users to content that aligns with their existing beliefs, strengthening their beliefs and making them more likely to act on them. These algorithms also diversify information exposure, and this combination of factors, the authors argue, could benefit offline civic participation.</li>
+  <li><strong>Promoting action:</strong> Social media platforms are designed to reward actions&#8212;liking, sharing, commenting&#8212;over inactivity, which may instill a general tendency toward action among habitual users. Small online actions may also serve as a &#8220;critical gateway&#8221; to higher effort real-world commitments over time.</li>
+  <li><strong>Building social capital:</strong> Social media algorithms lower the barriers to forming new social connections organized around shared interests and values. Frequent interactions with like-minded others build trust and group identity that can translate into offline action.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>This paper examines the psychological factors that mediate the relationship between social media use and offline civic participation. The authors interpret the body of research to say, perhaps counterintuitively, that social media algorithms reinforce users&#8217; existing beliefs while also &#8220;diversifying the information pool.&#8221; The authors also offer direct design implications&#8212;rather than algorithms that show users only what they already agree with, platforms could be designed differently. As the authors note, some algorithms could &#8220;easily limit the heterogeneity of information, which may hurt civic participation,&#8221; suggesting that how platforms are built affect democratic participation and civic engagement.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://journals.sagepub.com/doi/epub/10.1177/17456916231198471" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#how-social-media-algorithms-shape-offline-civic-participatio',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
   <div class="entry" id="asymmetric-ideological-segregation-in-exposure-to-political-n" data-faculty="sandra gonzález-bailón deen freelon" data-year="2023" data-themes="Social Media & Platforms,Political Polarization,Misinformation,2020 Meta Election Project">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
@@ -2546,6 +2795,130 @@ By causally estimating the role of recommendation algorithms in driving partisan
       <div class="entry-actions">
         <a href="https://www.nature.com/articles/s41586-023-06297-w" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
         <button class="link-btn" onclick="copyLink('#like-minded-sources-on-facebook-are-prevalent-but-not-polari',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="the-effects-of-polarized-evaluations-on-political-participat" data-faculty="diana c. mutz" data-year="2023" data-themes="Political Polarization,Persuasion & Behavior Change">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://academic.oup.com/poq/article/87/2/243/7161083?guestAccessKey=" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Effects of Polarized Evaluations on Political Participation: Does Hating the Other Side Motivate Voters?</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Diana C. Mutz</a></div>
+      <div class="entry-date">5/12/2023</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Polarization does not predict political participation, however candidate preference is strongly associated with political behaviour.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This study investigates whether rising affective polarization in American politics might have a side effect: increased political participation. Using American National Election Studies (ANES) data spanning presidential elections from 1980 to 2020, along with a nationally representative panel survey from 2016&#8211;2020, the authors test whether polarized feelings toward parties and candidates predict intent to vote, self-reported turnout, validated turnout, and broader campaign participation (e.g., attending rallies, donating, displaying buttons). They examine two measures of polarization: "affective polarization" (the gap in warmth felt toward one&#8217;s own party versus the opposing party) and "candidate thermometer difference" (the gap in feelings toward the two presidential candidates). Key findings include:</p>
+<ol class="findings-list">
+  <li>Candidate evaluations matter more than party feelings: Polarized views of the presidential candidates were a far more consistent predictor of voting intent and turnout than general affective polarization between the two parties. Candidate thermometer difference predicted intent to vote in all 11 election years studied, while affective polarization was significant in only 3.</li>
+  <li>Self-reports overstate the effect of Polarization: When using turnout records instead of self-reported voting, the relationship between polarization and turnout became much weaker or disappeared entirely. This suggests that polarized respondents are more likely to say they voted or intended to vote, even when they did not, indicating an expressive or performative element to reported polarization.</li>
+  <li>Panel data confirms a relationship between candidates and political participation: Tracking the same individuals from 2016 to 2020, increases in candidate thermometer difference predicted an individual&#8217;s increased likelihood of voting, reinforcing that it&#8217;s candidate-specific animosity/enthusiasm, not general party hostility, that drives behavior.</li>
+  <li>Modest but real impact on turnout: Roughly one-quarter to one-third of the actual rise in voter turnout between 1980&#8211;2016 (and again 2016&#8211;2020) can be statistically attributed to rising polarization in candidate evaluations.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>The paper distinguishes between candidate preference and polarization and displays that polarization is not an engine behind higher voter turnout. By distinguishing between party-level animosity and candidate-level polarization, and by comparing self-reported turnout against actual voting records, the authors show that much of the polarization drives participation story is more a performance than material reality. The findings suggest that the presidential candidates being fielded can actively influence partisan hostility. Being more cautious with candidate choice may be a more effective lever for both turnout and, potentially, for de-escalating unproductive political animosity.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://academic.oup.com/poq/article/87/2/243/7161083?guestAccessKey=" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#the-effects-of-polarized-evaluations-on-political-participat',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="increased-fox-news-viewership-is-not-associated-with-heighte" data-faculty="daniel j. hopkins yphtach lelkes" data-year="2023" data-themes="Political Polarization">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4420947" target="_blank" rel="noopener" onclick="event.stopPropagation()">Increased Fox News Viewership Is Not Associated with Heightened Anti-Black Prejudice</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Daniel J. Hopkins</a> and <a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
+      <div class="entry-date">5/1/2023</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Rising Fox News viewership does not appear to increase White Americans&#8217; anti-Black prejudice, but it is associated with more restrictionist views on unauthorized immigration.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>This paper reviews whether Fox News viewership influences consumers views on race and immigration. It uses a survey administered between 2008 and 2020 to test whether changes in individuals&#8217; Fox News viewership are associated with changes in anti-Black prejudice, attitudes about government assistance to Black Americans, and views on unauthorized immigration. Key findings include:</p>
+<ol class="findings-list">
+  <li>No meaningful link to anti-Black prejudice: Among White respondents, increased Fox News viewership &#8220;itself did not increase anti-Black prejudice.&#8221; Similarly, the researchers found that consuming Fox News content did not shape views on whether the government should assist Black Americans. However, the authors note that these findings do not mean that Fox News &#8220;has no race-related impacts.&#8221;</li>
+  <li>Negative views on unauthorized immigration: Increased Fox viewership was significantly associated with declining support for immigration and increased support for a border wall/deportation. In the authors&#8217; words, &#8220;people who started watching Fox News became more restrictionist on immigration relative to those who stopped.&#8221;</li>
+  <li>News coverage prioritizes immigration: A content analysis of Fox News transcripts found the network devoted more coverage to immigration than to race-related issues over this period, aligning with the survey results.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>The findings push back on a common assumption that partisan media consumption straightforwardly drives racial animus—at least for Fox News and anti-Black prejudice specifically. Instead, the results suggest media effects may be issue-specific: strong effects on immigration, where Fox&#8217;s coverage is heaviest, but not on race more broadly.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4420947" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#increased-fox-news-viewership-is-not-associated-with-heighte',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="the-promise-and-pitfalls-of-cross-partisan-conversations-for" data-faculty="erik santoro" data-year="2022" data-themes="Political Polarization,Persuasion & Behavior Change">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://www.science.org/doi/pdf/10.1126/sciadv.abn5515" target="_blank" rel="noopener" onclick="event.stopPropagation()">The promise and pitfalls of cross-partisan conversations for reducing affective polarization: Evidence from randomized experiments</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Erik Santoro</a></div>
+      <div class="entry-date">6/22/2022</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Brief cross-partisan conversations can soften partisan dislike in the moment, but only when focused on common ground—and these effects fade quickly and don't change how people actually behave politically.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The authors tested whether facilitating face-to-face conversations between Democrats and Republicans would reduce how much they dislike each other, and make them more supportive of democratic values. To do this, a pair of partisan strangers were randomly assigned to different conversation formats and topics. In Study 1, participants discussed their "perfect day," wherein half of the participants knew the party affiliation of their partner while the others did not. In Study 2, two additional conditions prompted participants to discuss partisan preferences—why they support their own party or dislike the other. Key findings include:</p>
+<ol class="findings-list">
+  <li>Simply knowing you were talking to someone from the other party—while having an ordinary, non-political conversation about your &#8216;perfect day&#8217;—significantly warmed partisan feelings toward the other side (both studies demonstrated this). But those gains had fully disappeared three months later.</li>
+  <li>When conversations turned to political differences rather than shared experiences, the warming effect vanished entirely. What people talk about matters as much as whether they talk at all.</li>
+  <li>Even when conversations did reduce partisan dislike, they had no effect on how people actually engage with politics—their support for bipartisanship, cross-party voting, or democratic norms remained unchanged.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Many dialogue programs operate on the assumption that reducing partisan dislike will naturally produce better democratic citizens. This paper shows those are two separate problems, and that one-off conversations alone are unlikely to bridge either divide in a lasting way.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://www.science.org/doi/pdf/10.1126/sciadv.abn5515" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#the-promise-and-pitfalls-of-cross-partisan-conversations-for',this)">Copy Link to Entry</button>
       </div>
     </div>
   </div>
