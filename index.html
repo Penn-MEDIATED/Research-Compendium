@@ -10,8 +10,8 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --navy: #011F5B; --gold-bright: #F2A900;
-      --link: #01419a; --text: #1a1a2e; --text-light: #555;
+      --navy: #011F5B; --gold-bright: #f2c100;
+      --link: #0055A4; --text: #1a1a2e; --text-light: #666666;
       --border: #dde3ee; --bg-subtle: #f4f5f8;
     }
     body {
@@ -122,7 +122,7 @@
       cursor: pointer; background: white; color: #555; transition: all .15s;
     }
     .year-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
-    .entry-count { margin-left: auto; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #999; white-space: nowrap; }
+    .entry-count { margin-left: auto; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #707070; white-space: nowrap; }
     .expand-all-btn {
       border: none; background: none; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
       font-size: 12px; color: var(--link); cursor: pointer; padding: 4px 0; white-space: nowrap;
@@ -137,7 +137,7 @@
     .theme-row-label {
       font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 11px;
       font-weight: 700; text-transform: uppercase; letter-spacing: .8px;
-      color: #999; white-space: nowrap; padding-top: 4px;
+      color: #707070; white-space: nowrap; padding-top: 4px;
     }
     /* Wrapping the pills separately from the label means every wrapped line
        starts at this container's left edge — which, thanks to the grid
@@ -169,19 +169,24 @@
     .chip button { border: none; background: none; cursor: pointer; color: #666; font-size: 14px; line-height: 1; padding: 0; }
     .chip button:hover { color: #c00; }
 
-    /* TABLE HEADER */
+    /* TABLE HEADER — outer band runs full width; inner wrapper keeps the
+       column grid centered and aligned with the rest of the page content. */
     .table-header {
+      background: #e8eef6; padding: 9px 0; border-bottom: 2px solid #b8cde0;
+    }
+    .table-header-inner {
       display: grid; grid-template-columns: 260px 160px 90px 1fr;
-      max-width: 1280px; margin: 0 auto;
-      background: #e8eef6; padding: 9px 24px; border-bottom: 2px solid #b8cde0;
+      max-width: 1280px; margin: 0 auto; padding: 0 24px;
     }
     .table-header span {
       font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 11px;
       font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--navy);
     }
 
-    /* ENTRIES */
-    .entries { max-width: 1280px; margin: 0 auto; padding: 16px 24px 60px; display: flex; flex-direction: column; gap: 10px; background: var(--bg-subtle); }
+    /* ENTRIES — same split: outer band carries the full-bleed background,
+       inner wrapper centers the actual list at the page's content width. */
+    .entries { padding: 16px 0 60px; background: var(--bg-subtle); }
+    .entries-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 10px; }
     .entry { background: white; border-radius: 8px; border: 1px solid var(--border); overflow: hidden; transition: box-shadow .2s; }
     .entry:hover { box-shadow: 0 2px 16px rgba(1,31,91,.1); }
     .entry:target { box-shadow: 0 0 0 2.5px var(--gold-bright); }
@@ -266,7 +271,7 @@
     .read-btn:hover { background: #062d85; }
     .link-btn { border: none; background: none; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: var(--link); cursor: pointer; padding: 0; }
     .link-btn:hover { text-decoration: underline; }
-    .no-results { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #999; padding: 52px 0; text-align: center; display: none; background: white; border-radius: 8px; border: 1px solid var(--border); }
+    .no-results { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #707070; padding: 52px 0; text-align: center; display: none; background: white; border-radius: 8px; border: 1px solid var(--border); }
 
     /* RESPONSIVE */
     @media (max-width: 780px) {
@@ -276,7 +281,7 @@
       .controls-top { padding: 11px 24px; }
       .theme-row { padding: 9px 24px; }
       .active-chips { padding: 0 24px 9px; }
-      .entries { padding: 12px 24px 48px; }
+      .entries { padding: 12px 0 48px; }
 
       /* Hide fixed-column header — labels live inside each entry */
       .table-header { display: none; }
@@ -322,7 +327,8 @@
       .controls-top input { width: 100%; }
       .theme-row { padding: 8px 16px; }
       .active-chips { padding: 0 16px 8px; }
-      .entries { padding: 10px 16px 40px; }
+      .entries { padding: 10px 0 40px; }
+      .entries-inner { padding: 0 16px; }
 
       .entry-top {
         grid-template-columns: 1fr;
@@ -424,11 +430,14 @@
 
 <!-- TABLE HEADER -->
 <div class="table-header">
-  <span>Title</span><span>Penn Faculty Lead</span><span>Date</span><span>Key Takeaway</span>
+  <div class="table-header-inner">
+    <span>Title</span><span>Penn Faculty Lead</span><span>Date</span><span>Key Takeaway</span>
+  </div>
 </div>
 
 <!-- ENTRIES -->
-<div class="entries" id="entriesList">
+<div class="entries">
+<div class="entries-inner" id="entriesList">
 
   <div class="entry" id="quantifying-the-prevalence-and-impact-of-overreaching-causal" data-faculty="duncan watts" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
     <div class="entry-top" onclick="toggleEntry(this)">
@@ -2977,6 +2986,7 @@ By causally estimating the role of recommendation algorithms in driving partisan
   </div>
 
   <div class="no-results" id="noResults">No entries match your filters.</div>
+</div>
 </div>
 
 <script>
