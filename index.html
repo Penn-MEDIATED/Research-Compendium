@@ -34,7 +34,7 @@
     }
     .page-title-band h1 {
       font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
-      font-size: 26px; font-weight: 700;
+      font-size: 1.9rem; font-weight: 700;
       color: var(--navy); margin-bottom: 14px;
     }
     .page-title-cols {
@@ -276,7 +276,7 @@
     /* RESPONSIVE */
     @media (max-width: 780px) {
       .page-title-band { padding: 24px 24px 20px; }
-      .page-title-band h1 { font-size: 22px; margin-bottom: 12px; }
+      .page-title-band h1 { margin-bottom: 12px; }
       .page-title-cols { gap: 24px; }
       .controls-top { padding: 11px 24px; }
       .theme-row { padding: 9px 24px; }
@@ -307,6 +307,7 @@
 
     /* Stack description + newsletter at this breakpoint */
     @media (max-width: 640px) {
+      .page-title-band h1 { font-size: 1.6rem; }
       .page-title-cols { flex-direction: column; gap: 0; }
       .page-title-left  { flex: none; width: 100%; }
       .page-title-right {
@@ -320,7 +321,6 @@
 
     @media (max-width: 600px) {
       .page-title-band { padding: 18px 16px 16px; }
-      .page-title-band h1 { font-size: 20px; }
       .page-desc { font-size: 14px; }
       .newsletter-box p, .newsletter-box li { font-size: 13.5px; }
       .controls-top { padding: 10px 16px; }
