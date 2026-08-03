@@ -176,7 +176,11 @@
     }
     .table-header-inner {
       display: grid; grid-template-columns: 260px 160px 90px 1fr;
-      max-width: 1280px; margin: 0 auto; padding: 0 24px;
+      max-width: 1280px; margin: 0 auto;
+      /* Left padding = entries-inner's 24px + the entry card's 1px border +
+         entry-top's 20px inner padding, so each label starts exactly where
+         that column's text starts inside every row below. */
+      padding: 0 24px 0 45px;
     }
     .table-header span {
       font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 11px;
@@ -451,7 +455,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Causal overclaiming has grown sharply over the past two decades. This problem is exacerbated by readers and AI systems alike tending to default toward causal interpretations even when researchers don&#8217;t imply causation or include limitations.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -492,7 +496,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Filtering political elites from social media feeds measurably improves factual knowledge and reduces misinformation susceptibility, with no impact on political engagement or heightened polarization.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -534,7 +538,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">LLMs overestimate how harshly people respond to norm violations, miss how much those responses depend on social relationships, and blur the line between describing behavior and prescribing it.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -575,7 +579,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">For users who have a history of watching extremist content on YouTube, &#8220;LLM-based reranking amplifies exposure by ranking such videos higher.&#8221;</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -616,7 +620,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Russia&#8217;s 2022 invasion of Ukraine exposed the limits of de-politicization as an autocratic media strategy: when events generate enough public demand for political news, outlets produce more of it and audiences actively seek it out, forcing regimes toward more overt censorship instead.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -657,7 +661,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">By dominating media space on racial justice after the Floyd protests, conservative counter-messaging successfully reframed Diversity, Equity, and Inclusion (DEI) and Critical Race Theory (CRT) as anti-white discrimination&#8212;reshaping public opinion in ways Democrats never effectively challenged.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -699,7 +703,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Not all conspiracy beliefs are equally likely to drive behavior. A belief becomes most consequential when the person holding it feels certain it is true, considers it personally important, and sees it as a useful guide for action.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -740,7 +744,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Only 3.15% of social science publications use social media data, with Twitter/X and Facebook dominant throughout the study period&#8212;but usage has plateaued and declined as platforms restrict academic data access.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -782,7 +786,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">The researchers found that, "interactors and lurkers skew younger and Democratic, whereas creators skew older and more Republican, consuming more ideological and low-credibility content."</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -823,7 +827,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Agreement is easier to find when people explore new ground together and are motivated to compromise.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -864,7 +868,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Evangelical churches in the U.S. engage in direct political advocacy in the lead up to elections and are focused more on mobilizing local voters who are ideologically homogenous rather than persuading swing voters.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -905,7 +909,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">At least 40 million American Facebook and Instagram users were exposed to deceptive online networks in the lead up to the 2020 election. However, it constituted a very small share of overall content consumption (only 0.3% for people who were exposed) and a lot of the exposure to such deceptive content was driven by everyday users rather than large consolidated networks.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -947,7 +951,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Statements that integrate attitudes and behaviors are more persuasive than statements that contain only one type of information. However, when comparing, attitudinal statements "generally outperform behavioral statements alone."</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -988,7 +992,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Politicians who primarily rely on personal attacks of their political opponents rather than substantive policy debate gain significant media attention but have &#8220;no measurable advantage in elections, fundraising or lawmaking.&#8221;</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1030,7 +1034,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Expressions of partisan animosity are sometimes used as a tool for forging ties and building trust within groups that share similar political views.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1070,7 +1074,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Political ads in the final weeks before the 2020 U.S. presidential election—when voter opinions are already largely fixed—have little to no effect on political beliefs.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1110,7 +1114,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Common sense in humans is subjective and traditional benchmarks aimed at evaluating common sense in LLMs mainly focus on measuring accuracy relative to some decided ground truth.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1150,7 +1154,7 @@
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">This review paper shows that LLMs by virtue of how they are trained and deployed, “are in part beholden to what language—and importantly, whose language—is being modeled in ways that have effects on the real speaker communities who use the technology."</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1192,7 +1196,7 @@ The inability for LLMs to accurately interpret AAL has significant impacts: AAL 
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">The last 20 years has witnessed a trend toward reduced researcher access for social media data, which is also "permanently contingent on factors over which researchers have little or no control."</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1230,7 +1234,7 @@ The authors close with recommendations urging platforms to make data more freely
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Computational social science is a "a collection of compelling and consequential problems, grounded in the rise of socio-technical systems: systems of devices, platforms, algorithms, and data that are equally social and computational, and that cannot be understood or managed through either lens in isolation of the other."</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1264,7 +1268,7 @@ Looking to the future, the authors identify 5 key challenges that would shape th
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">This megastudy points to the “intention-behavior gap” for voter registration and shows that when prior motivation is low, “interventions that successfully boost intentions may be insufficient to prompt action.”</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1305,7 +1309,7 @@ Looking to the future, the authors identify 5 key challenges that would shape th
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">This study shows that the “selective presentation of truthful information” can influence both the feelings and opinions regarding important news events. Moreover, by using an LLM to create a set of articles that are factually accurate but differ in tone(i.e., based on what content is included and what is left out) this paper highlights the “ease with which bias can be introduced to otherwise typical news coverage as well as its impact on readers.” Thus, grasping the role of misinformation in society must go beyond addressing falsehoods by also addressing “biased, yet factually accurate, reporting practices prevalent in mainstream media.”</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1346,7 +1350,7 @@ Looking to the future, the authors identify 5 key challenges that would shape th
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">This paper showed that presenting conceptual scientific knowledge that counters vaccine misinformation without directly refuting false claims can be more effective than merely correcting false claims.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1388,7 +1392,7 @@ The researchers also examined if exposure to misinformation would increase misco
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">There is a lack of empirical evidence to support net neutrality regulations, suggesting that policy decisions in Europe and the US about net neutrality "have largely been driven by ideological views and political considerations rather than economics and evidence."</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1430,7 +1434,7 @@ The researchers also examined if exposure to misinformation would increase misco
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">This study shows that neural indicators of reward, language and emotions processing are associated with the persuasiveness of messages both for individuals and at scale.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1471,7 +1475,7 @@ The researchers also examined if exposure to misinformation would increase misco
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">This paper provides a methodological framework to test automated moderation systems for incorrect speech suppression and in doing so, shows that there will be a tradeoff between “filtering out undesired content and ensuring that other speech is allowed.”</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1512,7 +1516,7 @@ The researchers also examined if exposure to misinformation would increase misco
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">LLMs reduce the effort it takes to find information about a topic but often at the expense of developing a deeper understanding of the topic. This in turn, makes LLM-assisted analyses less informative.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1553,7 +1557,7 @@ The researchers also examined if exposure to misinformation would increase misco
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">The effects of campaign speeches on electoral performance are constrained by what media organizations choose to amplify and this research finds that the media prefers polarizing content.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1597,7 +1601,7 @@ To address this, the authors developed a method to separately measure persuasion
         <div class="takeaway-text">LLMs developed in the West struggle to adapt to cultural nuances in specific conversational settings. The framework proposed in this paper can help guide future “AI systems that better
 understand, respect, and adapt to diversity in communication.”</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1634,7 +1638,7 @@ After evaluating five models from OpenAI, Google and Anthropic based on this fra
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Existing AI models are reasonably able to classify videos as either real or fake. That being said, most models have a bias towards real videos, meaning they have higher accuracy in correctly identifying real videos compared to fake ones.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1675,7 +1679,7 @@ The researchers then evaluated 13 existing AI models on their ability to identif
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">The paper demonstrates that LLM content moderation is neither stable nor transparent and longitudinal monitoring of LLM outputs is key for improving AI transparency. LLM refusals are also shaped by unannounced policy changes by companies, further demonstrating how LLMs can act as information gatekeepers.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1716,7 +1720,7 @@ The researchers then evaluated 13 existing AI models on their ability to identif
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Online interventions aimed at “depolarization” by themselves are not a “scalable solution for reducing societal conflict” and efforts must be made to study “elite behaviors and structural incentives that fuel partisan conflict.”</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1757,7 +1761,7 @@ This paper challenges this assumption, providing empirical evidence suggesting t
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">To effectively combat misinformation, interventions must go beyond describing what is true or false. If the goal is to change behavior in this regard, it is critical to recognize "when, how, and why a belief matters for behavior, and when behavior must be addressed in a direct way."</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1799,7 +1803,7 @@ to behavior change."</li>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">There has been a significant increase in political discussions in the United States, largely due to “increases in like-minded political discussion partners.” However, conversations across the political aisle (cross-cutting conversations) are "no less common than they were 25 years ago," and the paper concludes that elites rather than the mass public may be greater contributors to widespread political intolerance.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1841,7 +1845,7 @@ to behavior change."</li>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Automated moderation systems based on out-of-the-box LLMs, despite their sophistication, may perpetuate and not mitigate "existing social inequities in online spaces."</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1883,7 +1887,7 @@ Here are some key findings:</p>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">This paper shows that LLMs can be a powerful tool to analyze news discourse at scale, and may lead to a better understanding of ideological competition in the information ecosystem. The proposed framework addresses limitations regarding the ability for LLMs to "integrate contextual information required for understanding abstract ideological views."</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1925,7 +1929,7 @@ The paper then seeks to assess whether the LLM-based framework can predict the p
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">This study shows that in a world where most people tend to avoid news, a "committed minority" of news consumers have a disproportionate influence on how news is disseminated.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -1967,7 +1971,7 @@ The paper then seeks to assess whether the LLM-based framework can predict the p
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">A majority of political content on TikTok is associated with positive sentiments and news content on TikTok is rarely from official accounts. If researchers use news content as a proxy for examining political content, it may be "challenging to implement and miss the bigger picture if applied to TikTok."</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2008,7 +2012,7 @@ The paper then seeks to assess whether the LLM-based framework can predict the p
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">The paper shows that achieving genuine perceived empathy in human-AI interactions requires more than linguistic strategies, pointing to a deeper gap between the empathy chatbots express and the empathy users actually experience.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2048,7 +2052,7 @@ The paper then seeks to assess whether the LLM-based framework can predict the p
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Deactivating Facebook and Instagram in the weeks before the 2020 US presidential election modestly improved people's mental health—the effect was more pronounced for Facebook.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2089,7 +2093,7 @@ The paper then seeks to assess whether the LLM-based framework can predict the p
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Whether “cancel culture” is perceived as harmful or beneficial depends on how citizens prioritize competing values. That is, a commitment to “unfettered speech” versus the goal of protecting “marginalized groups in the public sphere.”</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2132,7 +2136,7 @@ discourage cross-party dialogue.”</p></div>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">When it comes to conversations about policy-level disagreements, “listening may not reliably enhance persuasion efforts.” Thus, from a practical standpoint, “adding listening to persuasive appeals may not be worth the added costs if persuasion is the goal.”</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2173,7 +2177,7 @@ discourage cross-party dialogue.”</p></div>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">While recommendation algorithms can shape what users choose to engage with, this paper finds no evidence that these algorithms radicalize users by pushing extreme content to them in the short-term.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2213,7 +2217,7 @@ discourage cross-party dialogue.”</p></div>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Despite being more Republican than the people they police, officers' party affiliation has little detectable effect on how they do their jobs. Race, on the other hand, consistently shapes policing behavior in ways that party affiliation does not.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2254,7 +2258,7 @@ discourage cross-party dialogue.”</p></div>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">During the 2020 election, misinformation spread slowly on Facebook, "powered by a tiny minority of users who tend to be older and more conservative."</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2295,7 +2299,7 @@ discourage cross-party dialogue.”</p></div>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">A consumer&#8217;s decision to read or listen to a news story alters their interpretation of the news, where listeners disproportionately focus on the risks over the benefits, and readers tend to form more balanced impressions.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2337,7 +2341,7 @@ discourage cross-party dialogue.”</p></div>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">This paper shows that sanctioning offensive speech on social media has a performative element: it allows users to signal their party allegiance and loyalty.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2378,7 +2382,7 @@ discourage cross-party dialogue.”</p></div>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Bypassing is an effective method to mitigate the impact of misinformation and is more effective than correction in a fast-paced information environment where short-form content's presence dominates.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2420,7 +2424,7 @@ discourage cross-party dialogue.”</p></div>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Twitter/X&#8217;s algorithm reduces news exposure relative to a chronological timeline, but also provides more diverse and reliable news.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2461,7 +2465,7 @@ discourage cross-party dialogue.”</p></div>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">This megastudy reveals that reducing partisan division and protecting democratic norms are related but distinct challenges—and that conflating them leads to the wrong interventions. Reducing partisan animosity through effective interventions remains critical, because it has broader implications for participatory democracy, and shapes phenomena like polarization, erosion of trust, and political segregation.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2502,7 +2506,7 @@ discourage cross-party dialogue.”</p></div>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">News outlets are increasingly covering stories through the lens of social identities and that is in part due to growing audience demand for such coverage.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2543,7 +2547,7 @@ discourage cross-party dialogue.”</p></div>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Deactivating Facebook and Instagram had limited effects on political attitudes, with the most notable impact being a reduction in online political participation. This study also revealed that Facebook access, and removal thereof, had slightly more of an effect on a user's political beliefs, relative to Instagram deactivation.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2585,7 +2589,7 @@ discourage cross-party dialogue.”</p></div>
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">While recommendation algorithms may shape content exposure and user preferences on online platforms like YouTube, this paper suggests that narratives about widespread algorithmic manipulation may be overstated.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2625,7 +2629,7 @@ By causally estimating the role of recommendation algorithms in driving partisan
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">When measured by what actually shows up in feeds rather than what people click on, X/Twitter environments look fairly moderate, left-leaning, and low in political and low-quality content relative to other evaluations.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2667,7 +2671,7 @@ By causally estimating the role of recommendation algorithms in driving partisan
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Social media algorithms shape offline civic participation; what people believe, how inclined they feel to act, and who they are connected to.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2708,7 +2712,7 @@ By causally estimating the role of recommendation algorithms in driving partisan
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">News that a Facebook user saw on their feed during the US 2020 election depended on their own political leanings, and, overall political news on Facebook leaned conservative.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2749,7 +2753,7 @@ By causally estimating the role of recommendation algorithms in driving partisan
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Switching from an algorithmic to chronological feed on Facebook and Instagram reduced time spent on these platforms but did not substantially alter political attitudes.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2790,7 +2794,7 @@ By causally estimating the role of recommendation algorithms in driving partisan
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">This study shows that removing reshared content did not measurably decrease political polarization or shape individual political beliefs—but it does play a significant role in amplifying users' exposure to political content.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2831,7 +2835,7 @@ By causally estimating the role of recommendation algorithms in driving partisan
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">The reduction of like-minded content from a user's Facebook feed did not result in any change in political attitudes such as polarization or candidate favorability, but actually increased the probability of a user interacting with like-minded sources when they encountered it.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2873,7 +2877,7 @@ By causally estimating the role of recommendation algorithms in driving partisan
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Polarization does not predict political participation, however candidate preference is strongly associated with political behaviour.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2915,7 +2919,7 @@ By causally estimating the role of recommendation algorithms in driving partisan
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Rising Fox News viewership does not appear to increase White Americans&#8217; anti-Black prejudice, but it is associated with more restrictionist views on unauthorized immigration.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
@@ -2956,7 +2960,7 @@ By causally estimating the role of recommendation algorithms in driving partisan
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">Brief cross-partisan conversations can soften partisan dislike in the moment, but only when focused on common ground—and these effects fade quickly and don't change how people actually behave politically.</div>
         <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#01419a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Full summary &amp; details
         </div>
       </div>
