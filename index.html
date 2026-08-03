@@ -6,7 +6,7 @@
   <title>Research Compendium — Penn MEDIATED</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Merriweather+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -15,7 +15,7 @@
       --border: #dde3ee; --bg-subtle: #f4f5f8;
     }
     body {
-      font-family: 'Merriweather', Georgia, serif;
+      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
       font-size: 16px; line-height: 1.75;
       background: white; color: var(--text);
     }
@@ -23,11 +23,17 @@
     /* PAGE TITLE */
     .page-title-band {
       background: white;
-      padding: 28px 40px 24px;
+      max-width: 1280px; margin: 0 auto;
+      padding: 28px 24px 24px;
       border-bottom: 1px solid var(--border);
     }
+    .page-title-band .eyebrow {
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #990000; margin-bottom: 12px;
+    }
     .page-title-band h1 {
-      font-family: 'Merriweather', Georgia, serif;
+      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
       font-size: 26px; font-weight: 700;
       color: var(--navy); margin-bottom: 14px;
     }
@@ -37,31 +43,54 @@
     .page-title-left { flex: 3 1 0; min-width: 0; }
     .page-title-right { flex: 2 1 0; min-width: 260px; }
     .page-desc {
-      font-family: 'Merriweather', Georgia, serif;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
       font-size: 15.5px; font-weight: 300;
       color: var(--text);
-      line-height: 1.85; margin-bottom: 10px;
+      line-height: 1.8; margin-bottom: 8px;
     }
     .page-desc:last-child { margin-bottom: 0; }
+    .newsletter-box {
+      background: #fdfaf4;
+      border: 1px solid #d0daf2;
+      border-top: 3px solid var(--gold-bright);
+      padding: 14px 16px;
+    }
     .newsletter-box h3 {
-      font-family: 'Merriweather Sans', Arial, sans-serif;
-      font-size: 13px; font-weight: 700; text-transform: uppercase;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11.5px; font-weight: 700; text-transform: uppercase;
       letter-spacing: .7px; color: var(--navy);
       border-bottom: 2px solid var(--gold-bright);
-      padding-bottom: 6px; margin-bottom: 11px;
+      padding-bottom: 5px; margin-bottom: 8px;
     }
     .newsletter-box p, .newsletter-box li {
-      font-family: 'Merriweather', Georgia, serif;
-      font-size: 14.5px; font-weight: 300;
-      color: var(--text); line-height: 1.8;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 12.5px; font-weight: 300;
+      color: var(--text); line-height: 1.6;
     }
+    .newsletter-cta-btn {
+      display: inline-block;
+      margin-top: 10px;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 12px; font-weight: 700;
+      background: var(--navy); color: #fff;
+      padding: 7px 14px;
+      text-decoration: none;
+      transition: background .15s;
+    }
+    .newsletter-cta-btn:hover { background: #062d85; color: #fff; text-decoration: none; }
     .newsletter-box ul {
-      margin: 9px 0 0 0; padding-left: 16px; list-style: disc;
+      margin: 10px 0 0 0; padding-left: 0; list-style: none;
     }
-    .newsletter-box li { margin-bottom: 7px; }
-    .newsletter-box li:last-child { margin-bottom: 0; }
-    .newsletter-box a { color: var(--link); text-decoration: none; }
-    .newsletter-box a:hover { text-decoration: underline; color: var(--navy); }
+    .newsletter-box li {
+      margin-bottom: 0; padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .newsletter-box li + li { padding-top: 8px; }
+    .newsletter-box li:last-child { border-bottom: none; padding-bottom: 0; }
+    .newsletter-box a { color: var(--link); text-decoration: none; font-weight: 600; }
+    .newsletter-box a:hover { text-decoration: underline; color: var(--gold-bright); }
+    .newsletter-box a.newsletter-cta-btn,
+    .newsletter-box a.newsletter-cta-btn:hover { color: #fff; text-decoration: none; }
 
     /* CONTROLS */
     .controls-wrap {
@@ -70,46 +99,55 @@
       box-shadow: 0 2px 10px rgba(1,31,91,.08);
     }
     .controls-top {
-      padding: 11px 40px; display: flex; align-items: center;
+      max-width: 1280px; margin: 0 auto;
+      padding: 11px 24px; display: flex; align-items: center;
       gap: 10px; flex-wrap: wrap; border-bottom: 1px solid #eef0f5;
     }
     .controls-top input {
       border: 1px solid #c8cfe0; border-radius: 5px;
-      padding: 7px 12px; font-family: 'Merriweather Sans', Arial, sans-serif;
+      padding: 7px 12px; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
       font-size: 13px; width: 260px; outline: none; color: var(--text);
     }
     .controls-top input:focus { border-color: var(--navy); }
-    .ctrl-label { font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 12px; color: #777; }
+    .ctrl-label { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #777; }
     select {
       border: 1px solid #c8cfe0; border-radius: 5px; padding: 7px 11px;
-      font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 13px;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 13px;
       color: var(--text); background: white; outline: none; cursor: pointer;
     }
     .ctrl-divider { width: 1px; height: 20px; background: #ddd; flex-shrink: 0; }
     .year-btn {
       border: 1px solid #c8cfe0; border-radius: 5px; padding: 5px 11px;
-      font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 12px;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 12px;
       cursor: pointer; background: white; color: #555; transition: all .15s;
     }
     .year-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
-    .entry-count { margin-left: auto; font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 12px; color: #999; white-space: nowrap; }
+    .entry-count { margin-left: auto; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #999; white-space: nowrap; }
     .expand-all-btn {
-      border: none; background: none; font-family: 'Merriweather Sans', Arial, sans-serif;
+      border: none; background: none; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
       font-size: 12px; color: var(--link); cursor: pointer; padding: 4px 0; white-space: nowrap;
     }
     .expand-all-btn:hover { text-decoration: underline; }
 
     .theme-row {
-      padding: 9px 40px; display: flex; align-items: center; gap: 7px; flex-wrap: wrap;
+      max-width: 1280px; margin: 0 auto;
+      padding: 9px 24px; display: grid; grid-template-columns: auto 1fr;
+      align-items: start; column-gap: 9px;
     }
     .theme-row-label {
-      font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 11px;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 11px;
       font-weight: 700; text-transform: uppercase; letter-spacing: .8px;
-      color: #999; margin-right: 2px; white-space: nowrap;
+      color: #999; white-space: nowrap; padding-top: 4px;
     }
+    /* Wrapping the pills separately from the label means every wrapped line
+       starts at this container's left edge — which, thanks to the grid
+       column above, is exactly where the first pill in the top row starts.
+       So row 2+ always lines up with row 1's first tag, never with the
+       "Theme" label. */
+    .theme-pills { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
     .theme-pill {
       border: 1.5px solid var(--tc); border-radius: 20px; padding: 4px 13px;
-      font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 12px;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 12px;
       font-weight: 500; cursor: pointer; background: white; color: var(--tc);
       transition: all .15s; white-space: nowrap;
     }
@@ -117,15 +155,15 @@
     .theme-pill.active { background: var(--tb); font-weight: 700; }
     .pill-count { opacity: .6; font-size: 11px; }
     .clear-filters {
-      border: none; background: none; font-family: 'Merriweather Sans', Arial, sans-serif;
+      border: none; background: none; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
       font-size: 12px; color: #c00; cursor: pointer; padding: 4px 6px; display: none;
     }
     .clear-filters:hover { text-decoration: underline; }
-    .active-chips { padding: 0 40px 9px; display: none; gap: 6px; flex-wrap: wrap; }
+    .active-chips { max-width: 1280px; margin: 0 auto; padding: 0 24px 9px; display: none; gap: 6px; flex-wrap: wrap; }
     .chip {
       display: inline-flex; align-items: center; gap: 5px;
       background: #e8edf7; border: 1px solid #c5d0e8; border-radius: 20px;
-      padding: 3px 10px; font-family: 'Merriweather Sans', Arial, sans-serif;
+      padding: 3px 10px; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
       font-size: 11px; color: #2a3a6b;
     }
     .chip button { border: none; background: none; cursor: pointer; color: #666; font-size: 14px; line-height: 1; padding: 0; }
@@ -134,56 +172,68 @@
     /* TABLE HEADER */
     .table-header {
       display: grid; grid-template-columns: 260px 160px 90px 1fr;
-      background: #e8eef6; padding: 9px 40px; border-bottom: 2px solid #b8cde0;
+      max-width: 1280px; margin: 0 auto;
+      background: #e8eef6; padding: 9px 24px; border-bottom: 2px solid #b8cde0;
     }
     .table-header span {
-      font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 11px;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 11px;
       font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--navy);
     }
 
     /* ENTRIES */
-    .entries { padding: 16px 40px 60px; display: flex; flex-direction: column; gap: 10px; background: var(--bg-subtle); }
+    .entries { max-width: 1280px; margin: 0 auto; padding: 16px 24px 60px; display: flex; flex-direction: column; gap: 10px; background: var(--bg-subtle); }
     .entry { background: white; border-radius: 8px; border: 1px solid var(--border); overflow: hidden; transition: box-shadow .2s; }
     .entry:hover { box-shadow: 0 2px 16px rgba(1,31,91,.1); }
     .entry:target { box-shadow: 0 0 0 2.5px var(--gold-bright); }
 
-    .entry-top { display: grid; grid-template-columns: 260px 160px 90px 1fr; padding: 16px 20px; cursor: pointer; align-items: start; }
+    .entry-top { display: grid; grid-template-columns: 260px 160px 90px 1fr; padding: 16px 20px; cursor: pointer; align-items: stretch; }
     .entry-top:hover { background: #fafbfe; }
 
-    .entry-title-col { padding-right: 14px; }
+    .entry-title-col { padding-right: 14px; display: flex; flex-direction: column; }
     .entry-title-text { display: flex; align-items: flex-start; gap: 7px; margin-bottom: 8px; }
     .entry-title-text a {
-      font-family: 'Merriweather', Georgia, serif; font-size: 13.5px;
+      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: 13.5px;
       font-weight: 400; color: var(--link); text-decoration: none; line-height: 1.55;
     }
     .entry-title-text a:hover { text-decoration: underline; color: var(--navy); }
-    .entry-badges { display: flex; flex-wrap: wrap; gap: 4px; }
+    .entry-badges { display: flex; flex-wrap: wrap; margin-top: auto; }
+    .entry-badges .theme-badge { margin: 0 4px 4px 0; }
     .theme-badge {
-      font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 10px;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 10px;
       font-weight: 600; padding: 2px 8px; border-radius: 10px; white-space: nowrap;
     }
     .new-badge {
       flex-shrink: 0; margin-top: 2px; background: var(--gold-bright); color: #5a3b00;
-      font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 9px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: .5px; padding: 3px 6px; border-radius: 4px; white-space: nowrap;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 9px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .5px; width: 34px; text-align: center;
+      padding: 3px 0; border-radius: 4px; white-space: nowrap;
+    }
+    /* When a title has the "New" badge, every line of tags below (including
+       any that wrap to a second row) needs to sit flush with the title
+       *text*, not the badge. Padding on the whole container — rather than
+       margin on just the first tag — indents every wrapped line equally.
+       34px matches the New badge's fixed width above; 7px matches the gap
+       between the badge and title text in the row above. */
+    .entry-title-col:has(.new-badge) .entry-badges {
+      padding-left: 41px;
     }
 
     .entry-faculty {
-      font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 13px;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 13px;
       color: #2a2a3e; padding-top: 2px; padding-right: 10px; line-height: 1.5;
     }
     .entry-faculty a { color: var(--link); text-decoration: none; }
     .entry-faculty a:hover { text-decoration: underline; }
 
-    .entry-date { font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 13px; color: #888; padding-top: 2px; }
+    .entry-date { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #888; padding-top: 2px; }
 
     .entry-takeaway { padding-top: 1px; }
     .takeaway-label {
-      font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 10px;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 10px;
       font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #b07d00; margin-bottom: 5px;
     }
-    .takeaway-text { font-family: 'Merriweather', Georgia, serif; font-size: 13px; font-weight: 300; color: var(--text); line-height: 1.7; }
-    .expand-hint { margin-top: 10px; display: inline-flex; align-items: center; gap: 5px; font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 12px; color: var(--link); }
+    .takeaway-text { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 300; color: var(--text); line-height: 1.7; }
+    .expand-hint { margin-top: 10px; display: inline-flex; align-items: center; gap: 5px; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: var(--link); }
     .chevron { transition: transform .25s; flex-shrink: 0; }
     .entry.open .chevron { transform: rotate(180deg); }
 
@@ -193,30 +243,30 @@
     .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding-top: 16px; }
     .detail-block { background: var(--bg-subtle); border-radius: 7px; padding: 14px 17px; }
     .detail-block.full-width { grid-column: 1 / -1; }
-    .detail-block h4 { font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 9px; }
+    .detail-block h4 { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 9px; }
     .detail-block.summary h4 { color: var(--navy); }
     .detail-block.takeaway-full { border-left: 3px solid var(--gold-bright); }
     .detail-block.takeaway-full h4 { color: #b07d00; }
     .detail-block.importance { border-left: 3px solid #2d7a4e; }
     .detail-block.importance h4 { color: #2d7a4e; }
-    .detail-text { font-family: 'Merriweather', Georgia, serif; font-size: 13px; font-weight: 300; line-height: 1.8; color: #333; }
+    .detail-text { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 300; line-height: 1.8; color: #333; }
     .detail-text p { margin-bottom: 10px; }
     .detail-text p:last-child { margin-bottom: 0; }
     .findings-list { margin: 10px 0 0 0; padding-left: 20px; list-style: decimal; }
-    .findings-list li { font-family: 'Merriweather', Georgia, serif; font-size: 13px; font-weight: 300; line-height: 1.8; color: #333; margin-bottom: 10px; padding-left: 4px; }
+    .findings-list li { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 300; line-height: 1.8; color: #333; margin-bottom: 10px; padding-left: 4px; }
     .findings-list li:last-child { margin-bottom: 0; }
-    .detail-sub { margin-top: 9px; font-family: 'Merriweather', Georgia, serif; font-size: 13px; line-height: 1.7; color: #444; }
+    .detail-sub { margin-top: 9px; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 13px; line-height: 1.7; color: #444; }
 
     .entry-actions { display: flex; align-items: center; gap: 16px; padding-top: 14px; }
     .read-btn {
       display: inline-block; background: var(--navy); color: white;
-      font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 13px; font-weight: 600;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600;
       padding: 8px 20px; border-radius: 5px; text-decoration: none; transition: background .15s;
     }
     .read-btn:hover { background: #062d85; }
-    .link-btn { border: none; background: none; font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 12px; color: var(--link); cursor: pointer; padding: 0; }
+    .link-btn { border: none; background: none; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: var(--link); cursor: pointer; padding: 0; }
     .link-btn:hover { text-decoration: underline; }
-    .no-results { font-family: 'Merriweather Sans', Arial, sans-serif; font-size: 14px; color: #999; padding: 52px 0; text-align: center; display: none; background: white; border-radius: 8px; border: 1px solid var(--border); }
+    .no-results { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #999; padding: 52px 0; text-align: center; display: none; background: white; border-radius: 8px; border: 1px solid var(--border); }
 
     /* RESPONSIVE */
     @media (max-width: 780px) {
@@ -290,6 +340,7 @@
 
 <!-- PAGE TITLE — no nav, no header; WordPress provides those -->
 <div class="page-title-band">
+  <div class="eyebrow">Research</div>
   <h1>Research Compendium</h1>
   <div class="page-title-cols">
     <div class="page-title-left">
@@ -298,7 +349,8 @@
     </div>
     <div class="page-title-right newsletter-box">
       <h3>Center Newsletter</h3>
-      <p><a href="https://signup.e2ma.net/signup/2017639/1984707/" target="_blank" rel="noopener">Subscribe</a> to our (occasional) newsletter for updates with the latest research, events, and announcements from the Center.</p>
+      <p>Stay up to date on the latest research, events, and announcements from the Center on Media, Technology and Democracy.</p>
+      <a href="https://signup.e2ma.net/signup/2017639/1984707/" class="newsletter-cta-btn" target="_blank" rel="noopener">Subscribe &rarr;</a>
       <ul>
         <li><a href="https://t.e2ma.net/webview/tu4evv/28f6ae8f3e899ec13fed5fa3122ccb6a" target="_blank" rel="noopener">Read about President Emerita Amy Gutmann joining Penn MEDIATED as faculty advisor, and other center updates</a> – April 2026.</li>
         <li><a href="https://t.e2ma.net/webview/htvldv/098dc58eec48180e59997bded5c81538" target="_blank" rel="noopener">Read about the announcement of the affiliated faculty, flagship conference, and new abbreviation</a> – February 2026.</li>
@@ -355,8 +407,8 @@
     <button class="expand-all-btn" id="expandAllBtn" onclick="toggleExpandAll()">Expand all</button>
   </div>
   <div class="theme-row">
-
     <span class="theme-row-label">Theme</span>
+    <div class="theme-pills">
     <button class="theme-pill" data-theme="LLMs & Civic Discourse" style="--tc:#4f46e5;--tb:#ede9fe" onclick="toggleTheme(this)">LLMs & Civic Discourse <span class="pill-count">14</span></button>
     <button class="theme-pill" data-theme="Misinformation" style="--tc:#b91c1c;--tb:#fee2e2" onclick="toggleTheme(this)">Misinformation <span class="pill-count">10</span></button>
     <button class="theme-pill" data-theme="Political Polarization" style="--tc:#0369a1;--tb:#e0f2fe" onclick="toggleTheme(this)">Political Polarization <span class="pill-count">25</span></button>
@@ -365,6 +417,7 @@
     <button class="theme-pill" data-theme="Guiding the Field" style="--tc:#6b21a8;--tb:#f3e8ff" onclick="toggleTheme(this)">Guiding the Field <span class="pill-count">9</span></button>
     <button class="theme-pill" data-theme="2020 Meta Election Project" style="--tc:#166534;--tb:#dcfce7" onclick="toggleTheme(this)">2020 Meta Election Project <span class="pill-count">9</span></button>
     <button class="clear-filters" id="clearBtn" onclick="clearFilters()">✕ Clear all filters</button>
+    </div>
   </div>
   <div class="active-chips" id="activeChips"></div>
 </div>
