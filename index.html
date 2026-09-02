@@ -444,129 +444,6 @@
 <div class="entries">
 <div class="entries-inner" id="entriesList">
 
-  <div class="entry" id="perceived-self-and-social-relevance-of-content-motivates-new" data-faculty="emily b. falk" data-year="2025" data-themes="Misinformation,Persuasion & Behavior Change">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://academic.oup.com/pnasnexus/article/doi/10.1093/pnasnexus/pgaf019/7974719" target="_blank" rel="noopener" onclick="event.stopPropagation()">Perceived self and social relevance of content motivates news sharing across cultures and topics</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Emily B. Falk</a></div>
-      <div class="entry-date">1/23/2025</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">Briefly prompting people to explain why a news story matters to them or their community reliably increases sharing of accurate information, but only when people actively write out their reasoning rather than merely reflecting on it.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>The paper examines what motivates people to share high-quality news, and whether that motivation can be deliberately triggered to increase sharing. Drawing on the idea that sharing is a “value-based decision,” they test whether content feels more worth sharing when it connects to a person's own identity (self-relevance) or to their relationships (social-relevance). To test this, they designed an intervention that prompts people to briefly write why a climate or health news story matters to them personally or to someone they know. They ran this test across four studies of increasing realism with a combined 2,559 participants in the United States and Netherlands. Here are some key findings:</p>
-<ol class="findings-list">
-  <li><strong>Across all four studies, the proposed intervention increased self- and social-relevance ratings and sharing intentions compared to control.</strong> In the field study, this extended to actual sharing behavior on platforms like Facebook and Twitter, and the effect generalized across climate and health topics and across the U.S. and Dutch samples.</li>
-  <li><strong>The fMRI analysis showed that brain regions tied to self-referential thinking and social cognition were more active during the intervention and independently predicted sharing intentions.</strong> However, this only held when participants wrote out their reasoning rather than silently reflecting on it, suggesting active engagement—not just exposure to the prompt—is what drives the effect.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>Most anti-misinformation work focuses on suppressing bad content. This paper offers a complementary approach: designing simple, scalable prompts that make good information more likely to spread on its own.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://academic.oup.com/pnasnexus/article/doi/10.1093/pnasnexus/pgaf019/7974719" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
-        <button class="link-btn" onclick="copyLink('#perceived-self-and-social-relevance-of-content-motivates-new',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="decomposed-prompting-does-not-fix-knowledge-gaps-but-helps-m" data-faculty="dan roth" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://arxiv.org/pdf/2602.04853" target="_blank" rel="noopener" onclick="event.stopPropagation()">Decomposed Prompting Does Not Fix Knowledge Gaps, But Helps Models Say “I Don’t Know”</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Dan Roth</a></div>
-      <div class="entry-date">2/4/2026</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">LLM outputs differ based on whether a question is asked directly or broken into sub-questions, suggesting that many of today’s frontier models do not reason consistently over stable internal knowledge.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>The paper asks how LLMs behave in closed-book question answering, where they rely solely on internal knowledge and cannot check their work against external sources. The authors compare three prompting regimes: Direct, where the model answers in one step, and two alternative forms, where it works through the same step-by-step sub-questions either all at once (Assistive) or one at a time (Incremental). Because all three prompting regimes should provide a consistent answer, any disagreement between them reflects the model's own instability—yet even frontier models like Gemini agree with themselves only about 70% of the time. The authors turn that disagreement into a reliability signal by introducing a process they call, “Disagreement Based Abstention," which answers "I don't know" whenever there are conflicting answers between the different prompting methods. Key findings include:</p>
-<ol class="findings-list">
-  <li><strong>Decomposition helps open-weight models, but plateaus for frontier ones.</strong> For non-frontier models (70B parameters and under), decomposition acts as a reasoning scaffold and boosts accuracy substantially—by as much as 26.8 points. For frontier models, gains disappear or turn negative, likely because these models already reason well internally, and imposed structure can interfere rather than help.</li>
-  <li><strong>Disagreement is a strong signal of error.</strong> When a model's direct and decomposed answers disagree, the direct answer is far more likely to be wrong. This makes disagreement an effective signal that a model response should not be trusted.</li>
-  <li><strong>Flagging an error is not the same as fixing it.</strong> Among frontier-model disagreements, 67% are cases where both prompting methods (Direct and Assistive) are wrong, reflecting genuine gaps in what the model knows rather than errors in reasoning. DBA is effective at detecting these errors but cannot correct errors that stem from a lack of parametric knowledge.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>This paper offers a practical, inexpensive way to identify knowledge gaps in LLM responses: simply ask the same question two different ways and see if the model contradicts itself.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://arxiv.org/pdf/2602.04853" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
-        <button class="link-btn" onclick="copyLink('#decomposed-prompting-does-not-fix-knowledge-gaps-but-helps-m',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="the-long-shadow-of-the-big-lie-how-beliefs-about-the-legitim" data-faculty="matt levendusky kathleen hall jamieson" data-year="2024" data-themes="Political Polarization,Misinformation">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://academic.oup.com/poq/article/88/3/933/7853504?guestAccessKey=" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Long Shadow of the Big Lie: How Beliefs about the Legitimacy of the 2020 Election Spill Over onto Future Elections</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Matt Levendusky</a> &amp; <a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Kathleen Hall Jamieson</a></div>
-      <div class="entry-date">10/30/2024</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">Believing that one election is unfair or illegitimate can spillover into how future elections are perceived. This narrative can prime those election skeptics to view every subsequent election as suspect.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>The paper tests whether believing that the 2020 election was stolen from Trump—the “big lie”—makes people distrust future elections, too. The authors argue, “election skeptics” (those who don't believe 2020 was legitimate) come to see all elections as suspect, both before any votes are cast and especially after their own candidate loses. To test this, the authors used panel survey data from over 3,800 voters in Michigan, Pennsylvania, and Wisconsin, tracked continuously from 2020 through the 2022 midterms. The same people were surveyed repeatedly before and after the 2022 election, enabling the researchers to examine how individual attitudes shifted. Here are a few key findings:</p>
-<ol class="findings-list">
-  <li><strong>Questioning election legitimacy is a stable attitude.</strong> The authors find that beliefs about the 2020 election shifted considerably around the election itself, but changed very little afterward. In the post-election data, election skepticism was relatively stable, comparable to strong social identities like partisanship.</li>
-  <li><strong>Skepticism predicts distrust.</strong> Those who doubted the legitimacy of the 2020 election were also far less confident that the 2022 midterms or the 2024 presidential race would be fair. In fact, skepticism about 2020 predicted distrust in future elections more strongly than party, ideology, or any other demographic variables measured in this study. For instance, Republicans who did not distrust the 2020 election were more confident about the fairness of future elections.</li>
-  <li><strong>Losing hits skeptics much harder than everyone else.</strong> After the 2022 election, confidence in the results rose for nearly every group of voters—except election skeptics who backed a losing candidate; their confidence dropped further. The “winner-loser gap” for Senate races (the difference in trust in elections between people whose candidate won versus lost) was about 5.5 times larger for skeptics than for non-skeptics.</li>
-  <li><strong>Losing skeptics reach for fraud as an explanation.</strong> Election skeptics who backed a losing 2022 candidate became roughly 5% more likely to say voter fraud had impacted that race—while election skeptics whose candidate won became less likely to blame fraud. Losing, for this group, effectively confirmed their prior belief.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>The 2022 midterms saw many election-denying candidates lose, which some hoped would put the “stolen election” narrative to rest. This research suggests otherwise: for a sizable share of the public, 2020 election skepticism has hardened into a stable identity-linked belief that keeps reproducing itself election after election, independent of actual election legitimacy.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://academic.oup.com/poq/article/88/3/933/7853504?guestAccessKey=" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
-        <button class="link-btn" onclick="copyLink('#the-long-shadow-of-the-big-lie-how-beliefs-about-the-legitim',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
   <div class="entry" id="ai-in-search-reduces-publisher-referrals-without-improving-u" data-faculty="danaé metaxa" data-year="2026" data-themes="LLMs & Civic Discourse,Social Media & Platforms">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
@@ -604,6 +481,47 @@
       <div class="entry-actions">
         <a href="https://arxiv.org/abs/2608.18352" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
         <button class="link-btn" onclick="copyLink('#ai-in-search-reduces-publisher-referrals-without-improving-u',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="decomposed-prompting-does-not-fix-knowledge-gaps-but-helps-m" data-faculty="dan roth" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://arxiv.org/pdf/2602.04853" target="_blank" rel="noopener" onclick="event.stopPropagation()">Decomposed Prompting Does Not Fix Knowledge Gaps, But Helps Models Say “I Don’t Know”</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Dan Roth</a></div>
+      <div class="entry-date">7/6/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">LLM outputs differ based on whether a question is asked directly or broken into sub-questions, suggesting that many of today’s frontier models do not reason consistently over stable internal knowledge.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The paper asks how LLMs behave in closed-book question answering, where they rely solely on internal knowledge and cannot check their work against external sources. The authors compare three prompting regimes: Direct, where the model answers in one step, and two alternative forms, where it works through the same step-by-step sub-questions either all at once (Assistive) or one at a time (Incremental). Because all three prompting regimes should provide a consistent answer, any disagreement between them reflects the model's own instability—yet even frontier models like Gemini agree with themselves only about 70% of the time. The authors turn that disagreement into a reliability signal by introducing a process they call, “Disagreement Based Abstention," which answers "I don't know" whenever there are conflicting answers between the different prompting methods. Key findings include:</p>
+<ol class="findings-list">
+  <li><strong>Decomposition helps open-weight models, but plateaus for frontier ones.</strong> For non-frontier models (70B parameters and under), decomposition acts as a reasoning scaffold and boosts accuracy substantially—by as much as 26.8 points. For frontier models, gains disappear or turn negative, likely because these models already reason well internally, and imposed structure can interfere rather than help.</li>
+  <li><strong>Disagreement is a strong signal of error.</strong> When a model's direct and decomposed answers disagree, the direct answer is far more likely to be wrong. This makes disagreement an effective signal that a model response should not be trusted.</li>
+  <li><strong>Flagging an error is not the same as fixing it.</strong> Among frontier-model disagreements, 67% are cases where both prompting methods (Direct and Assistive) are wrong, reflecting genuine gaps in what the model knows rather than errors in reasoning. DBA is effective at detecting these errors but cannot correct errors that stem from a lack of parametric knowledge.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>This paper offers a practical, inexpensive way to identify knowledge gaps in LLM responses: simply ask the same question two different ways and see if the model contradicts itself.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://arxiv.org/pdf/2602.04853" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#decomposed-prompting-does-not-fix-knowledge-gaps-but-helps-m',this)">Copy Link to Entry</button>
       </div>
     </div>
   </div>
@@ -649,92 +567,10 @@
     </div>
   </div>
 
-  <div class="entry" id="bibtex-citation-errors-in-scientific-publishing-agents-evalu" data-faculty="chris callison-burch" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://arxiv.org/abs/2604.03159" target="_blank" rel="noopener" onclick="event.stopPropagation()">BibTeX Citation Errors in Scientific Publishing Agents: Evaluation and Mitigation</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Chris Callison-Burch</a></div>
-      <div class="entry-date">2026</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">Search-enabled LLMs get roughly half of academic citations wrong, relying on internal memory over the results they retrieve. Verifying each citation against publisher records corrects most of these errors, though the newest papers remain hardest to fix.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>LLMs equipped with web search are increasingly used by researchers, but the resulting citations are often inaccurate, or entirely fabricated. Unlike most model output, a citation can be checked definitively: every field in a BibTeX entry has one correct value on record in a publisher database. If web search works as intended, models should not make citation errors even after their knowledge cut-off. To test this, the authors built a benchmark of 931 papers across four domains and three citation tiers, and had three search-enabled models (GPT-5, Claude Sonnet 4.6, and Gemini 3 Flash) generate an entry for each. Roughly 23,000 fields were compared against verified ground truth. The authors also built clibib, an open-source tool that retrieves verified citation records directly from publisher databases, and tested whether adding it as a separate revision step corrected the models' errors. Key findings include:</p>
-<ol class="findings-list">
-  <li><strong>Search helps, but half of all entries still contain an error.</strong> Models got 83.6% of individual citation fields right, but only 50.9% of entries were correct in every field. Author and entry type were the most reliable fields (91.1% each), while DOI (75.5%) and issue number (72.0%) were the worst.</li>
-  <li><strong>Newer citations are less accurate, and web search does not fix it.</strong> Accuracy fell from 92.7% for popular older papers to 65.0% for papers published after the models' training cutoffs, a 27.7 percentage point gap. For these new papers, models conducted web search in over 97% of cases, yet accuracy stayed at 65%.</li>
-  <li><strong>The tool developed by authors (<a href="https://github.com/delip/clibib" target="_blank" rel="noopener">clibib</a>) verifies each citation against publisher records and corrects most errors.</strong> Running clibib as a separate revision step after the model generates a citation raises the ratio of fully correct entries from 50.9% to 78.3% and rarely introduces new errors.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>In this study, models were asked only to reproduce a paper's citation details, each of which has a correct answer that is verifiable via web search. However, models still returned an error in roughly half of all entries, relying on internal memory over the sources they retrieved. This paper shows that just because a model invokes search, it does not mean the search function yields accurate responses.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://arxiv.org/abs/2604.03159" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
-        <button class="link-btn" onclick="copyLink('#bibtex-citation-errors-in-scientific-publishing-agents-evalu',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="quantifying-the-prevalence-and-impact-of-overreaching-causal" data-faculty="duncan watts" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://calvinisch.com/papers/Causal_Claims_in_Social_Science_Main.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Quantifying the prevalence and impact of overreaching causal claims in social science</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Duncan Watts</a></div>
-      <div class="entry-date">2026</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">Causal overclaiming has grown sharply over the past two decades. This problem is exacerbated by readers and AI systems alike tending to default toward causal interpretations even when researchers don&#8217;t imply causation or include limitations.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>The authors review how often social scientists claim their findings are causal. The authors used an LLM to scan 194,631 social science research paper abstracts published between 1980 and 2024, classifying whether each one used causal language (e.g., "X causes Y") versus more accurate associational language (e.g., "X is linked to Y"). They validated this LLM-based classification against expert human coders before applying it at scale. Beyond simply counting causal claims, the authors ran a set of experiments to test how this language affects readers and how AI tools respond to it. In one experiment, 1,105 college-educated adults read study abstracts—either in their original causal form or a rewritten associational version, sometimes paired with a note explaining the study's limitations—and reported whether they believed the results showed causation. In a parallel experiment, the authors fed the same materials to several AI language models to see whether AI-generated summaries introduced or removed causal overreach. Key findings include:</p>
-<ol class="findings-list">
-  <li>Causal language is common: Across the full 44-year period, 46.3% of cross-sectional abstracts used causal language despite their design not supporting it. This rate nearly tripled since 2000, climbing from about 20% to over 60% by 2024, with business journals showing the highest rates and sociology the lowest.</li>
-  <li>Readers default to inferring causation, and it's hard to correct. Even when abstracts were rewritten in purely associational language or flagged with a methodological warning, many participants still concluded the study demonstrated causation and used causal language themselves when summarizing it.</li>
-  <li>AI models can make the problem worse—but are more correctable than humans. Language models often introduced causal claims that weren't present in the original associational abstracts, especially when prompted to write "simple" or "practical" summaries. However, unlike human readers, models responded strongly to a prompt explicitly asking for methodological caution, substantially reducing overreach.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>The paper highlights rewriting abstracts and adding "this study is correlational" notes did little to stop human readers from walking away believing they'd seen causal evidence, suggesting the issue isn't just sloppy writing but a deeper cognitive pull toward causal stories. AI models, by contrast, were far more responsive to a simple "be careful" instruction. That asymmetry matters as more people rely on AI-generated research summaries.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://calvinisch.com/papers/Causal_Claims_in_Social_Science_Main.pdf" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
-        <button class="link-btn" onclick="copyLink('#quantifying-the-prevalence-and-impact-of-overreaching-causal',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
   <div class="entry" id="the-elite-effect-blocking-political-leaders-on-x-decreases-m" data-faculty="yphtach lelkes" data-year="2026" data-themes="Social Media & Platforms,Misinformation">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
-        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://assets-eu.researchsquare.com/files/rs-9347980/v1_covered_34b1e523-22c8-4c60-9dda-6db5edda3cc8.pdf?c=1781833331" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Elite Effect: Blocking Political Leaders on X Decreases Misinformation Susceptibility and Low-credibility Content Sharing</a></div>
+        <div class="entry-title-text"><a href="https://assets-eu.researchsquare.com/files/rs-9347980/v1_covered_34b1e523-22c8-4c60-9dda-6db5edda3cc8.pdf?c=1781833331" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Elite Effect: Blocking Political Leaders on X Decreases Misinformation Susceptibility and Low-credibility Content Sharing</a></div>
         <div class="entry-badges"><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Yphtach Lelkes</a></div>
@@ -1427,6 +1263,88 @@ The inability for LLMs to accurately interpret AAL has significant impacts: AAL 
       <div class="entry-actions">
         <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-linguistics-041824-050629" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
         <button class="link-btn" onclick="copyLink('#how-well-do-large-language-models-understand-african-america',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="bibtex-citation-errors-in-scientific-publishing-agents-evalu" data-faculty="chris callison-burch" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://arxiv.org/abs/2604.03159" target="_blank" rel="noopener" onclick="event.stopPropagation()">BibTeX Citation Errors in Scientific Publishing Agents: Evaluation and Mitigation</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Chris Callison-Burch</a></div>
+      <div class="entry-date">2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Search-enabled LLMs get roughly half of academic citations wrong, relying on internal memory over the results they retrieve. Verifying each citation against publisher records corrects most of these errors, though the newest papers remain hardest to fix.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>LLMs equipped with web search are increasingly used by researchers, but the resulting citations are often inaccurate, or entirely fabricated. Unlike most model output, a citation can be checked definitively: every field in a BibTeX entry has one correct value on record in a publisher database. If web search works as intended, models should not make citation errors even after their knowledge cut-off. To test this, the authors built a benchmark of 931 papers across four domains and three citation tiers, and had three search-enabled models (GPT-5, Claude Sonnet 4.6, and Gemini 3 Flash) generate an entry for each. Roughly 23,000 fields were compared against verified ground truth. The authors also built clibib, an open-source tool that retrieves verified citation records directly from publisher databases, and tested whether adding it as a separate revision step corrected the models' errors. Key findings include:</p>
+<ol class="findings-list">
+  <li><strong>Search helps, but half of all entries still contain an error.</strong> Models got 83.6% of individual citation fields right, but only 50.9% of entries were correct in every field. Author and entry type were the most reliable fields (91.1% each), while DOI (75.5%) and issue number (72.0%) were the worst.</li>
+  <li><strong>Newer citations are less accurate, and web search does not fix it.</strong> Accuracy fell from 92.7% for popular older papers to 65.0% for papers published after the models' training cutoffs, a 27.7 percentage point gap. For these new papers, models conducted web search in over 97% of cases, yet accuracy stayed at 65%.</li>
+  <li><strong>The tool developed by authors (<a href="https://github.com/delip/clibib" target="_blank" rel="noopener">clibib</a>) verifies each citation against publisher records and corrects most errors.</strong> Running clibib as a separate revision step after the model generates a citation raises the ratio of fully correct entries from 50.9% to 78.3% and rarely introduces new errors.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>In this study, models were asked only to reproduce a paper's citation details, each of which has a correct answer that is verifiable via web search. However, models still returned an error in roughly half of all entries, relying on internal memory over the sources they retrieved. This paper shows that just because a model invokes search, it does not mean the search function yields accurate responses.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://arxiv.org/abs/2604.03159" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#bibtex-citation-errors-in-scientific-publishing-agents-evalu',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="quantifying-the-prevalence-and-impact-of-overreaching-causal" data-faculty="duncan watts" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://calvinisch.com/papers/Causal_Claims_in_Social_Science_Main.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Quantifying the prevalence and impact of overreaching causal claims in social science</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Duncan Watts</a></div>
+      <div class="entry-date">2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Causal overclaiming has grown sharply over the past two decades. This problem is exacerbated by readers and AI systems alike tending to default toward causal interpretations even when researchers don&#8217;t imply causation or include limitations.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The authors review how often social scientists claim their findings are causal. The authors used an LLM to scan 194,631 social science research paper abstracts published between 1980 and 2024, classifying whether each one used causal language (e.g., "X causes Y") versus more accurate associational language (e.g., "X is linked to Y"). They validated this LLM-based classification against expert human coders before applying it at scale. Beyond simply counting causal claims, the authors ran a set of experiments to test how this language affects readers and how AI tools respond to it. In one experiment, 1,105 college-educated adults read study abstracts—either in their original causal form or a rewritten associational version, sometimes paired with a note explaining the study's limitations—and reported whether they believed the results showed causation. In a parallel experiment, the authors fed the same materials to several AI language models to see whether AI-generated summaries introduced or removed causal overreach. Key findings include:</p>
+<ol class="findings-list">
+  <li>Causal language is common: Across the full 44-year period, 46.3% of cross-sectional abstracts used causal language despite their design not supporting it. This rate nearly tripled since 2000, climbing from about 20% to over 60% by 2024, with business journals showing the highest rates and sociology the lowest.</li>
+  <li>Readers default to inferring causation, and it's hard to correct. Even when abstracts were rewritten in purely associational language or flagged with a methodological warning, many participants still concluded the study demonstrated causation and used causal language themselves when summarizing it.</li>
+  <li>AI models can make the problem worse—but are more correctable than humans. Language models often introduced causal claims that weren't present in the original associational abstracts, especially when prompted to write "simple" or "practical" summaries. However, unlike human readers, models responded strongly to a prompt explicitly asking for methodological caution, substantially reducing overreach.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>The paper highlights rewriting abstracts and adding "this study is correlational" notes did little to stop human readers from walking away believing they'd seen causal evidence, suggesting the issue isn't just sloppy writing but a deeper cognitive pull toward causal stories. AI models, by contrast, were far more responsive to a simple "be careful" instruction. That asymmetry matters as more people rely on AI-generated research summaries.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://calvinisch.com/papers/Causal_Claims_in_Social_Science_Main.pdf" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#quantifying-the-prevalence-and-impact-of-overreaching-causal',this)">Copy Link to Entry</button>
       </div>
     </div>
   </div>
@@ -2493,6 +2411,46 @@ discourage cross-party dialogue.”</p></div>
     </div>
   </div>
 
+  <div class="entry" id="perceived-self-and-social-relevance-of-content-motivates-new" data-faculty="emily b. falk" data-year="2025" data-themes="Misinformation,Persuasion & Behavior Change">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://academic.oup.com/pnasnexus/article/doi/10.1093/pnasnexus/pgaf019/7974719" target="_blank" rel="noopener" onclick="event.stopPropagation()">Perceived self and social relevance of content motivates news sharing across cultures and topics</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span><span class="theme-badge" style="color:#b45309;background:#fef3c7">Persuasion &amp; Behavior Change</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Emily B. Falk</a></div>
+      <div class="entry-date">1/23/2025</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Briefly prompting people to explain why a news story matters to them or their community reliably increases sharing of accurate information, but only when people actively write out their reasoning rather than merely reflecting on it.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The paper examines what motivates people to share high-quality news, and whether that motivation can be deliberately triggered to increase sharing. Drawing on the idea that sharing is a “value-based decision,” they test whether content feels more worth sharing when it connects to a person's own identity (self-relevance) or to their relationships (social-relevance). To test this, they designed an intervention that prompts people to briefly write why a climate or health news story matters to them personally or to someone they know. They ran this test across four studies of increasing realism with a combined 2,559 participants in the United States and Netherlands. Here are some key findings:</p>
+<ol class="findings-list">
+  <li><strong>Across all four studies, the proposed intervention increased self- and social-relevance ratings and sharing intentions compared to control.</strong> In the field study, this extended to actual sharing behavior on platforms like Facebook and Twitter, and the effect generalized across climate and health topics and across the U.S. and Dutch samples.</li>
+  <li><strong>The fMRI analysis showed that brain regions tied to self-referential thinking and social cognition were more active during the intervention and independently predicted sharing intentions.</strong> However, this only held when participants wrote out their reasoning rather than silently reflecting on it, suggesting active engagement—not just exposure to the prompt—is what drives the effect.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>Most anti-misinformation work focuses on suppressing bad content. This paper offers a complementary approach: designing simple, scalable prompts that make good information more likely to spread on its own.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://academic.oup.com/pnasnexus/article/doi/10.1093/pnasnexus/pgaf019/7974719" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#perceived-self-and-social-relevance-of-content-motivates-new',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
   <div class="entry" id="the-diffusion-and-reach-of-misinformation-on-facebook-during" data-faculty="sandra gonzález-bailón deen freelon" data-year="2024" data-themes="Social Media & Platforms,Misinformation,2020 Meta Election Project">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
@@ -2696,6 +2654,48 @@ discourage cross-party dialogue.”</p></div>
       <div class="entry-actions">
         <a href="https://dl.acm.org/doi/epdf/10.1145/3687046" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
         <button class="link-btn" onclick="copyLink('#lower-quantity-higher-quality-auditing-news-content-and-user',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="the-long-shadow-of-the-big-lie-how-beliefs-about-the-legitim" data-faculty="matt levendusky kathleen hall jamieson" data-year="2024" data-themes="Political Polarization,Misinformation">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><a href="https://academic.oup.com/poq/article/88/3/933/7853504?guestAccessKey=" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Long Shadow of the Big Lie: How Beliefs about the Legitimacy of the 2020 Election Spill Over onto Future Elections</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#0369a1;background:#e0f2fe">Political Polarization</span><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Matt Levendusky</a> &amp; <a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Kathleen Hall Jamieson</a></div>
+      <div class="entry-date">10/30/2024</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Believing that one election is unfair or illegitimate can spillover into how future elections are perceived. This narrative can prime those election skeptics to view every subsequent election as suspect.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The paper tests whether believing that the 2020 election was stolen from Trump—the “big lie”—makes people distrust future elections, too. The authors argue, “election skeptics” (those who don't believe 2020 was legitimate) come to see all elections as suspect, both before any votes are cast and especially after their own candidate loses. To test this, the authors used panel survey data from over 3,800 voters in Michigan, Pennsylvania, and Wisconsin, tracked continuously from 2020 through the 2022 midterms. The same people were surveyed repeatedly before and after the 2022 election, enabling the researchers to examine how individual attitudes shifted. Here are a few key findings:</p>
+<ol class="findings-list">
+  <li><strong>Questioning election legitimacy is a stable attitude.</strong> The authors find that beliefs about the 2020 election shifted considerably around the election itself, but changed very little afterward. In the post-election data, election skepticism was relatively stable, comparable to strong social identities like partisanship.</li>
+  <li><strong>Skepticism predicts distrust.</strong> Those who doubted the legitimacy of the 2020 election were also far less confident that the 2022 midterms or the 2024 presidential race would be fair. In fact, skepticism about 2020 predicted distrust in future elections more strongly than party, ideology, or any other demographic variables measured in this study. For instance, Republicans who did not distrust the 2020 election were more confident about the fairness of future elections.</li>
+  <li><strong>Losing hits skeptics much harder than everyone else.</strong> After the 2022 election, confidence in the results rose for nearly every group of voters—except election skeptics who backed a losing candidate; their confidence dropped further. The “winner-loser gap” for Senate races (the difference in trust in elections between people whose candidate won versus lost) was about 5.5 times larger for skeptics than for non-skeptics.</li>
+  <li><strong>Losing skeptics reach for fraud as an explanation.</strong> Election skeptics who backed a losing 2022 candidate became roughly 5% more likely to say voter fraud had impacted that race—while election skeptics whose candidate won became less likely to blame fraud. Losing, for this group, effectively confirmed their prior belief.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>The 2022 midterms saw many election-denying candidates lose, which some hoped would put the “stolen election” narrative to rest. This research suggests otherwise: for a sizable share of the public, 2020 election skepticism has hardened into a stable identity-linked belief that keeps reproducing itself election after election, independent of actual election legitimacy.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://academic.oup.com/poq/article/88/3/933/7853504?guestAccessKey=" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#the-long-shadow-of-the-big-lie-how-beliefs-about-the-legitim',this)">Copy Link to Entry</button>
       </div>
     </div>
   </div>
