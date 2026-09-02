@@ -485,10 +485,92 @@
     </div>
   </div>
 
+  <div class="entry" id="bibtex-citation-errors-in-scientific-publishing-agents-evalu" data-faculty="chris callison-burch" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://arxiv.org/abs/2604.03159" target="_blank" rel="noopener" onclick="event.stopPropagation()">BibTeX Citation Errors in Scientific Publishing Agents: Evaluation and Mitigation</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Chris Callison-Burch</a></div>
+      <div class="entry-date">8/8/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Search-enabled LLMs get roughly half of academic citations wrong, relying on internal memory over the results they retrieve. Verifying each citation against publisher records corrects most of these errors, though the newest papers remain hardest to fix.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>LLMs equipped with web search are increasingly used by researchers, but the resulting citations are often inaccurate, or entirely fabricated. Unlike most model output, a citation can be checked definitively: every field in a BibTeX entry has one correct value on record in a publisher database. If web search works as intended, models should not make citation errors even after their knowledge cut-off. To test this, the authors built a benchmark of 931 papers across four domains and three citation tiers, and had three search-enabled models (GPT-5, Claude Sonnet 4.6, and Gemini 3 Flash) generate an entry for each. Roughly 23,000 fields were compared against verified ground truth. The authors also built clibib, an open-source tool that retrieves verified citation records directly from publisher databases, and tested whether adding it as a separate revision step corrected the models' errors. Key findings include:</p>
+<ol class="findings-list">
+  <li><strong>Search helps, but half of all entries still contain an error.</strong> Models got 83.6% of individual citation fields right, but only 50.9% of entries were correct in every field. Author and entry type were the most reliable fields (91.1% each), while DOI (75.5%) and issue number (72.0%) were the worst.</li>
+  <li><strong>Newer citations are less accurate, and web search does not fix it.</strong> Accuracy fell from 92.7% for popular older papers to 65.0% for papers published after the models' training cutoffs, a 27.7 percentage point gap. For these new papers, models conducted web search in over 97% of cases, yet accuracy stayed at 65%.</li>
+  <li><strong>The tool developed by authors (<a href="https://github.com/delip/clibib" target="_blank" rel="noopener">clibib</a>) verifies each citation against publisher records and corrects most errors.</strong> Running clibib as a separate revision step after the model generates a citation raises the ratio of fully correct entries from 50.9% to 78.3% and rarely introduces new errors.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>In this study, models were asked only to reproduce a paper's citation details, each of which has a correct answer that is verifiable via web search. However, models still returned an error in roughly half of all entries, relying on internal memory over the sources they retrieved. This paper shows that just because a model invokes search, it does not mean the search function yields accurate responses.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://arxiv.org/abs/2604.03159" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#bibtex-citation-errors-in-scientific-publishing-agents-evalu',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="quantifying-the-prevalence-and-impact-of-overreaching-causal" data-faculty="duncan watts" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
+    <div class="entry-top" onclick="toggleEntry(this)">
+      <div class="entry-title-col">
+        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://calvinisch.com/papers/Causal_Claims_in_Social_Science_Main.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Quantifying the prevalence and impact of overreaching causal claims in social science</a></div>
+        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
+      </div>
+      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Duncan Watts</a></div>
+      <div class="entry-date">7/16/2026</div>
+      <div class="entry-takeaway">
+        <div class="takeaway-label">Key Takeaway</div>
+        <div class="takeaway-text">Causal overclaiming has grown sharply over the past two decades. This problem is exacerbated by readers and AI systems alike tending to default toward causal interpretations even when researchers don&#8217;t imply causation or include limitations.</div>
+        <div class="expand-hint">
+          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full summary &amp; details
+        </div>
+      </div>
+    </div>
+    <div class="entry-detail">
+      <div class="detail-grid">
+        <div class="detail-block summary full-width">
+          <h4>Overview</h4>
+          <div class="detail-text"><p>The authors review how often social scientists claim their findings are causal. The authors used an LLM to scan 194,631 social science research paper abstracts published between 1980 and 2024, classifying whether each one used causal language (e.g., "X causes Y") versus more accurate associational language (e.g., "X is linked to Y"). They validated this LLM-based classification against expert human coders before applying it at scale. Beyond simply counting causal claims, the authors ran a set of experiments to test how this language affects readers and how AI tools respond to it. In one experiment, 1,105 college-educated adults read study abstracts—either in their original causal form or a rewritten associational version, sometimes paired with a note explaining the study's limitations—and reported whether they believed the results showed causation. In a parallel experiment, the authors fed the same materials to several AI language models to see whether AI-generated summaries introduced or removed causal overreach. Key findings include:</p>
+<ol class="findings-list">
+  <li>Causal language is common: Across the full 44-year period, 46.3% of cross-sectional abstracts used causal language despite their design not supporting it. This rate nearly tripled since 2000, climbing from about 20% to over 60% by 2024, with business journals showing the highest rates and sociology the lowest.</li>
+  <li>Readers default to inferring causation, and it's hard to correct. Even when abstracts were rewritten in purely associational language or flagged with a methodological warning, many participants still concluded the study demonstrated causation and used causal language themselves when summarizing it.</li>
+  <li>AI models can make the problem worse—but are more correctable than humans. Language models often introduced causal claims that weren't present in the original associational abstracts, especially when prompted to write "simple" or "practical" summaries. However, unlike human readers, models responded strongly to a prompt explicitly asking for methodological caution, substantially reducing overreach.</li>
+</ol></div>
+        </div>
+
+        <div class="detail-block importance full-width">
+          <h4>Why Is This Important?</h4>
+          <div class="detail-text"><p>The paper highlights rewriting abstracts and adding "this study is correlational" notes did little to stop human readers from walking away believing they'd seen causal evidence, suggesting the issue isn't just sloppy writing but a deeper cognitive pull toward causal stories. AI models, by contrast, were far more responsive to a simple "be careful" instruction. That asymmetry matters as more people rely on AI-generated research summaries.</p></div>
+        </div>
+      </div>
+      <div class="entry-actions">
+        <a href="https://calvinisch.com/papers/Causal_Claims_in_Social_Science_Main.pdf" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
+        <button class="link-btn" onclick="copyLink('#quantifying-the-prevalence-and-impact-of-overreaching-causal',this)">Copy Link to Entry</button>
+      </div>
+    </div>
+  </div>
+
   <div class="entry" id="decomposed-prompting-does-not-fix-knowledge-gaps-but-helps-m" data-faculty="dan roth" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
-        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://arxiv.org/pdf/2602.04853" target="_blank" rel="noopener" onclick="event.stopPropagation()">Decomposed Prompting Does Not Fix Knowledge Gaps, But Helps Models Say “I Don’t Know”</a></div>
+        <div class="entry-title-text"><a href="https://arxiv.org/pdf/2602.04853" target="_blank" rel="noopener" onclick="event.stopPropagation()">Decomposed Prompting Does Not Fix Knowledge Gaps, But Helps Models Say “I Don’t Know”</a></div>
         <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Dan Roth</a></div>
@@ -529,7 +611,7 @@
   <div class="entry" id="auditing-llm-responses-in-a-complex-policy-landscape-abortio" data-faculty="danaé metaxa" data-year="2026" data-themes="LLMs & Civic Discourse,Misinformation">
     <div class="entry-top" onclick="toggleEntry(this)">
       <div class="entry-title-col">
-        <div class="entry-title-text"><span class="new-badge">New</span><a href="https://dl.acm.org/doi/10.1145/3805689.3806451" target="_blank" rel="noopener" onclick="event.stopPropagation()">Auditing LLM Responses in a Complex Policy Landscape: Abortion Law in the United States</a></div>
+        <div class="entry-title-text"><a href="https://dl.acm.org/doi/10.1145/3805689.3806451" target="_blank" rel="noopener" onclick="event.stopPropagation()">Auditing LLM Responses in a Complex Policy Landscape: Abortion Law in the United States</a></div>
         <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#b91c1c;background:#fee2e2">Misinformation</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Danaé Metaxa</a></div>
@@ -657,7 +739,7 @@
         <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#0f766e;background:#ccfbf1">Social Media &amp; Platforms</span></div>
       </div>
       <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Duncan Watts</a></div>
-      <div class="entry-date">June 2026</div>
+      <div class="entry-date">6/1/2026</div>
       <div class="entry-takeaway">
         <div class="takeaway-label">Key Takeaway</div>
         <div class="takeaway-text">For users who have a history of watching extremist content on YouTube, &#8220;LLM-based reranking amplifies exposure by ranking such videos higher.&#8221;</div>
@@ -1263,88 +1345,6 @@ The inability for LLMs to accurately interpret AAL has significant impacts: AAL 
       <div class="entry-actions">
         <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-linguistics-041824-050629" target="_blank" rel="noopener" class="read-btn">Read Paper →</a>
         <button class="link-btn" onclick="copyLink('#how-well-do-large-language-models-understand-african-america',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="bibtex-citation-errors-in-scientific-publishing-agents-evalu" data-faculty="chris callison-burch" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://arxiv.org/abs/2604.03159" target="_blank" rel="noopener" onclick="event.stopPropagation()">BibTeX Citation Errors in Scientific Publishing Agents: Evaluation and Mitigation</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Chris Callison-Burch</a></div>
-      <div class="entry-date">2026</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">Search-enabled LLMs get roughly half of academic citations wrong, relying on internal memory over the results they retrieve. Verifying each citation against publisher records corrects most of these errors, though the newest papers remain hardest to fix.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>LLMs equipped with web search are increasingly used by researchers, but the resulting citations are often inaccurate, or entirely fabricated. Unlike most model output, a citation can be checked definitively: every field in a BibTeX entry has one correct value on record in a publisher database. If web search works as intended, models should not make citation errors even after their knowledge cut-off. To test this, the authors built a benchmark of 931 papers across four domains and three citation tiers, and had three search-enabled models (GPT-5, Claude Sonnet 4.6, and Gemini 3 Flash) generate an entry for each. Roughly 23,000 fields were compared against verified ground truth. The authors also built clibib, an open-source tool that retrieves verified citation records directly from publisher databases, and tested whether adding it as a separate revision step corrected the models' errors. Key findings include:</p>
-<ol class="findings-list">
-  <li><strong>Search helps, but half of all entries still contain an error.</strong> Models got 83.6% of individual citation fields right, but only 50.9% of entries were correct in every field. Author and entry type were the most reliable fields (91.1% each), while DOI (75.5%) and issue number (72.0%) were the worst.</li>
-  <li><strong>Newer citations are less accurate, and web search does not fix it.</strong> Accuracy fell from 92.7% for popular older papers to 65.0% for papers published after the models' training cutoffs, a 27.7 percentage point gap. For these new papers, models conducted web search in over 97% of cases, yet accuracy stayed at 65%.</li>
-  <li><strong>The tool developed by authors (<a href="https://github.com/delip/clibib" target="_blank" rel="noopener">clibib</a>) verifies each citation against publisher records and corrects most errors.</strong> Running clibib as a separate revision step after the model generates a citation raises the ratio of fully correct entries from 50.9% to 78.3% and rarely introduces new errors.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>In this study, models were asked only to reproduce a paper's citation details, each of which has a correct answer that is verifiable via web search. However, models still returned an error in roughly half of all entries, relying on internal memory over the sources they retrieved. This paper shows that just because a model invokes search, it does not mean the search function yields accurate responses.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://arxiv.org/abs/2604.03159" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
-        <button class="link-btn" onclick="copyLink('#bibtex-citation-errors-in-scientific-publishing-agents-evalu',this)">Copy Link to Entry</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry" id="quantifying-the-prevalence-and-impact-of-overreaching-causal" data-faculty="duncan watts" data-year="2026" data-themes="LLMs & Civic Discourse,Guiding the Field">
-    <div class="entry-top" onclick="toggleEntry(this)">
-      <div class="entry-title-col">
-        <div class="entry-title-text"><a href="https://calvinisch.com/papers/Causal_Claims_in_Social_Science_Main.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Quantifying the prevalence and impact of overreaching causal claims in social science</a></div>
-        <div class="entry-badges"><span class="theme-badge" style="color:#4f46e5;background:#ede9fe">LLMs &amp; Civic Discourse</span><span class="theme-badge" style="color:#6b21a8;background:#f3e8ff">Guiding the Field</span></div>
-      </div>
-      <div class="entry-faculty"><a href="https://infodem.upenn.edu/faculty/" target="_blank" rel="noopener">Duncan Watts</a></div>
-      <div class="entry-date">2026</div>
-      <div class="entry-takeaway">
-        <div class="takeaway-label">Key Takeaway</div>
-        <div class="takeaway-text">Causal overclaiming has grown sharply over the past two decades. This problem is exacerbated by readers and AI systems alike tending to default toward causal interpretations even when researchers don&#8217;t imply causation or include limitations.</div>
-        <div class="expand-hint">
-          <svg class="chevron" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#0055A4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Full summary &amp; details
-        </div>
-      </div>
-    </div>
-    <div class="entry-detail">
-      <div class="detail-grid">
-        <div class="detail-block summary full-width">
-          <h4>Overview</h4>
-          <div class="detail-text"><p>The authors review how often social scientists claim their findings are causal. The authors used an LLM to scan 194,631 social science research paper abstracts published between 1980 and 2024, classifying whether each one used causal language (e.g., "X causes Y") versus more accurate associational language (e.g., "X is linked to Y"). They validated this LLM-based classification against expert human coders before applying it at scale. Beyond simply counting causal claims, the authors ran a set of experiments to test how this language affects readers and how AI tools respond to it. In one experiment, 1,105 college-educated adults read study abstracts—either in their original causal form or a rewritten associational version, sometimes paired with a note explaining the study's limitations—and reported whether they believed the results showed causation. In a parallel experiment, the authors fed the same materials to several AI language models to see whether AI-generated summaries introduced or removed causal overreach. Key findings include:</p>
-<ol class="findings-list">
-  <li>Causal language is common: Across the full 44-year period, 46.3% of cross-sectional abstracts used causal language despite their design not supporting it. This rate nearly tripled since 2000, climbing from about 20% to over 60% by 2024, with business journals showing the highest rates and sociology the lowest.</li>
-  <li>Readers default to inferring causation, and it's hard to correct. Even when abstracts were rewritten in purely associational language or flagged with a methodological warning, many participants still concluded the study demonstrated causation and used causal language themselves when summarizing it.</li>
-  <li>AI models can make the problem worse—but are more correctable than humans. Language models often introduced causal claims that weren't present in the original associational abstracts, especially when prompted to write "simple" or "practical" summaries. However, unlike human readers, models responded strongly to a prompt explicitly asking for methodological caution, substantially reducing overreach.</li>
-</ol></div>
-        </div>
-
-        <div class="detail-block importance full-width">
-          <h4>Why Is This Important?</h4>
-          <div class="detail-text"><p>The paper highlights rewriting abstracts and adding "this study is correlational" notes did little to stop human readers from walking away believing they'd seen causal evidence, suggesting the issue isn't just sloppy writing but a deeper cognitive pull toward causal stories. AI models, by contrast, were far more responsive to a simple "be careful" instruction. That asymmetry matters as more people rely on AI-generated research summaries.</p></div>
-        </div>
-      </div>
-      <div class="entry-actions">
-        <a href="https://calvinisch.com/papers/Causal_Claims_in_Social_Science_Main.pdf" target="_blank" rel="noopener" class="read-btn">Read Paper &#8594;</a>
-        <button class="link-btn" onclick="copyLink('#quantifying-the-prevalence-and-impact-of-overreaching-causal',this)">Copy Link to Entry</button>
       </div>
     </div>
   </div>
